@@ -1,57 +1,85 @@
 {
-    "home":"主页",
-    "about":"关于",
-    "skills":"技能",
-    "portfolio":"项目集",
-    "contact":"联系方式",
-    "home__title":"Hi, I'm ASOUTHERNCAT",
-    "home__subtitle":"前端工程师",
-    "home__description":"热爱学习，热爱生活，创造更高质量工作成果。",
-    "home__contact":"与我联系",
-    "home__scroll-name":"往下滑",
-    "about__title":"关于我",
-    "about__subtitle":"简单介绍",
-    "about__description":"Web开发人员，具有丰富的知识和多年的经验，从事Web技术和UI / Ux设计，提供高质量的工作。",
-    "about__info-name1":"年工作<br/>经验",
-    "about__info-name2":"完整<br/>项目",
-    "about__info-name3":"公司 <br /> 任职",
-    "download":"查看简历",
-    "skills__title":"技能",
-    "skills__subtitle":"技术水平",
-    "skills__years":"*年工作经验",
-
-    "skills__title2":"后端开发",
-    "skills__years2":"*年工作经验",
-
-    "qualification__title":"资历",
-    "qualification__subtitle":"个人履历",
-    "education":"教育",
-    "work":"工作",
-    "qualification1__title":"计算机科学与技术",
-    "qualification1__subtitle":"**大学",
-    "qualification2__title":"网页设计",
-    "qualification2__subtitle":"自学",
-    "qualification3__title":"网站开发",
-    "qualification3__subtitle":"自学",
-    "qualification4__title":"软件工程师",
-    "qualification4__subtitle":"深圳",
-
-    "portfolio__title":"项目集",
-    "portfolio__subtitle":"近期项目",
-    "portfolio1__title":"网站1",
-    "portfolio1__description":"网站采用响应式布局，适配于多种设备，具有UI组件和动画交互。",
-    "portfolio2__title":"网站2",
-    "portfolio2__description":"网站采用响应式布局，适配于多种设备，具有UI组件和动画交互。",
-    "portfolio3__title":"网站3",
-    "portfolio3__description":"网站采用响应式布局，适配于多种设备，具有UI组件和动画交互。",
-
-    "contact__title":"联系方式",
-    "contact__subtitle":"与我联系",
-    "tel":"电话",
-    "tel__number":"166********",
-    "email":"电子邮箱",
-    "email__address":"asoutherncat@gmail.com",
-    "location":"位置",
-    "location__detail":"湖南省"
+    "home": "主页",
+    "about": "关于",
+    "skills": "技能",
+    "portfolio": "项目集",
+    "contact": "联系方式",
+    "home__title": "你好，我是Hongdao Meng",
+    "home__subtitle": "软件工程师 / 机器学习工程师",
+    "home__description": "拥有计算机科学与信息安全背景，擅长全栈开发、机器学习与分布式系统，致力于构建高效可靠的软件解决方案。",
+    "home__contact": "与我联系",
+    "home__scroll-name": "往下滑",
     
+    "about__title": "关于我",
+    "about__subtitle": "个人简介",
+    "about__description": "我是计算机科学硕士，具有丰富的软件开发和机器学习经验，曾在多个企业级项目中发挥关键作用。擅长后端架构、人工智能及数据分析，致力于高效能、可扩展的系统开发。",
+    "about__info-name1": "工作<br/>经验",
+    "about__info-name2": "已完成<br/>项目",
+    "about__info-name3": "曾任职<br/>公司",
+    "download": "查看简历",
+
+    "skills__title": "技能",
+    "skills__subtitle": "技术栈",
+    
+    "skills__title1": "编程语言",
+    "skills__list1": "Java, Python, C/C++, Go, SQL, JavaScript, TypeScript, Shell, PHP, MATLAB, LaTeX",
+    
+    "skills__title2": "前端开发",
+    "skills__list2": "React, Angular, Vue.js, HTML/CSS",
+    
+    "skills__title3": "后端开发",
+    "skills__list3": "Django, Flask, Node.js, Spring Boot",
+    
+    "skills__title4": "机器学习",
+    "skills__list4": "PyTorch, TensorFlow, Scikit-Learn, Pandas",
+    
+    "skills__title5": "数据库",
+    "skills__list5": "MySQL, PostgreSQL, MongoDB, Redis, DynamoDB, Oracle, MilvusDB, Elasticsearch",
+    
+    "skills__title6": "开发工具",
+    "skills__list6": "Git, Docker, AWS, Azure, CMake, Jenkins, Nginx, CI/CD, Postman, LangChain, FFmpeg, OpenCV, Grafana, Prometheus",
+
+    "qualification__title": "资历",
+    "qualification__subtitle": "教育与工作经历",
+    "education": "教育",
+    "work": "工作",
+
+    "qualification1__title": "计算机科学硕士",
+    "qualification1__subtitle": "纽约大学 (2024-2026)",
+    
+    "qualification2__title": "信息安全学士",
+    "qualification2__subtitle": "北京工业大学 (2020-2024)",
+    
+    "qualification3__title": "机器学习工程师实习生",
+    "qualification3__subtitle": "DeepFake检测初创公司 (2024.09 - 2024.12)",
+    
+    "qualification4__title": "软件工程师实习生",
+    "qualification4__subtitle": "青腾云平台研发部 (2024.02 - 2024.08)",
+    
+    "qualification5__title": "机器学习工程师实习生",
+    "qualification5__subtitle": "数据挖掘与安全实验室 (2022.09 - 2024.07)",
+
+    "portfolio__title": "项目集",
+    "portfolio__subtitle": "近期项目",
+
+    "portfolio1__title": "DeepFake 检测平台",
+    "portfolio1__description": "开发基于 React + TypeScript 的核心模块，优化模型性能并部署至 AWS，支持 1200+ 并发用户。",
+    
+    "portfolio2__title": "RAG 聊天机器人",
+    "portfolio2__description": "基于 LangChain 和 MilvusDB 设计混合检索框架，优化查询性能，提高 21.7% 搜索相关性。",
+    
+    "portfolio3__title": "实时威胁检测平台",
+    "portfolio3__description": "利用 Spring Boot 和 Kafka 处理 15 万+ 日均安全日志，优化 SQL 查询，减少警报延迟 22%。",
+    
+    "portfolio4__title": "联邦多视图多标签学习",
+    "portfolio4__description": "在 IEEE Transactions on Big Data 发表论文，提出 FMVML 方法提升平均精度 8.3%。",
+
+    "contact__title": "联系方式",
+    "contact__subtitle": "与我联系",
+    "tel": "电话",
+    "tel__number": "(718) 306-3737",
+    "email": "电子邮箱",
+    "email__address": "mycrofthd@gmail.com",
+    "location": "位置",
+    "location__detail": "纽约，美国"
 }
