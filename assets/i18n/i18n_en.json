@@ -4,15 +4,15 @@
     "skills": "Skills",
     "portfolio": "Portfolio",
     "contact": "Contact",
-    "home__title": "Hi, I'm Hongdao Meng",
+    "home__title": "Here is Hongdao Meng",
     "home__subtitle": "Software Engineer / Machine Learning Engineer",
-    "home__description": "Strong background in computer science and information security. Proficient in full-stack development, machine learning, and distributed systems, delivering high-performance and scalable solutions.",
+    "home__description": "He is a Masters student in Computer Science at New York University, specializing in machine learning, data engineering, and software development.",
     "home__contact": "Contact Me",
     "home__scroll-name": "Scroll down",
 
     "about__title": "About Me",
     "about__subtitle": "My Introduction",
-    "about__description": "A computer science graduate with extensive experience in software engineering and machine learning. Skilled in backend architecture, artificial intelligence, and data analytics, dedicated to developing efficient and scalable systems.",
+    "about__description": "I am a NYU CS master with experience in machine learning and software engineering. I have developed deepfake detection platforms, RAG-based chatbots, and real-time analytics systems. Proficient in Python, Java, C++, AWS, and Kubernetes, I have optimized AI models and backend infrastructures. I also published research on federated learning in IEEE Transactions on Big Data. Passionate about AI and scalable systems, I enjoy building high-performance applications.",
     "about__info-name1": "Years of <br /> experience",
     "about__info-name2": "Completed <br /> projects",
     "about__info-name3": "Companies <br /> worked",
@@ -39,7 +39,8 @@
     "skills__title6": "Development Tools",
     "skills__list6": "Git, Docker, AWS, Azure, CMake, Jenkins, Nginx, CI/CD, Postman, LangChain, FFmpeg, OpenCV, Grafana, Prometheus",
 
-    "qualification__title": "Qualification",
+    "qualification__title": "Experience",
+    "experience": "Experience",
     "qualification__subtitle": "My Educational & Professional Journey",
     "education": "Education",
     "work": "Work",
@@ -50,14 +51,17 @@
     "qualification2__title": "Bachelor of Engineering in Information Security",
     "qualification2__subtitle": "Beijing University of Technology (2020-2024)",
 
-    "qualification3__title": "Machine Learning Engineer Intern",
-    "qualification3__subtitle": "DeepFake Detection Startup (Sep. 2024 - Dec. 2024)",
+    "qualification3__title": "Outstanding student of Beijing Soaring Program",
+    "qualification3__subtitle": "Beijing No.8 Middle School(2017-2020)",
 
-    "qualification4__title": "Software Engineer Intern",
-    "qualification4__subtitle": "QingTeng, Cloud Platform R&D Department (Feb. 2024 - Aug. 2024)",
+    "qualification4__title": "Software Development Engineer Intern",
+    "qualification4__subtitle": "DeepFake Detection Startup (Sep. 2024 - Dec. 2024)",
 
-    "qualification5__title": "Machine Learning Engineer Intern",
-    "qualification5__subtitle": "Data Mining & Security Lab (Sep. 2022 - Jul. 2024)",
+    "qualification5__title": "AI Algorithms Engineer Intern",
+    "qualification5__subtitle": "QingTeng, Cloud Platform R&D Department (Feb. 2024 - Aug. 2024)",
+
+    "qualification6__title": "Machine Learning Engineer Intern",
+    "qualification6__subtitle": "Data Mining & Security Lab (Sep. 2022 - Jul. 2024)",
 
     "portfolio__title": "Portfolio",
     "portfolio__subtitle": "Recent Projects",
@@ -74,12 +78,27 @@
     "portfolio4__title": "Federated Multi-View Multi-Label Learning",
     "portfolio4__description": "Published research in IEEE Transactions on Big Data, introducing the FMVML method, which improved average precision by 8.3%.",
 
+    "publication__title": "Publications",
+    "publication__subtitle": "My recent research papers",
+  
+    "publication1__title": "Federated Multi-View Multi-Label Classification",
+    "publication1__description": "First Author. Published in IEEE Transactions on Big Data, 2025.",
+  
+    "publication2__title": "Susceptibility Genes Identification in Salt Sensitivity of BP",
+    "publication2__description": "Co-author. Published in BMC Genomics, 2024.",
+  
+    "publication3__title": "Multi-Omics Big Data Analysis in Hypertension Research",
+    "publication3__description": "Co-author. Published in Chinese Journal of Cardiology, 2023.",
+  
+    "publication4__title": "Key Methods of Multi-Modal Information Fusion",
+    "publication4__description": "First Author. Patent (Application Number: 2023111952962), 2023.",
+  
     "contact__title": "Contact Me",
     "contact__subtitle": "Get in Touch",
     "tel": "Phone",
-    "tel__number": "(718) 306-3737",
+    "tel__number": "+1 (718) 306-3737/ +86 18500305220",
     "email": "E-mail",
     "email__address": "mycrofthd@gmail.com",
     "location": "Location",
-    "location__detail": "New York, USA"
+    "location__detail": "New York, USA// Beijing CN"
 }
