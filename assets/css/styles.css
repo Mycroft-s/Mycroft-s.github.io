@@ -532,29 +532,15 @@ img {
   background-color: var(--first-color);
 }
 
-.skills__html {
-  width: 60%;
-}
+.skills__python { width: 100%; }  /* Python 100% */
+.skills__cpp { width: 90%; }      /* C++ 80% */
+.skills__java { width: 80%; }     /* Java 70% */
+.skills__go { width: 70%; }       /* Go 60% */
+.skills__sql { width: 80%; }      /* SQL 60% */
+.skills__javascript { width: 80%; } /* JavaScript 50% */
+.skills__typescript { width: 90%; } /* TypeScript 40% */
+.skills__shell { width: 70%; }      /* Shell 40% */
 
-.skills__css{
-  width: 50%;
-}
-
-.skills__js{
-  width: 30%;
-}
-
-.skills__vue{
-  width: 10%;
-}
-
-.skills__java{
-  width: 70%;
-}
-
-.skills__python{
-  width: 50%;
-}
 
 .skills__close .skills__list {
   
@@ -798,9 +784,9 @@ img {
   color: var(--first-color-lighter);
 }
 
-.footer__social {
-  font-size: 1.35rem;
-  margin-right: var(--mb-1-5);
+.footer__socials {
+  display: flex;
+  gap: 10px; /* 调整图标之间的间距 */
 }
 
 .footer__social:hover {
@@ -857,6 +843,13 @@ img {
   bottom: 5rem;
 }
 
+.footer__social-icon img {
+  transition: transform 0.3s ease;
+}
+
+.footer__social-icon img:hover {
+  transform: scale(1.1); /* 悬停时放大 10% */
+}
 
 /*========== SCROLL BAR ==========*/
 ::-webkit-scrollbar {
