@@ -70,22 +70,35 @@ tabs.forEach(tab => {
 })
 
 
-/*==================== PORTFOLIO SWIPER  ====================*/
+/*==================== PORTFOLIO SWIPER ====================*/
 let swiperPortfolio = new Swiper('.portfolio__container', {
-    cssMode: true,
-    loop: true,
-  
-    navigation: {
+  loop: true, // 开启循环滚动
+  spaceBetween: 30, // 每个项目之间的间距
+  navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-  
-    pagination: {
+  },
+  pagination: {
       el: '.swiper-pagination',
       clickable: true,
-    },
-  });
+  },
+});
 
+/*==================== PUBLICATION SWIPER ====================*/
+let swiperPublication = new Swiper('.publication__container', {
+  loop: true, // 开启循环滚动
+  spaceBetween: 30, // 确保每个项目之间有一定间距
+  navigation: {
+      nextEl: '.publication-button-next',
+      prevEl: '.publication-button-prev',
+  },
+  pagination: {
+      el: '.publication-pagination',
+      clickable: true,
+  },
+});
+
+  
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
