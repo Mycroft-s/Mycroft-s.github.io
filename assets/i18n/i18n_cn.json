@@ -4,15 +4,17 @@
     "skills": "技能",
     "portfolio": "项目集",
     "contact": "联系方式",
-    "home__title": "你好，我是Hongdao Meng",
+    "home__title": "我是孟宏道",
     "home__subtitle": "软件工程师 / 机器学习工程师",
-    "home__description": "拥有计算机科学与信息安全背景，擅长全栈开发、机器学习与分布式系统，致力于构建高效可靠的软件解决方案。",
+    "home__description": "他是纽约大学计算机科学专业硕士研究生，专攻机器学习、数据工程和软件开发。",
     "home__contact": "与我联系",
     "home__scroll-name": "往下滑",
     
+
+
     "about__title": "关于我",
     "about__subtitle": "个人简介",
-    "about__description": "我是计算机科学硕士，具有丰富的软件开发和机器学习经验，曾在多个企业级项目中发挥关键作用。擅长后端架构、人工智能及数据分析，致力于高效能、可扩展的系统开发。",
+    "about__description": "我是纽约大学计算机科学硕士，拥有机器学习和软件工程经验。我曾开发深度伪造检测平台、RAG聊天机器人和实时分析系统。熟练使用 Python、Java、C++、AWS 和 Kubernetes，优化 AI 模型和后端架构。我还在 IEEE Transactions on Big Data 发表了关于联邦学习的研究。对 人工智能和可扩展系统 充满热情，擅长构建高性能应用。",
     "about__info-name1": "工作<br/>经验",
     "about__info-name2": "已完成<br/>项目",
     "about__info-name3": "曾任职<br/>公司",
@@ -39,7 +41,9 @@
     "skills__title6": "开发工具",
     "skills__list6": "Git, Docker, AWS, Azure, CMake, Jenkins, Nginx, CI/CD, Postman, LangChain, FFmpeg, OpenCV, Grafana, Prometheus",
 
-    "qualification__title": "资历",
+    "qualification__title": "经历",
+    "experience": "经历",
+
     "qualification__subtitle": "教育与工作经历",
     "education": "教育",
     "work": "工作",
@@ -50,14 +54,17 @@
     "qualification2__title": "信息安全学士",
     "qualification2__subtitle": "北京工业大学 (2020-2024)",
     
-    "qualification3__title": "机器学习工程师实习生",
-    "qualification3__subtitle": "DeepFake检测初创公司 (2024.09 - 2024.12)",
+    "qualification3__title": "北京市翱翔计划优秀学员",
+    "qualification3__subtitle": "北京市第八中学",
+
+    "qualification4__title": "软件开发工程师实习生",
+    "qualification4__subtitle": "DeepFake检测初创公司 (2024.09 - 2024.12)",
     
-    "qualification4__title": "软件工程师实习生",
-    "qualification4__subtitle": "青腾云平台研发部 (2024.02 - 2024.08)",
+    "qualification5__title": "AI算法工程师实习生",
+    "qualification5__subtitle": "青腾云平台研发部 (2024.02 - 2024.08)",
     
-    "qualification5__title": "机器学习工程师实习生",
-    "qualification5__subtitle": "数据挖掘与安全实验室 (2022.09 - 2024.07)",
+    "qualification6__title": "机器学习工程师实习生",
+    "qualification6__subtitle": "数据挖掘与安全实验室 (2022.09 - 2024.07)",
 
     "portfolio__title": "项目集",
     "portfolio__subtitle": "近期项目",
@@ -74,12 +81,29 @@
     "portfolio4__title": "联邦多视图多标签学习",
     "portfolio4__description": "在 IEEE Transactions on Big Data 发表论文，提出 FMVML 方法提升平均精度 8.3%。",
 
+    "publication__title": "发表论文",
+    "publication__subtitle": "我最近的研究论文",
+  
+    "publication1__title": "联邦多视角多标签分类",
+    "publication1__description": "第一作者。发表于 IEEE Transactions on Big Data，2025。",
+  
+    "publication2__title": "血压盐敏感性的易感基因识别及风险评估模型构建",
+    "publication2__description": "合著者。发表于 BMC Genomics，2024。",
+  
+    "publication3__title": "高血压研究中的多组学大数据分析",
+    "publication3__description": "合著者。发表于《中华心血管病杂志》，2023。",
+  
+    "publication4__title": "基于数据隐私保护的多模态信息融合关键方法",
+    "publication4__description": "第一作者。国家知识产权局专利（申请号：2023111952962），2023。",
+  
+  
+
     "contact__title": "联系方式",
     "contact__subtitle": "与我联系",
     "tel": "电话",
-    "tel__number": "(718) 306-3737",
+    "tel__number": "+1 (718) 306-3737/ +86 18500305220",
     "email": "电子邮箱",
     "email__address": "mycrofthd@gmail.com",
     "location": "位置",
-    "location__detail": "纽约，美国"
+    "location__detail": "纽约，美国/ 北京，中国"
 }
