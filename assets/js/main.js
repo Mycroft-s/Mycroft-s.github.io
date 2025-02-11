@@ -72,8 +72,8 @@ tabs.forEach(tab => {
 
 /*==================== PORTFOLIO SWIPER ====================*/
 let swiperPortfolio = new Swiper('.portfolio__container', {
-  loop: true, // 开启循环滚动
-  spaceBetween: 30, // 每个项目之间的间距
+    cssMode: true,
+    loop: true,
   navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -86,8 +86,8 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
 
 /*==================== PUBLICATION SWIPER ====================*/
 let swiperPublication = new Swiper('.publication__container', {
-  loop: true, // 开启循环滚动
-  spaceBetween: 30, // 确保每个项目之间有一定间距
+  cssMode: true,
+  loop: true,
   navigation: {
       nextEl: '.publication-button-next',
       prevEl: '.publication-button-prev',
