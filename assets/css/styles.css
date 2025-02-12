@@ -625,6 +625,10 @@ img {
 
 }
 
+.qualification__content.qualification__active {
+  display: block; /* 只有被选中的内容才显示 */
+}
+
 .qualification__active[data-content] {
   display: block;
 }
