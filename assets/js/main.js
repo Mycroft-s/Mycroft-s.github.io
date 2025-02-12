@@ -50,42 +50,68 @@ const skillsContent = document.getElementsByClassName('skills__content'),
 
 /*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
-      tabContents = document.querySelectorAll('[data-content]')
+      tabContents = document.querySelectorAll('[data-content]');
 
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
-    console.log('click disparado')
-    const target = document.querySelector(tab.dataset.target)
+    console.log('Tab clicked:', tab.dataset.target);
 
-    tabContents.forEach(tabContent => {
-      tabContent.classList.remove('qualification__active')
-    })
-    target.classList.add('qualification__active')
+    const target = document.querySelector(tab.dataset.target);
+    if (!target) {
+      console.error('Target not found for:', tab.dataset.target);
+      return;
+    }
 
-    tabs.forEach(tab => {
-      tab.classList.remove('qualification__active')
-    })
-    tab.classList.add('qualification__active')
-  })
-})
+    // 1. 先移除所有 qualification__active 类，确保其他内容隐藏
+    tabContents.forEach(tc => {
+      tc.classList.remove('qualification__active');
+      tc.style.display = "none"; // 关键：隐藏其他内容
+    });
+
+    // 2. 显示当前选中的内容
+    target.classList.add('qualification__active');
+    target.style.display = "block"; // 关键：让选中的内容显示
+
+    // 3. 移除所有 tab 按钮的激活状态
+    tabs.forEach(t => {
+      t.classList.remove('qualification__active');
+    });
+
+    // 4. 让当前点击的按钮变为激活状态
+    tab.classList.add('qualification__active');
+  });
+});
 
 
-/*==================== PORTFOLIO SWIPER  ====================*/
+/*==================== PORTFOLIO SWIPER ====================*/
 let swiperPortfolio = new Swiper('.portfolio__container', {
     cssMode: true,
     loop: true,
-  
-    navigation: {
+  navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-  
-    pagination: {
+  },
+  pagination: {
       el: '.swiper-pagination',
       clickable: true,
-    },
-  });
+  },
+});
 
+/*==================== PUBLICATION SWIPER ====================*/
+let swiperPublication = new Swiper('.publication__container', {
+  cssMode: true,
+  loop: true,
+  navigation: {
+      nextEl: '.publication-button-next',
+      prevEl: '.publication-button-prev',
+  },
+  pagination: {
+      el: '.publication-pagination',
+      clickable: true,
+  },
+});
+
+  
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
