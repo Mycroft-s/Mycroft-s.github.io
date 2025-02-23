@@ -460,6 +460,50 @@ img {
   justify-content: center;
 }
 
+/*==================== NEWS ====================*/
+.news__container {
+  margin-top: 2rem;
+}
+
+.news__content {
+  /* 固定一个合适高度，这样可以出现滚动条 */
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 1rem;
+  border: 1px solid var(--first-color);
+  border-radius: 0.5rem;
+
+  /* 你可以根据需要加一些背景色或其他效果 */
+  /* background-color: #f9f9f9; */
+}
+
+.news__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news__item {
+  margin-bottom: 1.5rem;
+  /* 可以根据需求让新闻之间有分割线 */
+  /* border-bottom: 1px solid #ddd; */
+  /* padding-bottom: 1rem; */
+}
+
+.news__date {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--title-color);
+}
+
+.news__description {
+  margin-top: 0.5rem;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  /* 根据实际需求自定义文字大小、颜色等 */
+}
+
+
 /*==================== SKILLS ====================*/
 .skills__container {
   row-gap: 0;

@@ -43,6 +43,12 @@
               </a>
             </li>
             <li class="nav__item">
+              <a href="#news" class="nav__link">
+                <i class="uil uil-newspaper nav__icon"></i>
+                <p i18n="news_menu">News</p>
+              </a>
+            </li>            
+            <li class="nav__item">
               <a href="#skills" class="nav__link">
                 <i class="uil uil-file-alt nav__icon"></i>
                 <p i18n="skills">Skills</p>
@@ -289,6 +295,60 @@
           </div>
         </div>
       </section>
+
+<!--==================== NEWS ====================-->
+<section class="news section" id="news">
+  <h2 class="section__title" i18n="news__title">News</h2>
+  <span class="section__subtitle" i18n="news__subtitle">My Recent Updates</span>
+
+  <div class="news__container container">
+    <!-- 这里设置一个固定高度 + overflow: auto 以实现上下滚动 -->
+    <div class="news__content">
+      <ul class="news__list">
+        <!-- 每条新闻都可以是一个 li -->
+        <li class="news__item">
+          <h3 class="news__date" i18n="news_date2">2025.01.15</h3>
+          <p class="news__description" i18n="news_content2">
+            I'm happy to start my Developer Assistant job in C2SMARTER Center!
+          </p>
+        </li>
+
+        <li class="news__item">
+          <h3 class="news__date" i18n="news_date3">2024.12.24</h3>
+          <p class="news__description" i18n="news_content3">
+            I got 3.8 GPA for my frist semester!
+          </p>
+        </li>
+        
+        <li class="news__item">
+          <h3 class="news__date" i18n="news_date3">2024.12.20</h3>
+          <p class="news__description" i18n="news_content3">
+            My paper Federated Multi-view Multi-Label Classification was accepted by IEEE TBD.
+          </p>
+        </li>
+
+        <li class="news__item">
+          <h3 class="news__date" i18n="news_date3">2024.9.3</h3>
+          <p class="news__description" i18n="news_content3">
+            I started my work and research on deepfake detection!
+          </p>
+        </li>
+
+        <li class="news__item">
+          <h3 class="news__date" i18n="news_date3">2024.9.1</h3>
+          <p class="news__description" i18n="news_content3">
+            I'm happy to share that I've started my master of computer science at New York University!
+          </p>
+        </li>
+
+        <!-- 根据需要继续添加更多新闻 -->
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
 
 <!--==================== SKILLS ====================-->
 <section class="skills section" id="skills">
@@ -1043,6 +1103,7 @@
             target="_blank" rel="noopener"
             >Bedimcode</a
           >
+          2025.3
         </p>
       </div>
     </footer>
