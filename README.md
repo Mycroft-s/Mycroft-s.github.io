@@ -12,6 +12,7 @@
 - 打开 index.html
 - 右击-选择"open with live server"
 - vscode 将自动跳转至 http://localhost:5500/index.html
+- 可在本地修改后再进行部署
 
 ```
 
