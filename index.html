@@ -75,6 +75,14 @@
             </li>
             
             <li class="nav__item">
+              <a href="#photography" class="nav__link">
+                <!-- 可使用任何合适的图标，这里示例用了摄影图标 -->
+                <i class="uil uil-camera nav__icon"></i>
+                <p i18n="photography">Photography</p>
+              </a>
+            </li>
+            
+            <li class="nav__item">
               <a href="#contact" class="nav__link">
                 <i class="uil uil-message nav__icon"></i>
                 <p i18n="contact">Contactme</p>
@@ -307,37 +315,49 @@
       <ul class="news__list">
         <!-- 每条新闻都可以是一个 li -->
         <li class="news__item">
+          <h3 class="news__date" i18n="news_date2">2025.03.15</h3>
+          <p class="news__description" i18n="news_content2">
+            I started my research on automated deployment with AI (CI/CD)!<br>
+            我开始了关于AI结合的自动化部署（CI/CD）的研究！
+          </p>
+        </li>
+        <li class="news__item">
           <h3 class="news__date" i18n="news_date2">2025.01.15</h3>
           <p class="news__description" i18n="news_content2">
-            I'm happy to share that I have started my Developer Assistant job in C2SMARTER Center!
+            I'm happy to share that I have started my Developer Assistant job in C2SMARTER Center!<br>
+            我很高兴地告诉大家，我已经在C2SMARTER Center开始了我的开发助理工作！
           </p>
         </li>
 
         <li class="news__item">
           <h3 class="news__date" i18n="news_date3">2024.12.24</h3>
           <p class="news__description" i18n="news_content3">
-            I got 3.8 GPA for my frist semester!
+            I got 3.8 GPA for my frist semester!<br>
+            我在NYU的第一学期的GPA是3.8 ！
           </p>
         </li>
         
         <li class="news__item">
           <h3 class="news__date" i18n="news_date3">2024.12.20</h3>
           <p class="news__description" i18n="news_content3">
-            My paper Federated Multi-view Multi-Label Classification was accepted by IEEE TBD.
+            My paper Federated Multi-view Multi-Label Classification was accepted by IEEE TBD.<br>
+            我作为第一作者的论文《Federated Multi-view Multi-Label Classification》被IEEE TBD接受。
           </p>
         </li>
 
         <li class="news__item">
           <h3 class="news__date" i18n="news_date3">2024.9.3</h3>
           <p class="news__description" i18n="news_content3">
-            I started my work and research on deepfake detection!
+            I started my work and research on deepfake detection!<br>
+            我开始了关于深度伪造检测的工作和研究！
           </p>
         </li>
 
         <li class="news__item">
           <h3 class="news__date" i18n="news_date3">2024.9.1</h3>
           <p class="news__description" i18n="news_content3">
-            I'm happy to share that I've started my master of computer science at New York University!
+            I'm happy to share that I've started my master of computer science at New York University!<br>
+            我很高兴地告诉大家，我已经开始在纽约大学攻读计算机科学硕士学位了！
           </p>
         </li>
 
@@ -964,37 +984,163 @@
           <div class="swiper-pagination"></div>
         </div>
       </section>
-    
+ 
 
-    <!-- add arrows-->
-    <div class="swiper-button-next publication-button-next">
-      <i class="uil uil-angle-right-b swiper-publication-icon"></i>
+      <!--==================== PHOTOGRAPHY ====================-->
+<section class="photography section" id="photography">
+  <h2 class="section__title">Photography</h2>
+  <span class="section__subtitle">My recent shots</span>
+
+  <div class="photography__container container swiper-container">
+    <div class="swiper-wrapper">
+      <!-- 你的一系列 .swiper-slide ... -->
+       <!-- 这里的每个 swiper-slide 都是一个单独的摄影作品 -->
+      <div class="photography__content grid swiper-slide">
+        <img
+          src="assets/img/best10/2021/202101.png"
+          alt="Night street photography"
+          class="photography__img"
+        />
+        <div class="photography__data">
+          <h3 class="photography__title" i18n="photography1__title">Name</h3>
+          <p class="photography__description" i18n="photography1__desc">
+            description.
+          </p>
+        </div>
+      </div>
+
+      <div class="photography__content grid swiper-slide">
+        <img
+        src="assets/img/best10/2021/202102.png"
+          alt="Mountain landscape"
+          class="photography__img"
+        />
+        <div class="photography__data">
+          <h3 class="photography__title" i18n="photography2__title">Name</h3>
+          <p class="photography__description" i18n="photography2__desc">
+            description.
+          </p>
+        </div>
+      </div>
+      <div class="photography__content grid swiper-slide">
+        <img
+        src="assets/img/best10/2021/202103.png"
+          alt="Mountain landscape"
+          class="photography__img"
+        />
+        <div class="photography__data">
+          <h3 class="photography__title" i18n="photography3__title">Name</h3>
+          <p class="photography__description" i18n="photography2__desc">
+            description.
+          </p>
+        </div>
+      </div>
+      <div class="photography__content grid swiper-slide">
+        <img
+        src="assets/img/best10/2021/202104.png"
+          alt="Mountain landscape"
+          class="photography__img"
+        />
+        <div class="photography__data">
+          <h3 class="photography__title" i18n="photography4__title">Name</h3>
+          <p class="photography__description" i18n="photography2__desc">
+            description.
+          </p>
+        </div>
+      </div>
+      <div class="photography__content grid swiper-slide">
+        <img
+          src="assets/img/best10/2021/202105.png"
+          alt="Night street photography"
+          class="photography__img"
+        />
+        <div class="photography__data">
+          <h3 class="photography__title" i18n="photography5__title">Name</h3>
+          <p class="photography__description" i18n="photography5__desc">
+            description.
+          </p>
+        </div>
+      </div>
+      <div class="photography__content grid swiper-slide">
+        <img
+          src="assets/img/best10/2021/202106.png"
+          alt="Night street photography"
+          class="photography__img"
+        />
+        <div class="photography__data">
+          <h3 class="photography__title" i18n="photography1__title">Name</h3>
+          <p class="photography__description" i18n="photography1__desc">
+            description.
+          </p>
+        </div>
+      </div>
+
+      <div class="photography__content grid swiper-slide">
+        <img
+        src="assets/img/best10/2021/202107.png"
+          alt="Mountain landscape"
+          class="photography__img"
+        />
+        <div class="photography__data">
+          <h3 class="photography__title" i18n="photography2__title">Name</h3>
+          <p class="photography__description" i18n="photography2__desc">
+            description.
+          </p>
+        </div>
+      </div>
+      <div class="photography__content grid swiper-slide">
+        <img
+        src="assets/img/best10/2021/202108.png"
+          alt="Mountain landscape"
+          class="photography__img"
+        />
+        <div class="photography__data">
+          <h3 class="photography__title" i18n="photography3__title">Name</h3>
+          <p class="photography__description" i18n="photography2__desc">
+            description.
+          </p>
+        </div>
+      </div>
+      <div class="photography__content grid swiper-slide">
+        <img
+        src="assets/img/best10/2021/202109.png"
+          alt="Mountain landscape"
+          class="photography__img"
+        />
+        <div class="photography__data">
+          <h3 class="photography__title" i18n="photography4__title">Name</h3>
+          <p class="photography__description" i18n="photography2__desc">
+            description.
+          </p>
+        </div>
+      </div>
+      <div class="photography__content grid swiper-slide">
+        <img
+          src="assets/img/best10/2021/202110.png"
+          alt="Night street photography"
+          class="photography__img"
+        />
+        <div class="photography__data">
+          <h3 class="photography__title" i18n="photography5__title">Name</h3>
+          <p class="photography__description" i18n="photography5__desc">
+            description.
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div class="swiper-button-prev publication-button-prev">
-      <i class="uil uil-angle-left-b swiper-publication-icon"></i>
+    <!-- 给摄影区独立的 class -->
+    <div class="swiper-button-next photography-button-next">
+      <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
     </div>
-
-    <!-- Add Pagination -->
-    <div class="swiper-pagination publication-pagination"></div>
+    <div class="swiper-button-prev photography-button-prev">
+      <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+    </div>
+    <div class="swiper-pagination photography-pagination"></div>
   </div>
 </section>
 
-
-    <!-- add arrows-->
-    <div class="swiper-button-next">
-      <i class="uil uil-angle-right-b swiper-publication-icon"></i>
-    </div>
-
-    <div class="swiper-button-prev">
-      <i class="uil uil-angle-left-b swiper-publication-icon"></i>
-    </div>
-
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
-
+      
 
       <!--==================== CONTACT ME ====================-->
       <section class="contact section" id="contact">
