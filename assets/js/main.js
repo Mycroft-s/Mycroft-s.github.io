@@ -111,7 +111,27 @@ let swiperPublication = new Swiper('.publication__container', {
   },
 });
 
-  
+/*==================== PHOTOGRAPHY SWIPER ====================*/
+let swiperPhotography = new Swiper('.photography__container', {
+  cssMode: true,
+  loop: true,
+  // 启用 Lazy
+  preloadImages: false,
+  lazy: true, // 或 { loadPrevNext: true, loadPrevNextAmount: 2 }
+  navigation: {
+    nextEl: '.photography-button-next',  // 用独立类
+    prevEl: '.photography-button-prev',
+  },
+  pagination: {
+    el: '.photography-pagination',       // 用独立类
+    clickable: true,
+  },
+});
+
+
+
+
+
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
