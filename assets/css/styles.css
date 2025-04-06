@@ -748,6 +748,28 @@ img {
   outline: none;
 }
 
+/*==================== photography ====================*/
+
+.photography__img {
+  width: 500px;
+  height: auto;
+  object-fit: cover;   /* 图片裁切方式，保持居中填充 */
+  /* 如果想要圆角可加 */
+  border-radius: 4px;
+  /* 如果想让图像水平居中，可加display:block + margin:auto */
+  display: block;
+  margin: 0 auto;
+}
+.photography__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 水平居中 */
+  justify-content: center;
+}
+
+
+
+
 /*==================== CONTACT ME ====================*/
 .contact__container {
   row-gap: 3rem;
