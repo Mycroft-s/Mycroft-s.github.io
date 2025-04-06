@@ -1,6 +1,7 @@
 {
     "home": "Home",
     "about": "About",
+    "news_menu":"News",
     "skills": "Skills",
     "portfolio": "Portfolio",
     "publication": "publication",
@@ -18,6 +19,12 @@
     "about__info-name2": "Completed <br /> projects",
     "about__info-name3": "Companies <br /> worked",
     "download": "Download CV",
+
+
+    
+    "news__title": "News",
+    "news__subtitle": "My Recent Updates",
+    
 
     "skills__title": "Skills",
     "skills__subtitle": "My Technical Proficiency",
@@ -47,25 +54,25 @@
     "work": "Work",
 
     "qualification1__title": "Master of Science in Computer Science",
-    "qualification1__subtitle": "New York University (2024-2026)",
+    "qualification1__subtitle": "New York University",
 
     "qualification2__title": "Bachelor of Engineering in Information Security",
-    "qualification2__subtitle": "Beijing University of Technology (2020-2024)",
+    "qualification2__subtitle": "Beijing University of Technology",
 
     "qualification3__title": "Outstanding student of Beijing Soaring Program",
-    "qualification3__subtitle": "Beijing No.8 Middle School(2017-2020)",
+    "qualification3__subtitle": "Beijing No.8 High School (Top3 in Beijing)",
 
     "qualification4__title": "Software Development Engineer Intern",
-    "qualification4__subtitle": "DeepFake Detection Startup (Sep. 2024 - Dec. 2024)",
+    "qualification4__subtitle": "DeepFake Detection Startup, New York",
 
     "qualification5__title": "AI Algorithms Engineer Intern",
-    "qualification5__subtitle": "QingTeng, Cloud Platform R&D Department (Feb. 2024 - Aug. 2024)",
+    "qualification5__subtitle": "QingTeng, Cloud Platform R&D Department, Beijing",
 
     "qualification6__title": "Machine Learning Engineer Intern",
-    "qualification6__subtitle": "Data Mining & Security Lab (Sep. 2022 - Jul. 2024)",
+    "qualification6__subtitle": "Data Mining & Security Lab, Beijing",
 
     "qualification7__title": "Software Development Engineer Intern",
-    "qualification7__subtitle": "C2SMARTER Center (Jan. 2025 - Present)",
+    "qualification7__subtitle": "C2SMARTER Center, New York",
 
     "portfolio__title": "Portfolio",
     "portfolio__subtitle": "Recent Projects",
