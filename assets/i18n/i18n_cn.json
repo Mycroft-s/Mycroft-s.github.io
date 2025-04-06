@@ -1,6 +1,7 @@
 {
     "home": "主页",
     "about": "关于",
+    "news_menu":"新闻",
     "skills": "技能",
     "portfolio": "项目集",
     "publication": "论文发表",
@@ -20,6 +21,11 @@
     "about__info-name2": "已完成<br/>项目",
     "about__info-name3": "曾任职<br/>公司",
     "download": "查看简历",
+
+
+    "news__title": "新闻",
+    "news__subtitle": "我最近的更新",
+
 
     "skills__title": "技能",
     "skills__subtitle": "技术栈",
@@ -50,25 +56,25 @@
     "work": "工作",
 
     "qualification1__title": "计算机科学硕士",
-    "qualification1__subtitle": "纽约大学 (2024-2026)",
+    "qualification1__subtitle": "纽约大学",
     
     "qualification2__title": "信息安全学士",
-    "qualification2__subtitle": "北京工业大学 (2020-2024)",
+    "qualification2__subtitle": "北京工业大学 ",
     
     "qualification3__title": "北京市翱翔计划优秀学员",
-    "qualification3__subtitle": "北京市第八中学",
+    "qualification3__subtitle": "北京市第八中学(北京Top3)",
 
     "qualification4__title": "软件开发工程师实习生",
-    "qualification4__subtitle": "DeepFake检测初创公司 (2024.09 - 2024.12)",
+    "qualification4__subtitle": "DeepFake检测初创公司，纽约",
     
     "qualification5__title": "AI算法工程师实习生",
-    "qualification5__subtitle": "青腾云平台研发部 (2024.02 - 2024.08)",
+    "qualification5__subtitle": "青腾云平台研发部，北京 ",
     
     "qualification6__title": "机器学习工程师实习生",
-    "qualification6__subtitle": "数据挖掘与安全实验室 (2022.09 - 2024.07)",
+    "qualification6__subtitle": "数据挖掘与安全实验室，北京 ",
 
     "qualification7__title": "软件开发工程师实习生",
-    "qualification7__subtitle": "C2SMARTER Center (2025.01 - Presnet)",
+    "qualification7__subtitle": "C2SMARTER Center，纽约 ",
 
 
     "portfolio__title": "项目集",
