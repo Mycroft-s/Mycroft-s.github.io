@@ -5,6 +5,7 @@
     "skills": "技能",
     "portfolio": "项目集",
     "publication": "论文发表",
+    "photography": "摄影",
     "contact": "联系方式",
     "home__title": "我是孟宏道",
     "home__subtitle": "软件工程师 / 机器学习工程师",
@@ -107,7 +108,7 @@
     "publication4__title": "基于数据隐私保护的多模态信息融合关键方法",
     "publication4__description": "第一作者。国家知识产权局专利（申请号：2023111952962），2023。",
   
-  
+    "photography__subtitle":"滚动查看我最近的作品",
 
     "contact__title": "联系方式",
     "contact__subtitle": "与我联系",
