@@ -5,6 +5,7 @@
     "skills": "Skills",
     "portfolio": "Portfolio",
     "publication": "publication",
+    "photography": "Photography",
     "contact": "Contact",
     "home__title": "Here is Hongdao Meng",
     "home__subtitle": "Software Engineer / Machine Learning Engineer",
@@ -104,6 +105,8 @@
     "publication4__title": "Key Methods of Multi-Modal Information Fusion",
     "publication4__description": "First Author. Patent (Application Number: 2023111952962), 2023.",
   
+    "photography__subtitle":"Scroll through my most recent work",
+
     "contact__title": "Contact Me",
     "contact__subtitle": "Get in Touch",
     "tel": "Phone",
