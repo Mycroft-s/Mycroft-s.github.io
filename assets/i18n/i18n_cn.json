@@ -17,7 +17,7 @@
 
     "about__title": "关于我",
     "about__subtitle": "个人简介",
-    "about__description": "我是纽约大学计算机科学硕士，拥有机器学习和软件工程经验。我曾开发深度伪造检测平台、RAG聊天机器人和实时分析系统。熟练使用 Python、Java、C++、AWS 和 Kubernetes，优化 AI 模型和后端架构。我还在 IEEE Transactions on Big Data 发表了关于联邦学习的研究。对 人工智能和可扩展系统 充满热情，擅长构建高性能应用。",
+    "about__description": "大家好，我叫孟泓道，目前在纽约大学攻读计算机科学硕士。我的经历涵盖了机器学习和软件工程两个方向，曾经主导开发过支持上千用户的深度伪造检测平台，构建过提升准确率和响应速度的RAG聊天机器人系统，并在字节跳动推荐系统团队设计过大规模基础架构，将算子迁移效率提升了80%以上。我熟练掌握Python、Java和C++，熟悉PyTorch、React、Django等框架，以及AWS和Kubernetes等云平台。同时，我以第一作者身份在IEEE Transactions on Big Data上发表了关于联邦学习的研究论文。我对人工智能和可扩展系统充满热情，希望能将这些技术应用到高性能应用的开发中，创造实质性的价值。",
     "about__info-name1": "工作<br/>经验",
     "about__info-name2": "已完成<br/>项目",
     "about__info-name3": "曾任职<br/>公司",
