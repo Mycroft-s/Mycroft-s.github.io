@@ -15,7 +15,7 @@
 
     "about__title": "About Me",
     "about__subtitle": "My Introduction",
-    "about__description": "I am a NYU CS master with experience in machine learning and software engineering. I have developed deepfake detection platforms, RAG-based chatbots, and real-time analytics systems. Proficient in Python, Java, C++, AWS, and Kubernetes, I have optimized AI models and backend infrastructures. I also published research on federated learning in IEEE Transactions on Big Data. Passionate about AI and scalable systems, I enjoy building high-performance applications.",
+    "about__description": "Hi, my name is Hongdao Meng, a Master’s student in Computer Science at NYU with experience in both machine learning and software engineering. I’ve worked on projects ranging from building a deepfake detection platform that supported thousands of users, to developing a RAG-based chatbot system that improved both accuracy and latency, and designing large-scale infrastructure at TikTok’s recommendation system team that boosted operator migration throughput by over 95%. I’m proficient in Python, Java, and C++, with experience across frameworks like PyTorch, React, and Django, and cloud platforms like AWS and Kubernetes. I also published first-author research on federated learning in IEEE Transactions on Big Data. Overall, I’m passionate about applying AI and scalable system design to build high-performance applications that make a real impact.",
     "about__info-name1": "Years of <br /> experience",
     "about__info-name2": "Completed <br /> projects",
     "about__info-name3": "Companies <br /> worked",
