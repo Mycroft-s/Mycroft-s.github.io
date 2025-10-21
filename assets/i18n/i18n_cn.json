@@ -65,20 +65,23 @@
     "qualification3__title": "北京市翱翔计划优秀学员",
     "qualification3__subtitle": "北京市第八中学(北京Top3)",
 
-    "qualification4__title": "软件开发工程师实习生",
+    "qualification4__title": "AI工程师实习生",
     "qualification4__subtitle": "DeepFake检测初创公司，纽约",
     
     "qualification5__title": "AI算法工程师实习生",
     "qualification5__subtitle": "青腾云平台研发部，北京 ",
     
-    "qualification6__title": "机器学习工程师实习生",
+    "qualification6__title": "AI研究员",
     "qualification6__subtitle": "数据挖掘与安全实验室，北京 ",
 
-    "qualification7__title": "软件开发工程师实习生",
-    "qualification7__subtitle": "C2SMARTER Center，纽约 ",
+    "qualification7__title": "软件工程师实习生",
+    "qualification7__subtitle": "<a href='https://c2smart.engineering.nyu.edu/' target='_blank' rel='noopener'>C2SMARTER Center</a> (Feb. 2025- Present), 纽约",
 
-    "qualification8__title": "软件开发工程师实习生",
+    "qualification8__title": "软件工程师实习生",
     "qualification8__subtitle": "Tiktok，西雅图 ",
+
+    "qualification9__title": "AI工程师实习生",
+    "qualification9__subtitle": "<a href='https://freeleaps.com/home/' target='_blank' rel='noopener'>Freeleaps</a>，西雅图",
 
 
     "portfolio__title": "项目集",

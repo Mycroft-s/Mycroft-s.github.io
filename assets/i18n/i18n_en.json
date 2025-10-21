@@ -63,20 +63,23 @@
     "qualification3__title": "Outstanding student of Beijing Soaring Program",
     "qualification3__subtitle": "Beijing No.8 High School (Top3 in Beijing)",
 
-    "qualification4__title": "Software Development Engineer Intern",
+    "qualification4__title": "AI Engineer Intern",
     "qualification4__subtitle": "DeepFake Detection Startup, New York",
 
     "qualification5__title": "AI Algorithms Engineer Intern",
     "qualification5__subtitle": "QingTeng, Cloud Platform R&D Department, Beijing",
 
-    "qualification6__title": "Machine Learning Engineer Intern",
+    "qualification6__title": "AI Researcher",
     "qualification6__subtitle": "Data Mining & Security Lab, Beijing",
 
-    "qualification7__title": "Software Development Engineer Intern",
-    "qualification7__subtitle": "C2SMARTER Center, New York",
+    "qualification7__title": "Software Engineer Intern",
+    "qualification7__subtitle": "<a href='https://c2smart.engineering.nyu.edu/' target='_blank' rel='noopener'>C2SMARTER Center</a> (Feb. 2025- Present), New York",
 
-    "qualification8__title": "Software Development Engineer Intern",
+    "qualification8__title": "Software Engineer Intern",
     "qualification8__subtitle": "Tiktok, Seattle ",
+
+    "qualification9__title": "AI Engineer Intern",
+    "qualification9__subtitle": "<a href='https://freeleaps.com/home/' target='_blank' rel='noopener'>Freeleaps</a>, Seattle",
 
     "portfolio__title": "Portfolio",
     "portfolio__subtitle": "Recent Projects",
