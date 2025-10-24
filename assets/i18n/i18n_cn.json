@@ -98,6 +98,9 @@
     
     "portfolio4__title": "联邦多视图多标签学习",
     "portfolio4__description": "在 IEEE Transactions on Big Data 发表论文，提出 FMVML 方法提升平均精度 8.3%。",
+    
+    "portfolio5__title": "智能健康助手 - 语音驱动AI代理",
+    "portfolio5__description": "专为老年人设计的智能健康助手AI代理系统，通过语音交互提供个性化健康管理服务，集成LangChain和实时语音处理技术。",
 
     "publication__title": "发表论文",
     "publication__subtitle": "我最近的研究论文",

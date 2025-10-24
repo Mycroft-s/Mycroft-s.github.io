@@ -96,6 +96,9 @@
     "portfolio4__title": "Federated Multi-View Multi-Label Learning",
     "portfolio4__description": "Published research in IEEE Transactions on Big Data, introducing the FMVML method, which improved average precision by 8.3%.",
 
+    "portfolio5__title": "Intelligent Health Assistant - Voice-Driven AI Agent",
+    "portfolio5__description": "An intelligent health assistant AI agent system designed specifically for elderly people, providing personalized health management services through voice interaction, integrated with LangChain and real-time voice processing technologies.",
+
     "publication__title": "Publications",
     "publication__subtitle": "My recent research papers",
   
