@@ -102,6 +102,9 @@
     "portfolio5__title": "智能健康助手 - 语音驱动AI代理",
     "portfolio5__description": "专为老年人设计的智能健康助手AI代理系统，通过语音交互提供个性化健康管理服务，集成LangChain和实时语音处理技术。",
 
+    "portfolio6__title": "推荐系统的分享",
+    "portfolio6__description": "从学术和工业两个角度分享推荐系统的相关内容",
+
     "publication__title": "发表论文",
     "publication__subtitle": "我最近的研究论文",
   
