@@ -113,18 +113,34 @@ let swiperPublication = new Swiper('.publication__container', {
 
 /*==================== PHOTOGRAPHY SWIPER ====================*/
 let swiperPhotography = new Swiper('.photography__container', {
-  cssMode: true,
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
   loop: true,
-  // 启用 Lazy
+  speed: 700,
+  coverflowEffect: {
+    rotate: 25,
+    stretch: 0,
+    depth: 120,
+    modifier: 1,
+    slideShadows: true,
+  },
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
   preloadImages: false,
-  lazy: true, // 或 { loadPrevNext: true, loadPrevNextAmount: 2 }
+  lazy: { loadPrevNext: true, loadPrevNextAmount: 2 },
   navigation: {
-    nextEl: '.photography-button-next',  // 用独立类
+    nextEl: '.photography-button-next',
     prevEl: '.photography-button-prev',
   },
   pagination: {
-    el: '.photography-pagination',       // 用独立类
+    el: '.photography-pagination',
     clickable: true,
+    dynamicBullets: true,
   },
 });
 
@@ -196,3 +212,68 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*==================== SKILL BAR ANIMATION ====================*/
+// Set all bars to 0 on load, then animate when visible
+document.querySelectorAll('.skills__percentage').forEach(bar => {
+  bar.style.width = '0';
+});
+
+function animateSkillBars(container) {
+  container.querySelectorAll('.skills__percentage').forEach(bar => {
+    bar.style.removeProperty('width');
+  });
+}
+
+// Animate open section when skills enters viewport
+const skillsSectionEl = document.querySelector('#skills');
+if (skillsSectionEl) {
+  new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      document.querySelectorAll('.skills__content.skills__open')
+        .forEach(animateSkillBars);
+    }
+  }, { threshold: 0.1 }).observe(skillsSectionEl);
+}
+
+// Animate bars when a section accordion is opened
+skillsHeader.forEach(header => {
+  header.addEventListener('click', function() {
+    const content = this.parentNode;
+    setTimeout(() => {
+      if (content.classList.contains('skills__open')) {
+        animateSkillBars(content);
+      }
+    }, 50);
+  });
+});
+
+/*==================== SCROLL REVEAL ====================*/
+const revealSelectors = [
+  '.about__img',
+  '.about__data',
+  '.news__content',
+  '.qualification__sections',
+  '.contact__container > div',
+];
+
+revealSelectors.forEach((sel, i) => {
+  document.querySelectorAll(sel).forEach((el, j) => {
+    el.classList.add('reveal');
+    // Stagger siblings within the same parent
+    if (j === 1) el.classList.add('reveal-delay-1');
+    if (j === 2) el.classList.add('reveal-delay-2');
+  });
+});
+
+// about__data gets a slight delay relative to about__img
+const aboutData = document.querySelector('.about__data');
+if (aboutData) aboutData.classList.add('reveal-delay-1');
+
+document.querySelectorAll('.reveal').forEach(el => {
+  new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      entries[0].target.classList.add('visible');
+    }
+  }, { threshold: 0.12 }).observe(el);
+});
