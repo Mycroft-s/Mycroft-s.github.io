@@ -1,0 +1,27 @@
+[
+  {
+    "url": "https://www.linkedin.com/in/hongdao-meng-70222b306/",
+    "image": "assets/img/linkedin.png",
+    "alt": "linkedin"
+  },
+  {
+    "url": "https://github.com/Mycroft-s",
+    "image": "assets/img/github.png",
+    "alt": "GitHub"
+  },
+  {
+    "url": "https://space.bilibili.com/66771970?spm_id_from=333.1007.0.0",
+    "image": "assets/img/bilibili.png",
+    "alt": "bilibili"
+  },
+  {
+    "url": "https://www.xiaohongshu.com/user/profile/60269c88000000000100ab82",
+    "image": "assets/img/xiaohongshu.png",
+    "alt": "xiaohongshu"
+  },
+  {
+    "url": "https://www.instagram.com/mycrofthd/",
+    "image": "assets/img/ins.png",
+    "alt": "ins"
+  }
+]

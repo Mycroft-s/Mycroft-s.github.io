@@ -1,0 +1,16 @@
+<section class="news section" id="news">
+  <h2 class="section__title" i18n="news__title">{{ t:news__title }}</h2>
+  <span class="section__subtitle" i18n="news__subtitle">{{ t:news__subtitle }}</span>
+
+  <div class="news__container container">
+    <!-- 这里设置一个固定高度 + overflow: auto 以实现上下滚动 -->
+    <div class="news__content">
+      <ul class="news__list">
+        <!-- 每条新闻都可以是一个 li -->
+        {{ each:news:components/news-item.html }}
+
+        <!-- 根据需要继续添加更多新闻 -->
+      </ul>
+    </div>
+  </div>
+</section>

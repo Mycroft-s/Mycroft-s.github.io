@@ -1,0 +1,56 @@
+[
+  {
+    "image": "assets/img/fake-profile.jpg",
+    "alt": "",
+    "titleKey": "portfolio1__title",
+    "descriptionKey": "portfolio1__description",
+    "descriptionClass": "portfolio__description",
+    "url": "https://github.com/Mycroft-s/image_and_audio_deepfakededtection",
+    "buttonLabel": "Demo"
+  },
+  {
+    "image": "assets/img/rag.jpg",
+    "alt": "",
+    "titleKey": "portfolio2__title",
+    "descriptionKey": "portfolio2__description",
+    "descriptionClass": "portfolio__description",
+    "url": "https://github.com/Mycroft-s/Web-Search-Engines-CS-GY-6913-A",
+    "buttonLabel": "Demo"
+  },
+  {
+    "image": "assets/img/portfolio3.jpg",
+    "alt": "",
+    "titleKey": "portfolio3__title",
+    "descriptionKey": "portfolio3__description",
+    "descriptionClass": "portfolio__description",
+    "url": "https://github.com/Mycroft-s",
+    "buttonLabel": "Demo"
+  },
+  {
+    "image": "assets/img/deepfake_cover.jpg",
+    "alt": "Voice-driven AI Agents",
+    "titleKey": "portfolio4__title",
+    "descriptionKey": "portfolio4__description",
+    "descriptionClass": "portfolio__description",
+    "url": "https://github.com/Mycroft-s/voice-driven-AI-agents",
+    "buttonLabel": "Demo"
+  },
+  {
+    "image": "assets/img/portfolio1.jpg",
+    "alt": "Intelligent Health Assistant",
+    "titleKey": "portfolio5__title",
+    "descriptionKey": "portfolio5__description",
+    "descriptionClass": "portfolio__description",
+    "url": "https://github.com/Mycroft-s/voice-driven-AI-agents",
+    "buttonLabel": "Demo"
+  },
+  {
+    "image": "assets/img/portfolio2.jpg",
+    "alt": "Voice-driven AI Agents",
+    "titleKey": "portfolio6__title",
+    "descriptionKey": "portfolio6__description",
+    "descriptionClass": "portfolio__description",
+    "url": "https://www.youtube.com/watch?v=Xv3h8YH95ZQ",
+    "buttonLabel": "Demo"
+  }
+]

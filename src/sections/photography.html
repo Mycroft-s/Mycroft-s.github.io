@@ -1,0 +1,25 @@
+<section class="photography section" id="photography">
+  <h2 class="section__title"> <p i18n="photography">{{ t:photography }}</p></h2>
+  <span class="section__subtitle"><p i18n="photography__subtitle">{{ t:photography__subtitle }}</p></span>
+
+  <div class="photography__container container swiper-container">
+    <div class="swiper-wrapper">
+      {{ each:photography:components/photo.html }}
+    </div>
+
+    <!-- 给摄影区独立的 class -->
+    <div class="swiper-button-next photography-button-next">
+      <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+    </div>
+    <div class="swiper-button-prev photography-button-prev">
+      <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+    </div>
+    <div class="swiper-pagination photography-pagination"></div>
+  </div>
+  <div class="photography__archive-link">
+    <a class="button button--flex" href="photography.html">
+      <span i18n="gallery__home_link">{{ t:gallery__home_link }}</span>
+      <i class="uil uil-arrow-up-right button__icon" aria-hidden="true"></i>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,37 @@
+<section class="about section" id="about">
+        <h2 class="section__title" i18n="about__title">{{ t:about__title }}</h2>
+        <span class="section__subtitle" i18n="about__subtitle"
+          >{{ t:about__subtitle }}</span>
+        <div class="about__container container grid">
+          <img src="assets/img/mhd.jpg" alt="" class="about__img" />
+
+          <div class="about__data">
+            <p class="about__description" i18n="about__description">{{ t:about__description }}</p>
+
+            <div class="about__info">
+              <div>
+                <span class="about__info-title">5+</span>
+                <span class="about__info-name" i18n="about__info-name1"
+                  >{{ t:about__info-name1 }}</span>
+              </div>
+
+              <div>
+                <span class="about__info-title">15+</span>
+                <span class="about__info-name" i18n="about__info-name2"
+                  >{{ t:about__info-name2 }}</span>
+              </div>
+
+              <div>
+                <span class="about__info-title">4+</span>
+                <span class="about__info-name" i18n="about__info-name3"
+                  >{{ t:about__info-name3 }}</span>
+              </div>
+            </div>
+
+            <div class="about__buttons">
+  {{ each:resumes:components/resume-link.html }}
+</div>
+
+          </div>
+        </div>
+      </section>

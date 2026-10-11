@@ -1,0 +1,39 @@
+<footer class="footer">
+  <div class="footer__bg">
+    <div class="footer__container container grid">
+      <div>
+        <h1 class="footer__title">MYCROFT</h1>
+        <span class="footer__subtitle" i18n="home__subtitle"
+          >{{ t:home__subtitle }}</span>
+      </div>
+
+      <ul class="footer__links">
+        <li>
+          <a href="#skills" class="footer__link" i18n="skills">{{ t:skills }}</a>
+        </li>
+        <li>
+          <a href="#portfolio" class="footer__link" i18n="portfolio"
+            >{{ t:portfolio }}</a>
+        </li>
+        <li>
+          <a href="#contact" class="footer__link" i18n="contact">{{ t:contact }}</a>
+        </li>
+      </ul>
+
+      <div class="footer__socials">
+        <!-- LinkedIn -->
+        {{ each:social:components/footer-social.html }}
+      </div>
+
+    <p class="footer__copy">
+      &#169; MYCROFT.Copy from
+      <a
+        class="footer__copy"
+        href="https://www.youtube.com/c/Bedimcode"
+        target="_blank" rel="noopener"
+        >Bedimcode</a
+      >
+      2025.3
+    </p>
+  </div>
+</footer>

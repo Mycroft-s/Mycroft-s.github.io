@@ -1,0 +1,10 @@
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.mjs text eol=lf
+assets/css/styles.css -text whitespace=cr-at-eol
+assets/js/main.js text eol=lf
+assets/js/cn-en-translate.js text eol=lf
+assets/js/modules/*.js text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf

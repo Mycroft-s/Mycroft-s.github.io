@@ -1,35 +1,117 @@
-$(document).ready(function () {
-    /*默认语言*/
-    const lang = localStorage.getItem("lang");
-    const defaultLang = lang? lang : "en";
-    $("[i18n]").i18n({
-        defaultLang: defaultLang,
-        filePath: "assets/i18n/", //路径配置
-        filePrefix: "i18n_",
-        fileSuffix: "",
-        forever: true,
-        callback: function () {
-            console.log("i18n is ready.");
-        },
-    });
-    /*中英文切换按钮*/
-    const text = defaultLang =="cn"?"中/En":"En/中";
-    $("#nav__translate").text(text);
-    $("#translate").click(function (e) {
-        const currentLang = localStorage.getItem("lang")? localStorage.getItem("lang") : defaultLang;
-        const targetLang = currentLang == "cn" ? "en" : "cn"; // 目标语言
-        const text = targetLang =="cn"?"中/En":"En/中";
-        $("#nav__translate").text(text);
+import { readPreference, writePreference } from './modules/storage.js';
 
-        $("[i18n]").i18n({
-            defaultLang: targetLang,
-            filePath: "assets/i18n/",
-            callback: function () {
-                localStorage.setItem("lang", targetLang);
-                console.log(localStorage.getItem("lang"));
-            }
+const controllers = new WeakMap();
+const supportedLanguages = new Set(['en', 'cn']);
+
+/**
+ * Translate the existing static page using the repository's trusted JSON files.
+ * Keep HTML values (links and line breaks) intact; missing keys retain the
+ * original static content, including when switching between partial locales.
+ */
+export function initLanguage(root = document, fetcher = globalThis.fetch) {
+  if (controllers.has(root)) return controllers.get(root);
+
+  const button = root.getElementById('translate');
+  const label = root.getElementById('nav__translate');
+  const fallback = new WeakMap();
+  const cache = new Map();
+  let currentLanguage = root.documentElement.lang.startsWith('zh') ? 'cn' : 'en';
+  let requestedLanguage = currentLanguage;
+  let requestVersion = 0;
+
+  const rememberFallback = element => {
+    if (!fallback.has(element)) {
+      fallback.set(element, {
+        html: element.innerHTML,
+        value: element.value,
+        placeholder: element.getAttribute('placeholder'),
+      });
+    }
+    return fallback.get(element);
+  };
+  root.querySelectorAll('[i18n]').forEach(rememberFallback);
+
+  const updateLabel = () => {
+    if (label) label.textContent = currentLanguage === 'cn' ? '中/En' : 'En/中';
+    button?.setAttribute('value', currentLanguage);
+  };
+  updateLabel();
+
+  const loadTranslations = language => {
+    if (!cache.has(language)) {
+      const request = Promise.resolve()
+        .then(() => fetcher(`assets/i18n/i18n_${language}.json`))
+        .then(async response => {
+          if (!response.ok) throw new Error(`Translation request failed (${response.status}).`);
+          const translations = await response.json();
+          if (!translations || typeof translations !== 'object' || Array.isArray(translations)) {
+            throw new Error('Translation file must contain a JSON object.');
+          }
+          return translations;
+        })
+        .catch(error => {
+          cache.delete(language); // A later click can retry a transient failure.
+          throw error;
         });
+      cache.set(language, request);
+    }
+    return cache.get(language);
+  };
 
-    });
+  const applyTranslations = translations => {
+    for (const element of root.querySelectorAll('[i18n]')) {
+      const original = rememberFallback(element);
+      const key = element.getAttribute('i18n');
+      const mode = element.getAttribute('i18n-only');
+      const translated = Object.hasOwn(translations, key) && typeof translations[key] === 'string';
+      const value = translated ? translations[key] : undefined;
 
-});
+      if (!mode || mode === 'html') element.innerHTML = value ?? original.html;
+      if ((mode === 'value' || !mode) && original.value !== undefined) {
+        element.value = value ?? original.value;
+      }
+      if ((mode === 'placeholder' || !mode) && original.placeholder !== null) {
+        element.setAttribute('placeholder', value ?? original.placeholder);
+      }
+    }
+  };
+
+  const setLanguage = async language => {
+    if (!supportedLanguages.has(language)) return false;
+    requestedLanguage = language;
+    const version = ++requestVersion;
+    button?.setAttribute('aria-busy', 'true');
+    try {
+      const translations = await loadTranslations(language);
+      // Fast repeated clicks may complete in a different order than requested.
+      if (version !== requestVersion) return false;
+      applyTranslations(translations);
+      currentLanguage = language;
+      root.documentElement.lang = language === 'cn' ? 'zh-CN' : 'en';
+      writePreference('lang', language);
+      updateLabel();
+      return true;
+    } catch (error) {
+      if (version === requestVersion) {
+        requestedLanguage = currentLanguage;
+        console.warn('Language change unavailable; keeping the current page content.', error);
+      }
+      return false;
+    } finally {
+      if (version === requestVersion) button?.setAttribute('aria-busy', 'false');
+    }
+  };
+
+  const controller = {
+    setLanguage,
+    get language() { return currentLanguage; },
+    ready: null,
+  };
+  controllers.set(root, controller);
+  button?.addEventListener('click', () => {
+    void setLanguage(requestedLanguage === 'cn' ? 'en' : 'cn');
+  });
+  const preference = readPreference('lang');
+  controller.ready = setLanguage(supportedLanguages.has(preference) ? preference : 'en');
+  return controller;
+}

@@ -8,24 +8,24 @@
     "photography": "Photography",
     "contact": "Contact",
     "home__title": "Here is Hongdao Meng",
-    "home__subtitle": "Software Engineer / Machine Learning Engineer",
-    "home__description": "He is a Master’s student in Computer Science at New York University and a Software Engineer Intern at TikTok, specializing in machine learning, data engineering, and software development.",
+    "home__subtitle": "AI Engineer",
+    "home__description": "Based in San Jose, I work on Transaction Agent in TikTok’s GMPT Transaction Platform team, focusing on high-performance knowledge bases, automated skill generation, and offline agent evaluation and self-improvement.",
     "home__contact": "Contact Me",
     "home__scroll-name": "Scroll down",
 
     "about__title": "About Me",
     "about__subtitle": "My Introduction",
-    "about__description": "Hi, my name is Hongdao Meng, a Master’s student in Computer Science at NYU with experience in both machine learning and software engineering. I’ve worked on projects ranging from building a deepfake detection platform that supported thousands of users, to developing a RAG-based chatbot system that improved both accuracy and latency, and designing large-scale infrastructure at TikTok’s recommendation system team that boosted operator migration throughput by over 95%. I’m proficient in Python, Java, and C++, with experience across frameworks like PyTorch, React, and Django, and cloud platforms like AWS and Kubernetes. I also published first-author research on federated learning in IEEE Transactions on Big Data. Overall, I’m passionate about applying AI and scalable system design to build high-performance applications that make a real impact.",
+    "about__description": "I'm Hongdao Meng, an AI Engineer based in San Jose, California. At TikTok’s GMPT Transaction Platform team, I develop Transaction Agent, focusing on high-performance knowledge bases, automated skill generation, and agent evaluation and self-improvement. My experience spans deepfake detection, RAG, recommendation infrastructure, and federated learning, with a computer science background from NYU and first-author research published in IEEE Transactions on Big Data.",
     "about__info-name1": "Years of <br /> experience",
     "about__info-name2": "Completed <br /> projects",
     "about__info-name3": "Companies <br /> worked",
     "download": "Download CV",
 
 
-    
+
     "news__title": "News",
     "news__subtitle": "My Recent Updates",
-    
+
 
     "skills__title": "Skills",
     "skills__subtitle": "My Technical Proficiency",
@@ -41,6 +41,12 @@
 
     "skills__title4": "Machine Learning & AI",
     "skills__list4": "PyTorch, TensorFlow, Scikit-Learn, Pandas",
+    "skills__fine_tuning": "Fine-tuning",
+    "skills__post_training": "Post-training",
+    "skills__agents": "AI Agents",
+    "skills__knowledge": "RAG & Knowledge Bases",
+    "skills__skill_generation": "Automated Skill Generation",
+    "skills__agent_evaluation": "Agent Evaluation & Self-improvement",
 
     "skills__title5": "Databases",
     "skills__list5": "MySQL, PostgreSQL, MongoDB, Redis, DynamoDB, Oracle, MilvusDB, Elasticsearch",
@@ -81,6 +87,10 @@
     "qualification9__title": "AI Engineer Intern",
     "qualification9__subtitle": "<a href='https://freeleaps.com/home/' target='_blank' rel='noopener'>Freeleaps</a>, Seattle",
 
+    "qualification10__title": "AI Engineer",
+    "qualification10__subtitle": "TikTok · GMPT / Transaction Platform, San Jose",
+    "qualification10__date": "Jul. 13, 2026 – Present",
+
     "portfolio__title": "Portfolio",
     "portfolio__subtitle": "Recent Projects",
 
@@ -104,19 +114,19 @@
 
     "publication__title": "Publications",
     "publication__subtitle": "My recent research papers",
-  
+
     "publication1__title": "Federated Multi-View Multi-Label Classification",
     "publication1__description": "First Author. Published in IEEE Transactions on Big Data, 2025.",
-  
+
     "publication2__title": "Susceptibility Genes Identification in Salt Sensitivity of BP",
     "publication2__description": "Co-author. Published in BMC Genomics, 2024.",
-  
+
     "publication3__title": "Multi-Omics Big Data Analysis in Hypertension Research",
     "publication3__description": "Co-author. Published in Chinese Journal of Cardiology, 2023.",
-  
+
     "publication4__title": "Key Methods of Multi-Modal Information Fusion",
     "publication4__description": "First Author. Patent (Application Number: 2023111952962), 2023.",
-  
+
     "photography__subtitle":"Scroll through my most recent work",
 
     "contact__title": "Contact Me",
@@ -126,5 +136,40 @@
     "email": "E-mail",
     "email__address": "mycrofthd@gmail.com",
     "location": "Location",
-    "location__detail": "New York, USA/ Beijing CN"
+    "location__detail": "San Jose, California, USA / Beijing, China",
+    "gallery__home_link": "Explore the photo archive",
+    "gallery__count_template": "{count} photographs",
+    "gallery__all_devices": "All devices",
+    "gallery__loading": "Loading photograph…",
+    "gallery__image_error": "Could not load this photograph. You can open the original below.",
+    "gallery__viewer_position": "{current} / {total}",
+    "gallery__unknown_device": "Device not recorded",
+    "gallery__archive_year": "Archive year",
+    "gallery__taken": "Taken",
+    "gallery__theme": "Switch theme",
+    "gallery__language": "Switch language",
+    "gallery__title": "Photography",
+    "gallery__eyebrow": "A visual journal",
+    "gallery__intro": "Small moments, open horizons. A collection of things that made me pause.",
+    "gallery__selected": "Selected frames",
+    "gallery__archive": "The archive",
+    "gallery__archive_intro": "Arranged by year, then by the camera behind each frame.",
+    "gallery__browse": "Browse the archive",
+    "gallery__all_years": "All years",
+    "gallery__device": "Device",
+    "gallery__back": "Back to home",
+    "gallery__open": "View photograph",
+    "gallery__close": "Close",
+    "gallery__previous": "Previous",
+    "gallery__next": "Next",
+    "gallery__original": "Open original",
+    "gallery__empty": "No photographs match these filters.",
+    "gallery__footer": "Photographs by Hongdao Meng",
+    "gallery__top": "Back to top",
+    "gallery__photos": "photographs",
+    "gallery__document_title": "Photography — Hongdao Meng",
+    "gallery__year_label": "Year",
+    "gallery__year_hint": "Drag to explore, or choose a year below.",
+    "gallery__photo": "photograph",
+    "gallery__count_one": "{count} photograph"
 }

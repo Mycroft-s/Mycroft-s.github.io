@@ -8,16 +8,16 @@
     "photography": "摄影",
     "contact": "联系方式",
     "home__title": "我是孟宏道",
-    "home__subtitle": "软件工程师 / 机器学习工程师",
-    "home__description": "他是纽约大学计算机科学硕士在读生，现任 TikTok 软件工程实习生，专注于机器学习、数据工程和软件开发。",
+    "home__subtitle": "AI 工程师",
+    "home__description": "我目前常驻美国加州圣何塞，在 TikTok GMPT 旗下的 Transaction Platform 团队从事 Transaction Agent 研发，专注于高性能知识库、Skill 自动生成，以及 Agent 评测与自提升的离线链路。",
     "home__contact": "与我联系",
     "home__scroll-name": "往下滑",
-    
+
 
 
     "about__title": "关于我",
     "about__subtitle": "个人简介",
-    "about__description": "大家好，我叫孟泓道，目前在纽约大学攻读计算机科学硕士。我的经历涵盖了机器学习和软件工程两个方向，曾经主导开发过支持上千用户的深度伪造检测平台，构建过提升准确率和响应速度的RAG聊天机器人系统，并在字节跳动推荐系统团队设计过大规模基础架构，将算子迁移效率提升了80%以上。我熟练掌握Python、Java和C++，熟悉PyTorch、React、Django等框架，以及AWS和Kubernetes等云平台。同时，我以第一作者身份在IEEE Transactions on Big Data上发表了关于联邦学习的研究论文。我对人工智能和可扩展系统充满热情，希望能将这些技术应用到高性能应用的开发中，创造实质性的价值。",
+    "about__description": "我是一名常驻美国加州圣何塞的 AI 工程师，在 TikTok GMPT 旗下的 Transaction Platform 团队从事 Transaction Agent 研发，专注于高性能知识库、Skill 自动生成，以及 Agent 评测与自提升。我的经历涵盖深度伪造检测、RAG、推荐系统基础设施和联邦学习，具有纽约大学计算机科学学习背景，并以第一作者身份在 IEEE Transactions on Big Data 发表研究论文。",
     "about__info-name1": "工作<br/>经验",
     "about__info-name2": "已完成<br/>项目",
     "about__info-name3": "曾任职<br/>公司",
@@ -30,22 +30,28 @@
 
     "skills__title": "技能",
     "skills__subtitle": "技术栈",
-    
+
     "skills__title1": "编程语言",
     "skills__list1": "Java, Python, C/C++, Go, SQL, JavaScript, TypeScript, Shell, PHP, MATLAB, LaTeX",
-    
+
     "skills__title2": "前端开发",
     "skills__list2": "React, Angular, Vue.js, HTML/CSS",
-    
+
     "skills__title3": "后端开发",
     "skills__list3": "Django, Flask, Node.js, Spring Boot",
-    
-    "skills__title4": "机器学习",
+
+    "skills__title4": "机器学习与 AI",
     "skills__list4": "PyTorch, TensorFlow, Scikit-Learn, Pandas",
-    
+    "skills__fine_tuning": "模型微调（Fine-tuning）",
+    "skills__post_training": "后训练（Post-training）",
+    "skills__agents": "AI Agent 开发",
+    "skills__knowledge": "RAG 与知识库",
+    "skills__skill_generation": "Skill 自动生成",
+    "skills__agent_evaluation": "Agent 评测与自提升",
+
     "skills__title5": "数据库",
     "skills__list5": "MySQL, PostgreSQL, MongoDB, Redis, DynamoDB, Oracle, MilvusDB, Elasticsearch",
-    
+
     "skills__title6": "开发工具",
     "skills__list6": "Git, Docker, AWS, Azure, CMake, Jenkins, Nginx, CI/CD, Postman, LangChain, FFmpeg, OpenCV, Grafana, Prometheus",
 
@@ -58,19 +64,19 @@
 
     "qualification1__title": "计算机科学硕士",
     "qualification1__subtitle": "纽约大学",
-    
+
     "qualification2__title": "信息安全学士",
     "qualification2__subtitle": "北京工业大学 ",
-    
+
     "qualification3__title": "北京市翱翔计划优秀学员",
     "qualification3__subtitle": "北京市第八中学(北京Top3)",
 
     "qualification4__title": "AI工程师实习生",
     "qualification4__subtitle": "DeepFake检测初创公司，纽约",
-    
+
     "qualification5__title": "AI算法工程师实习生",
     "qualification5__subtitle": "青腾云平台研发部，北京 ",
-    
+
     "qualification6__title": "AI研究员",
     "qualification6__subtitle": "数据挖掘与安全实验室，北京 ",
 
@@ -83,22 +89,26 @@
     "qualification9__title": "AI工程师实习生",
     "qualification9__subtitle": "<a href='https://freeleaps.com/home/' target='_blank' rel='noopener'>Freeleaps</a>，西雅图",
 
+    "qualification10__title": "AI 工程师",
+    "qualification10__subtitle": "TikTok · GMPT / Transaction Platform，圣何塞（San Jose）",
+    "qualification10__date": "2026 年 7 月 13 日至今",
+
 
     "portfolio__title": "项目集",
     "portfolio__subtitle": "近期项目",
 
     "portfolio1__title": "DeepFake 检测平台",
     "portfolio1__description": "开发基于 React + TypeScript 的核心模块，优化模型性能并部署至 AWS，支持 1200+ 并发用户。",
-    
+
     "portfolio2__title": "RAG 聊天机器人",
     "portfolio2__description": "基于 LangChain 和 MilvusDB 设计混合检索框架，优化查询性能，提高 21.7% 搜索相关性。",
-    
+
     "portfolio3__title": "实时威胁检测平台",
     "portfolio3__description": "利用 Spring Boot 和 Kafka 处理 15 万+ 日均安全日志，优化 SQL 查询，减少警报延迟 22%。",
-    
+
     "portfolio4__title": "联邦多视图多标签学习",
     "portfolio4__description": "在 IEEE Transactions on Big Data 发表论文，提出 FMVML 方法提升平均精度 8.3%。",
-    
+
     "portfolio5__title": "智能健康助手 - 语音驱动AI代理",
     "portfolio5__description": "专为老年人设计的智能健康助手AI代理系统，通过语音交互提供个性化健康管理服务，集成LangChain和实时语音处理技术。",
 
@@ -107,19 +117,19 @@
 
     "publication__title": "发表论文",
     "publication__subtitle": "我最近的研究论文",
-  
+
     "publication1__title": "联邦多视角多标签分类",
     "publication1__description": "第一作者。发表于 IEEE Transactions on Big Data，2025。",
-  
+
     "publication2__title": "血压盐敏感性的易感基因识别及风险评估模型构建",
     "publication2__description": "合著者。发表于 BMC Genomics，2024。",
-  
+
     "publication3__title": "高血压研究中的多组学大数据分析",
     "publication3__description": "合著者。发表于《中华心血管病杂志》，2023。",
-  
+
     "publication4__title": "基于数据隐私保护的多模态信息融合关键方法",
     "publication4__description": "第一作者。国家知识产权局专利（申请号：2023111952962），2023。",
-  
+
     "photography__subtitle":"滚动查看我最近的作品",
 
     "contact__title": "联系方式",
@@ -129,5 +139,40 @@
     "email": "电子邮箱",
     "email__address": "mycrofthd@gmail.com",
     "location": "位置",
-    "location__detail": "纽约，美国/ 北京，中国"
+    "location__detail": "美国加州圣何塞（San Jose） / 中国北京",
+    "gallery__home_link": "查看摄影档案",
+    "gallery__count_template": "{count} 张照片",
+    "gallery__all_devices": "全部设备",
+    "gallery__loading": "照片加载中…",
+    "gallery__image_error": "照片加载失败，可通过下方链接查看原图。",
+    "gallery__viewer_position": "{current} / {total}",
+    "gallery__unknown_device": "设备未记录",
+    "gallery__archive_year": "归档年份",
+    "gallery__taken": "拍摄于",
+    "gallery__theme": "切换主题",
+    "gallery__language": "切换语言",
+    "gallery__title": "摄影",
+    "gallery__eyebrow": "影像手记",
+    "gallery__intro": "在细微处停留，向远方望去。记录那些让我驻足的瞬间。",
+    "gallery__selected": "精选影像",
+    "gallery__archive": "影像档案",
+    "gallery__archive_intro": "按年份整理，也按记录每一刻的设备归档。",
+    "gallery__browse": "浏览影像档案",
+    "gallery__all_years": "全部年份",
+    "gallery__device": "拍摄设备",
+    "gallery__back": "返回主页",
+    "gallery__open": "查看照片",
+    "gallery__close": "关闭",
+    "gallery__previous": "上一张",
+    "gallery__next": "下一张",
+    "gallery__original": "查看原图",
+    "gallery__empty": "没有符合筛选条件的照片。",
+    "gallery__footer": "孟宏道的摄影记录",
+    "gallery__top": "回到顶部",
+    "gallery__photos": "张照片",
+    "gallery__document_title": "摄影 — 孟宏道",
+    "gallery__year_label": "年份",
+    "gallery__year_hint": "拖动滑杆，或点击下方年份浏览。",
+    "gallery__photo": "张照片",
+    "gallery__count_one": "{count} 张照片"
 }
