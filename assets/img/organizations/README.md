@@ -26,4 +26,12 @@ Verified against each LinkedIn profile's official website field on 2026-10-10:
 - [QingTeng Cloud Security](https://www.linkedin.com/company/%E9%9D%92%E8%97%A4%E4%BA%91%E5%AE%89%E5%85%A8/) — qingteng.cn
 - [Beijing University of Technology](https://www.linkedin.com/school/beijing-university-of-technology/) — bjut.edu.cn; used for the Data Mining & Security Lab entry.
 
-The site owner requested leaving the unnamed DeepFake startup unlinked. School entries in the Education tab remain decorative.
+The site owner requested leaving the unnamed DeepFake startup unlinked.
+
+## Education timeline LinkedIn destinations
+
+School buttons reuse the work timeline's link markup, interaction styles, and bilingual new-tab labels. Verified on 2026-10-10:
+
+- [New York University](https://www.linkedin.com/school/new-york-university/) — LinkedIn school page identifies NYU and nyu.edu.
+- [Beijing University of Technology](https://www.linkedin.com/school/beijing-university-of-technology/) — bjut.edu.cn, also used by the research lab entry.
+- [Beijing No.8 High School](https://www.linkedin.com/school/no8ms/) — indexed LinkedIn school page names Beijing No.8 High School, links no8ms.bj.cn, and lists Xicheng District, Beijing and a 1921 founding date.
