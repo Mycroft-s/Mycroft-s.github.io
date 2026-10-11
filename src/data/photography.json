@@ -1037,7 +1037,7 @@
     "yearSource": "folder",
     "cameraMake": "Leica",
     "cameraModel": "",
-    "deviceType": "camera",
+    "deviceType": "film",
     "width": 2075,
     "height": 3130,
     "thumbnail": "assets/img/gallery/photo-202208-thumb.webp",
@@ -1047,12 +1047,12 @@
     "deviceOverride": {
       "cameraMake": "Leica",
       "cameraModel": "",
-      "deviceType": "camera",
-      "deviceLabelEn": "Leica",
-      "deviceLabelCn": "Leica"
+      "deviceType": "film",
+      "deviceLabelEn": "Film · Leica",
+      "deviceLabelCn": "胶片 · 莱卡"
     },
-    "deviceLabelEn": "Leica",
-    "deviceLabelCn": "Leica",
+    "deviceLabelEn": "Film · Leica",
+    "deviceLabelCn": "胶片 · 莱卡",
     "descriptionEn": "A walker on a sunlit path",
     "descriptionCn": "阳光小径上的行人身影"
   },

@@ -67,6 +67,11 @@ function deviceLabel(photo) {
   return (isChinese() ? photo.data.deviceLabelCn : photo.data.deviceLabelEn) || copy('unknown_device');
 }
 
+function deviceMatchesYear() {
+  return selectedYear === 'all' || selectedDevice === 'all'
+    || photos.some(photo => photo.year === selectedYear && photo.device === selectedDevice);
+}
+
 function updateLocation() {
   const url = new URL(location.href);
   // Keep overview explicit: an absent year always means the newest archive.
@@ -81,6 +86,11 @@ function readLocation() {
   selectedYear = query.get('year') === 'all' || years.includes(query.get('year')) ? query.get('year') : latestYear;
   rangeYear = selectedYear === 'all' ? latestYear : selectedYear;
   selectedDevice = devices.has(query.get('device')) ? query.get('device') : 'all';
+  // A camera link must remain useful even when its photos are from older years.
+  if (!deviceMatchesYear()) {
+    selectedYear = 'all';
+    updateLocation();
+  }
 }
 
 function initYearRange() {
@@ -113,14 +123,9 @@ function updateYearControls() {
 }
 
 function updateDeviceOptions() {
-  const available = new Map();
-  for (const photo of photos) {
-    if (selectedYear === 'all' || photo.year === selectedYear) available.set(photo.device, photo);
-  }
-  // Keep a device only if the next year has photos taken with it.
-  if (!available.has(selectedDevice)) selectedDevice = 'all';
+  // Keep every camera discoverable, including cameras used in earlier years.
   deviceControl.replaceChildren(new Option(copy('all_devices'), 'all'),
-    ...[...available].map(([value, photo]) => new Option(deviceLabel(photo), value)));
+    ...[...devices].map(([value, photo]) => new Option(deviceLabel(photo), value)));
   deviceControl.value = selectedDevice;
 }
 
@@ -216,6 +221,8 @@ function updateLanguage() {
 function selectYear(year) {
   selectedYear = year;
   if (year !== 'all') rangeYear = year;
+  // An explicit year choice takes priority over a previous camera selection.
+  if (!deviceMatchesYear()) selectedDevice = 'all';
   filterPhotos();
   updateLocation();
 }
@@ -241,6 +248,8 @@ yearRange.addEventListener('keydown', event => {
 });
 deviceControl.addEventListener('change', () => {
   selectedDevice = devices.has(deviceControl.value) ? deviceControl.value : 'all';
+  // An explicit camera choice opens its archive rather than an empty year.
+  if (!deviceMatchesYear()) selectedYear = 'all';
   filterPhotos();
   updateLocation();
 });
