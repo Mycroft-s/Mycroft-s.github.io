@@ -507,14 +507,66 @@
                 <i class="uil uil-angle-down skills__arrow"></i>
               </div>
               <div class="skills__list grid">
-                <ul class="skills__tags">
-                  <li i18n="skills__fine_tuning">Fine-tuning</li>
-                  <li i18n="skills__post_training">Post-training</li>
-                  <li i18n="skills__agents">AI Agents</li>
-                  <li i18n="skills__knowledge">RAG & Knowledge Bases</li>
-                  <li i18n="skills__skill_generation">Automated Skill Generation</li>
-                  <li i18n="skills__agent_evaluation">Agent Evaluation & Self-improvement</li>
-                </ul>
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name" id="skill-fine-tuning" i18n="skills__fine_tuning">Fine-tuning</h3>
+                    <span class="skills__number">100%</span>
+                  </div>
+                  <div class="skills__bar" role="progressbar" aria-labelledby="skill-fine-tuning" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+                    <div class="skills__percentage skills__full"></div>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name" id="skill-post-training" i18n="skills__post_training">Post-training</h3>
+                    <span class="skills__number">100%</span>
+                  </div>
+                  <div class="skills__bar" role="progressbar" aria-labelledby="skill-post-training" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+                    <div class="skills__percentage skills__full"></div>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name" id="skill-agents" i18n="skills__agents">AI Agents</h3>
+                    <span class="skills__number">100%</span>
+                  </div>
+                  <div class="skills__bar" role="progressbar" aria-labelledby="skill-agents" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+                    <div class="skills__percentage skills__full"></div>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name" id="skill-knowledge" i18n="skills__knowledge">RAG & Knowledge Bases</h3>
+                    <span class="skills__number">100%</span>
+                  </div>
+                  <div class="skills__bar" role="progressbar" aria-labelledby="skill-knowledge" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+                    <div class="skills__percentage skills__full"></div>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name" id="skill-generation" i18n="skills__skill_generation">Automated Skill Generation</h3>
+                    <span class="skills__number">100%</span>
+                  </div>
+                  <div class="skills__bar" role="progressbar" aria-labelledby="skill-generation" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+                    <div class="skills__percentage skills__full"></div>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name" id="skill-agent-evaluation" i18n="skills__agent_evaluation">Agent Evaluation & Self-improvement</h3>
+                    <span class="skills__number">100%</span>
+                  </div>
+                  <div class="skills__bar" role="progressbar" aria-labelledby="skill-agent-evaluation" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+                    <div class="skills__percentage skills__full"></div>
+                  </div>
+                </div>
+
                 <div class="skills__data">
                   <div class="skills__titles">
                     <h3 class="skills__name">PyTorch</h3>
@@ -793,12 +845,12 @@
               class="qualification__button button--flex qualification__active"
               data-target="#work"
             >
-              <i class="uil uil-graduation-cap qualification__icon"></i>
+              <i class="uil uil-briefcase-alt qualification__icon"></i>
               <span i18n="work">Work</span>
             </div>
 
             <div class="qualification__button button--flex" data-target="#education">
-              <i class="uil uil-briefcase-alt qualification__icon"></i>
+              <i class="uil uil-graduation-cap qualification__icon"></i>
               <span i18n="education">Education</span>
             </div>
           </div>
@@ -808,11 +860,13 @@
               <!-- Current role; continue the alternating timeline into earlier roles. -->
               <div class="qualification__data">
                 <div></div>
-                <div>
-                  <span class="qualification__rounder"></span>
+                <div class="qualification__marker">
+                  <span class="qualification__badge" aria-hidden="true">
+                    <img class="qualification__logo" src="assets/img/organizations/tiktok.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                  </span>
                   <span class="qualification__line"></span>
                 </div>
-                <div>
+                <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification10__title">AI Engineer</h3>
                   <span class="qualification__subtitle" i18n="qualification10__subtitle">TikTok · GMPT / Transaction Platform, San Jose</span>
                   <div class="qualification__calendar">
@@ -824,7 +878,7 @@
 
               <!--==================== QUALIFICATION tiktok  ====================-->
               <div class="qualification__data">
-                <div>
+                <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification8__title">Software Engineer Intern</h3>
                   <span class="qualification__subtitle" i18n="qualification8__subtitle">Tiktok, Seattle </span>
                   <div class="qualification__calendar">
@@ -832,8 +886,10 @@
                     May. 2025 - Sep. 2025, Jan. 2026 - May 2026
                   </div>
                 </div>
-                <div>
-                  <span class="qualification__rounder"></span>
+                <div class="qualification__marker">
+                  <span class="qualification__badge" aria-hidden="true">
+                    <img class="qualification__logo" src="assets/img/organizations/tiktok.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                  </span>
                   <span class="qualification__line"></span>
                 </div>
               </div>
@@ -841,11 +897,13 @@
                <!--==================== QUALIFICATION C2smarter  ====================-->
                <div class="qualification__data">
                 <div></div>
-                <div>
-                  <span class="qualification__rounder"></span>
+                <div class="qualification__marker">
+                  <span class="qualification__badge" aria-hidden="true">
+                    <img class="qualification__logo" src="assets/img/organizations/c2smarter.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                  </span>
                   <span class="qualification__line"></span>
                 </div>
-                <div>
+                <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification7__title">Software Engineer Intern</h3>
                   <span class="qualification__subtitle" i18n="qualification7__subtitle"><a href='https://c2smart.engineering.nyu.edu/' target='_blank' rel='noopener'>C2SMARTER Center</a> (Feb. 2025- Present), New York</span>
                   <div class="qualification__calendar">
@@ -857,7 +915,7 @@
 
               <!--==================== QUALIFICATION Freeleaps  ====================-->
               <div class="qualification__data">
-                <div>
+                <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification9__title">AI Engineer Intern</h3>
                   <span class="qualification__subtitle" i18n="qualification9__subtitle"><a href='https://freeleaps.com/home/' target='_blank' rel='noopener'>Freeleaps</a>, Seattle</span>
                   <div class="qualification__calendar">
@@ -865,8 +923,10 @@
                     Mar. 2025 - May 2025
                   </div>
                 </div>
-                <div>
-                  <span class="qualification__rounder"></span>
+                <div class="qualification__marker">
+                  <span class="qualification__badge" aria-hidden="true">
+                    <img class="qualification__logo" src="assets/img/organizations/freeleaps.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                  </span>
                   <span class="qualification__line"></span>
                 </div>
               </div>
@@ -874,11 +934,13 @@
               <!--==================== QUALIFICATION DeepFake Detection ====================-->
               <div class="qualification__data">
                 <div></div>
-                <div>
-                  <span class="qualification__rounder"></span>
+                <div class="qualification__marker">
+                  <span class="qualification__badge qualification__badge--symbol" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4 5 7 8 9 3-2 8-5 8-9V6z"/><path d="m8 12 3 3 5-6"/></svg>
+                  </span>
                   <span class="qualification__line"></span>
                 </div>
-                <div>
+                <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification4__title">AI Engineer Intern</h3>
                   <span class="qualification__subtitle" i18n="qualification4__subtitle">DeepFake Detection Startup, New York</span>
                   <div class="qualification__calendar">
@@ -890,7 +952,7 @@
 
               <!--==================== QUALIFICATION QingTeng ====================-->
               <div class="qualification__data">
-                <div>
+                <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification5__title">AI Algorithms Engineer Intern</h3>
                   <span class="qualification__subtitle" i18n="qualification5__subtitle">QingTeng, Cloud Platform R&D Department, Beijing</span>
                   <div class="qualification__calendar">
@@ -898,8 +960,10 @@
                     Feb. 2024 - Aug. 2024
                   </div>
                 </div>
-                <div>
-                  <span class="qualification__rounder"></span>
+                <div class="qualification__marker">
+                  <span class="qualification__badge" aria-hidden="true">
+                    <img class="qualification__logo" src="assets/img/organizations/qingteng.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                  </span>
                   <span class="qualification__line"></span>
                 </div>
               </div>
@@ -907,11 +971,13 @@
               <!--==================== QUALIFICATION Data Mining Lab ====================-->
               <div class="qualification__data">
                 <div></div>
-                <div>
-                  <span class="qualification__rounder"></span>
+                <div class="qualification__marker">
+                  <span class="qualification__badge qualification__badge--symbol" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-6 10a1.3 1.3 0 0 0 1 2h14a1.3 1.3 0 0 0 1-2L14 9V3M7 15h10"/><circle cx="10" cy="18" r=".6" fill="currentColor" stroke="none"/><circle cx="14" cy="17" r=".6" fill="currentColor" stroke="none"/></svg>
+                  </span>
                   <!-- 最后一个不要加 qualification__line -->
                 </div>
-                <div>
+                <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification6__title">AI Researcher</h3>
                   <span class="qualification__subtitle" i18n="qualification6__subtitle">Data Mining & Security Lab, Beijing</span>
                   <div class="qualification__calendar">
@@ -926,7 +992,7 @@
             <div class="qualification__content" data-content id="education">
               <!--==================== QUALIFICATION 1 ====================-->
               <div class="qualification__data">
-                <div>
+                <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification1__title">Master of Science in Computer Science</h3>
                   <span class="qualification__subtitle" i18n="qualification1__subtitle">New York University</span>
                   <div class="qualification__calendar">
@@ -935,8 +1001,10 @@
                   </div>
                 </div>
 
-                <div>
-                  <span class="qualification__rounder"></span>
+                <div class="qualification__marker">
+                  <span class="qualification__badge" aria-hidden="true">
+                    <img class="qualification__logo" src="assets/img/organizations/nyu.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                  </span>
                   <span class="qualification__line"></span>
                 </div>
               </div>
@@ -944,11 +1012,13 @@
               <!--==================== QUALIFICATION 2 ====================-->
               <div class="qualification__data">
                 <div></div>
-                <div>
-                  <span class="qualification__rounder"></span>
+                <div class="qualification__marker">
+                  <span class="qualification__badge" aria-hidden="true">
+                    <img class="qualification__logo" src="assets/img/organizations/bjut.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                  </span>
                   <span class="qualification__line"></span>
                 </div>
-                <div>
+                <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification2__title">Bachelor of Engineering in Information Security</h3>
                   <span class="qualification__subtitle" i18n="qualification2__subtitle">Beijing University of Technology</span>
                   <div class="qualification__calendar">
@@ -960,7 +1030,7 @@
 
               <!--==================== QUALIFICATION 3 ====================-->
               <div class="qualification__data">
-                <div>
+                <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification3__title">Outstanding student of Beijing Soaring Program</h3>
                   <span class="qualification__subtitle" i18n="qualification3__subtitle">Beijing No.8 High School (Top3 in Beijing)</span>
                   <div class="qualification__calendar">
@@ -969,8 +1039,10 @@
                   </div>
                 </div>
 
-                <div>
-                  <span class="qualification__rounder"></span>
+                <div class="qualification__marker">
+                  <span class="qualification__badge" aria-hidden="true">
+                    <img class="qualification__logo" src="assets/img/organizations/beijing-no8.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                  </span>
                   <!-- 最后一个不要加 qualification__line -->
                 </div>
               </div>

@@ -211,14 +211,66 @@
           <i class="uil uil-angle-down skills__arrow"></i>
         </div>
         <div class="skills__list grid">
-          <ul class="skills__tags">
-            <li i18n="skills__fine_tuning">{{ t:skills__fine_tuning }}</li>
-            <li i18n="skills__post_training">{{ t:skills__post_training }}</li>
-            <li i18n="skills__agents">{{ t:skills__agents }}</li>
-            <li i18n="skills__knowledge">{{ t:skills__knowledge }}</li>
-            <li i18n="skills__skill_generation">{{ t:skills__skill_generation }}</li>
-            <li i18n="skills__agent_evaluation">{{ t:skills__agent_evaluation }}</li>
-          </ul>
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name" id="skill-fine-tuning" i18n="skills__fine_tuning">{{ t:skills__fine_tuning }}</h3>
+              <span class="skills__number">100%</span>
+            </div>
+            <div class="skills__bar" role="progressbar" aria-labelledby="skill-fine-tuning" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+              <div class="skills__percentage skills__full"></div>
+            </div>
+          </div>
+
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name" id="skill-post-training" i18n="skills__post_training">{{ t:skills__post_training }}</h3>
+              <span class="skills__number">100%</span>
+            </div>
+            <div class="skills__bar" role="progressbar" aria-labelledby="skill-post-training" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+              <div class="skills__percentage skills__full"></div>
+            </div>
+          </div>
+
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name" id="skill-agents" i18n="skills__agents">{{ t:skills__agents }}</h3>
+              <span class="skills__number">100%</span>
+            </div>
+            <div class="skills__bar" role="progressbar" aria-labelledby="skill-agents" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+              <div class="skills__percentage skills__full"></div>
+            </div>
+          </div>
+
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name" id="skill-knowledge" i18n="skills__knowledge">{{ t:skills__knowledge }}</h3>
+              <span class="skills__number">100%</span>
+            </div>
+            <div class="skills__bar" role="progressbar" aria-labelledby="skill-knowledge" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+              <div class="skills__percentage skills__full"></div>
+            </div>
+          </div>
+
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name" id="skill-generation" i18n="skills__skill_generation">{{ t:skills__skill_generation }}</h3>
+              <span class="skills__number">100%</span>
+            </div>
+            <div class="skills__bar" role="progressbar" aria-labelledby="skill-generation" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+              <div class="skills__percentage skills__full"></div>
+            </div>
+          </div>
+
+          <div class="skills__data">
+            <div class="skills__titles">
+              <h3 class="skills__name" id="skill-agent-evaluation" i18n="skills__agent_evaluation">{{ t:skills__agent_evaluation }}</h3>
+              <span class="skills__number">100%</span>
+            </div>
+            <div class="skills__bar" role="progressbar" aria-labelledby="skill-agent-evaluation" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+              <div class="skills__percentage skills__full"></div>
+            </div>
+          </div>
+
           <div class="skills__data">
             <div class="skills__titles">
               <h3 class="skills__name">PyTorch</h3>

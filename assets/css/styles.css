@@ -601,22 +601,6 @@ img {
   margin-bottom: var(--mb-0-5)
 }
 
-.skills__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
-}
-
-.skills__tags li {
-  max-width: 100%;
-  padding: .35rem .65rem;
-  border: 1px solid var(--first-color-lighter);
-  border-radius: .35rem;
-  color: var(--text-color);
-  font-size: var(--small-font-size);
-  line-height: 1.5;
-}
-
 .skills__name {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
@@ -1402,4 +1386,52 @@ img {
   .contact__inputs {
       grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* Full AI skill bars and organization badges share the existing visual tokens. */
+.skills__full { width: 100%; }
+.skills__titles { gap: 1rem; align-items: baseline; }
+.skills__number { flex-shrink: 0; }
+.skills__name { min-width: 0; }
+.qualification__data {
+  grid-template-columns: minmax(0, 1fr) 48px minmax(0, 1fr);
+  column-gap: 1.25rem;
+}
+.qualification__entry { min-width: 0; padding-top: .25rem; padding-bottom: 1.75rem; }
+.qualification__marker { display: flex; flex-direction: column; align-items: center; }
+.qualification__badge {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  padding: 6px;
+  border: 1px solid hsl(var(--hue-color), 35%, 88%);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 3px 12px hsl(var(--hue-color), 25%, 25%, .06);
+}
+.qualification__logo { display: block; width: 100%; height: 100%; max-width: 32px; max-height: 32px; object-fit: contain; }
+.qualification__badge--symbol {
+  background: var(--container-color);
+  color: var(--first-color);
+  font-size: 1.45rem;
+}
+.qualification__marker .qualification__line {
+  flex: 1;
+  min-height: 24px;
+  height: auto;
+  margin-block: 3px;
+  transform: none;
+  opacity: .55;
+}
+.dark-theme .qualification__badge { border-color: hsl(var(--hue-color), 20%, 55%); }
+@media screen and (min-width: 568px) {
+  .qualification__sections { grid-template-columns: minmax(0, 640px); }
+}
+@media screen and (max-width: 480px) {
+  .qualification__data { grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr); column-gap: .65rem; }
+  .qualification__badge { width: 40px; height: 40px; padding: 5px; }
+  .qualification__title { overflow-wrap: anywhere; }
+  .qualification__subtitle { overflow-wrap: anywhere; }
 }
