@@ -14,4 +14,16 @@ These local assets identify the companies and schools in the Experience timeline
 
 ICO resources were converted to PNG without cropping or recoloring. Display marks at no more than 32 CSS pixels so the smallest source assets stay crisp.
 
-Edit entries in `src/sections/qualification.html`, then run `npm run build`. The unnamed startup and research lab use decorative inline SVG symbols rather than invented organization marks. Images are decorative because each adjacent entry already names its organization.
+Edit entries in `src/sections/qualification.html`, then run `npm run build`. The unnamed startup uses a decorative inline SVG symbol. The research lab uses BJUT's mark, as confirmed by the site owner. Logo images use empty alt text; clickable marks have a bilingual text label that names the destination and announces the new tab.
+
+## Work timeline LinkedIn destinations
+
+Verified against each LinkedIn profile's official website field on 2026-10-10:
+
+- [TikTok](https://www.linkedin.com/company/tiktok/) — tiktok.com
+- [C2SMARTER](https://www.linkedin.com/company/c2smart-center/) — c2smart.engineering.nyu.edu
+- [Freeleaps](https://www.linkedin.com/company/freeleaps/) — freeleaps.com
+- [QingTeng Cloud Security](https://www.linkedin.com/company/%E9%9D%92%E8%97%A4%E4%BA%91%E5%AE%89%E5%85%A8/) — qingteng.cn
+- [Beijing University of Technology](https://www.linkedin.com/school/beijing-university-of-technology/) — bjut.edu.cn; used for the Data Mining & Security Lab entry.
+
+The site owner requested leaving the unnamed DeepFake startup unlinked. School entries in the Education tab remain decorative.
