@@ -1,11 +1,8 @@
 <div class="portfolio__content grid swiper-slide">
-  <img src="{{ text:image }}" alt="{{ text:alt }}" class="portfolio__img" />
+  <img src="{{ text:image }}" alt="{{ text:alt }}" class="portfolio__img" loading="lazy" decoding="async" />
   <div class="portfolio_">
     <h3 class="portfolio__title" i18n="{{ text:titleKey }}">{{ i18n:titleKey }}</h3>
     <p class="{{ text:descriptionClass }}" i18n="{{ text:descriptionKey }}">{{ i18n:descriptionKey }}</p>
-    <a href="{{ text:url }}" target="_blank" rel="noopener" class="button button--flex button--small portfolio__button">
-      {{ text:buttonLabel }}
-      <i class="uil uil-arrow-right button__icon"></i>
-    </a>
+    <div class="project-actions">{{ html:actionsHtml }}</div>
   </div>
 </div>

@@ -5,6 +5,7 @@ import { initSkills } from './modules/skills.js';
 import { initSliders } from './modules/sliders.js';
 import { initTabs } from './modules/tabs.js';
 import { initTheme } from './modules/theme.js';
+import { initContact } from './modules/contact.js';
 
 // Module scripts are deferred: the static page is already available here.
 initNavigation();
@@ -13,4 +14,5 @@ initSkills();
 initTabs();
 initSliders();
 initReveal();
+initContact();
 initLanguage();

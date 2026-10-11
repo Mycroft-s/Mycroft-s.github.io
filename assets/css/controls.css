@@ -1,0 +1,144 @@
+/* Native controls retain the site's typography and purple interaction language. */
+.control-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.nav__control,
+.skills__header,
+.qualification__button,
+.contact__copy {
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: color .18s ease, background-color .18s ease, transform .18s ease;
+}
+
+.nav__control {
+  padding: .25rem;
+  border-radius: .45rem;
+}
+
+.nav__control:focus-visible,
+.nav__link:focus-visible,
+.skills__header:focus-visible,
+.qualification__button:focus-visible,
+.contact__link:focus-visible,
+.contact__copy:focus-visible,
+.contact__copy-field:focus-visible {
+  outline: 2px solid var(--first-color);
+  outline-offset: 4px;
+}
+
+.nav__control:active,
+.skills__header:active,
+.qualification__button:active,
+.contact__copy:active {
+  transform: translateY(1px) scale(.98);
+}
+
+.skills__heading { margin: 0; }
+.skills__header {
+  width: 100%;
+  min-height: 44px;
+  padding: 0;
+  text-align: left;
+  color: var(--title-color);
+  border-radius: .5rem;
+}
+.skills__header:hover .skills__title { color: var(--first-color); }
+.skills__title { font-weight: var(--font-semi-bold); }
+.skills__evidence { margin-top: .45rem; font-size: var(--small-font-size); }
+.skills__evidence summary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .4rem;
+  width: fit-content;
+  min-height: 36px;
+  margin-left: auto;
+  padding-inline: .35rem;
+  border-radius: .35rem;
+  color: var(--first-color);
+  cursor: pointer;
+  list-style: none;
+}
+.skills__evidence summary::-webkit-details-marker { display: none; }
+.skills__evidence summary:focus-visible,
+.skills__evidence a:focus-visible { outline: 2px solid var(--first-color); outline-offset: 3px; }
+.skills__evidence summary:hover { background: hsl(var(--hue-color), 69%, 61%, .08); }
+.skills__evidence-indicator { font-size: 1.05rem; }
+.skills__evidence[open] .skills__evidence-indicator { transform: rotate(45deg); }
+.skills__evidence-body {
+  padding: .85rem 1rem;
+  border-left: 2px solid var(--first-color);
+  border-radius: 0 .5rem .5rem 0;
+  background: hsl(var(--hue-color), 69%, 61%, .06);
+  line-height: 1.65;
+}
+.skills__evidence-body a { display: inline-block; margin-top: .4rem; color: var(--first-color); }
+.skills__evidence-body a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.skills__list[hidden],
+.qualification__content[hidden],
+.contact__copy[hidden],
+.contact__copy-fallback[hidden] { display: none; }
+
+.qualification__button {
+  padding: .6rem .85rem;
+  border-radius: .7rem;
+  color: var(--text-color);
+}
+.qualification__button[aria-selected="true"] {
+  background: hsl(var(--hue-color), 69%, 61%, .1);
+}
+.qualification__button:hover,
+.contact__copy:hover { background: hsl(var(--hue-color), 69%, 61%, .08); }
+
+.contact__link { color: inherit; text-underline-offset: .2em; }
+.contact__link:hover { color: var(--first-color); text-decoration: underline; }
+.contact__phone { display: inline-block; padding-block: .35rem; }
+.contact__email-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .8rem; }
+.contact__copy {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  min-height: 40px;
+  padding: .35rem .55rem;
+  border-radius: .5rem;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+.contact__copy:disabled { opacity: .6; cursor: progress; }
+.contact__copy-status { max-width: 30rem; font-size: var(--small-font-size); color: var(--text-color); }
+.contact__copy-status:not(:empty) { margin-top: .4rem; }
+.contact__copy-fallback { display: grid; gap: .35rem; margin-top: .5rem; font-size: var(--small-font-size); }
+.contact__copy-field {
+  width: 100%;
+  max-width: 25rem;
+  padding: .6rem .7rem;
+  border: 1px solid var(--first-color);
+  border-radius: .5rem;
+  font: inherit;
+  color: var(--title-color);
+  background: var(--container-color);
+}
+
+@media (max-width: 767px) {
+  .nav__control { min-width: 44px; min-height: 44px; }
+  .nav__link { min-height: 44px; }
+  .contact__phone { min-height: 44px; display: inline-flex; align-items: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav__control, .skills__header, .qualification__button, .contact__copy { transition: none; }
+}

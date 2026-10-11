@@ -5,8 +5,16 @@
     "titleKey": "portfolio1__title",
     "descriptionKey": "portfolio1__description",
     "descriptionClass": "portfolio__description",
-    "url": "https://github.com/Mycroft-s/image_and_audio_deepfakededtection",
-    "buttonLabel": "Demo"
+    "links": [
+      {
+        "kind": "details",
+        "url": "project-deepfake.html"
+      },
+      {
+        "kind": "code",
+        "url": "https://github.com/Mycroft-s/image_and_audio_deepfakededtection"
+      }
+    ]
   },
   {
     "image": "assets/img/rag.jpg",
@@ -14,8 +22,16 @@
     "titleKey": "portfolio2__title",
     "descriptionKey": "portfolio2__description",
     "descriptionClass": "portfolio__description",
-    "url": "https://github.com/Mycroft-s/Web-Search-Engines-CS-GY-6913-A",
-    "buttonLabel": "Demo"
+    "links": [
+      {
+        "kind": "details",
+        "url": "project-rag.html"
+      },
+      {
+        "kind": "code",
+        "url": "https://github.com/Mycroft-s/Web-Search-Engines-CS-GY-6913-A/tree/main/Hybrid_search_bgem3_LLMs"
+      }
+    ]
   },
   {
     "image": "assets/img/portfolio3.jpg",
@@ -23,17 +39,25 @@
     "titleKey": "portfolio3__title",
     "descriptionKey": "portfolio3__description",
     "descriptionClass": "portfolio__description",
-    "url": "https://github.com/Mycroft-s",
-    "buttonLabel": "Demo"
+    "links": [
+      {
+        "kind": "experience",
+        "url": "#qualification"
+      }
+    ]
   },
   {
-    "image": "assets/img/deepfake_cover.jpg",
-    "alt": "Voice-driven AI Agents",
+    "image": "assets/img/FMVML.png",
+    "alt": "Federated multi-view multi-label learning",
     "titleKey": "portfolio4__title",
     "descriptionKey": "portfolio4__description",
     "descriptionClass": "portfolio__description",
-    "url": "https://github.com/Mycroft-s/voice-driven-AI-agents",
-    "buttonLabel": "Demo"
+    "links": [
+      {
+        "kind": "paper",
+        "url": "https://ieeexplore.ieee.org/document/10816109"
+      }
+    ]
   },
   {
     "image": "assets/img/portfolio1.jpg",
@@ -41,16 +65,28 @@
     "titleKey": "portfolio5__title",
     "descriptionKey": "portfolio5__description",
     "descriptionClass": "portfolio__description",
-    "url": "https://github.com/Mycroft-s/voice-driven-AI-agents",
-    "buttonLabel": "Demo"
+    "links": [
+      {
+        "kind": "details",
+        "url": "project-voice-agent.html"
+      },
+      {
+        "kind": "code",
+        "url": "https://github.com/Mycroft-s/voice-driven-AI-agents"
+      }
+    ]
   },
   {
     "image": "assets/img/portfolio2.jpg",
-    "alt": "Voice-driven AI Agents",
+    "alt": "Recommendation systems presentation",
     "titleKey": "portfolio6__title",
     "descriptionKey": "portfolio6__description",
     "descriptionClass": "portfolio__description",
-    "url": "https://www.youtube.com/watch?v=Xv3h8YH95ZQ",
-    "buttonLabel": "Demo"
+    "links": [
+      {
+        "kind": "video",
+        "url": "https://www.youtube.com/watch?v=Xv3h8YH95ZQ"
+      }
+    ]
   }
 ]

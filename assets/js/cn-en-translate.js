@@ -15,6 +15,24 @@ export function initLanguage(root = document, fetcher = globalThis.fetch) {
   const label = root.getElementById('nav__translate');
   const fallback = new WeakMap();
   const cache = new Map();
+  // Built from structured content; these keys have a single authored source.
+  let contentTranslations = {};
+  const contentElement = root.getElementById('content-translations');
+  if (contentElement) {
+    try {
+      const embedded = JSON.parse(contentElement.textContent);
+      if (!embedded || typeof embedded !== 'object' || Array.isArray(embedded)) throw new Error('Invalid content translations.');
+      for (const language of ['en', 'cn']) {
+        const values = embedded[language];
+        if (!values || typeof values !== 'object' || Array.isArray(values) || Object.values(values).some(value => typeof value !== 'string')) {
+          throw new Error('Invalid content translation dictionary.');
+        }
+      }
+      contentTranslations = embedded;
+    } catch {
+      console.warn('Structured translations unavailable; preserving static content.');
+    }
+  }
   let currentLanguage = root.documentElement.lang.startsWith('zh') ? 'cn' : 'en';
   let requestedLanguage = currentLanguage;
   let requestVersion = 0;
@@ -25,6 +43,7 @@ export function initLanguage(root = document, fetcher = globalThis.fetch) {
         html: element.innerHTML,
         value: element.value,
         placeholder: element.getAttribute('placeholder'),
+        content: element.getAttribute('content'),
       });
     }
     return fallback.get(element);
@@ -47,7 +66,7 @@ export function initLanguage(root = document, fetcher = globalThis.fetch) {
           if (!translations || typeof translations !== 'object' || Array.isArray(translations)) {
             throw new Error('Translation file must contain a JSON object.');
           }
-          return translations;
+          return { ...translations, ...contentTranslations[language] };
         })
         .catch(error => {
           cache.delete(language); // A later click can retry a transient failure.
@@ -72,6 +91,9 @@ export function initLanguage(root = document, fetcher = globalThis.fetch) {
       }
       if ((mode === 'placeholder' || !mode) && original.placeholder !== null) {
         element.setAttribute('placeholder', value ?? original.placeholder);
+      }
+      if (mode === 'content' && original.content !== null) {
+        element.setAttribute('content', value ?? original.content);
       }
     }
   };

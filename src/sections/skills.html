@@ -6,15 +6,15 @@
     <div>
       <!--==================== Programming Languages ====================-->
       <div class="skills__content skills__open">
-        <div class="skills__header">
-          <i class="uil uil-brackets-curly skills__icon"></i>
-          <div>
-            <h1 class="skills__title" i18n="skills__title1">{{ t:skills__title1 }}</h1>
-          </div>
-          <i class="uil uil-angle-down skills__arrow"></i>
-        </div>
+        <h3 class="skills__heading">
+          <button class="skills__header" type="button" id="skills-toggle-1" aria-expanded="true" aria-controls="skills-list-1">
+            <i class="uil uil-brackets-curly skills__icon" aria-hidden="true"></i>
+            <span class="skills__title" i18n="skills__title1">{{ t:skills__title1 }}</span>
+            <i class="uil uil-angle-down skills__arrow" aria-hidden="true"></i>
+          </button>
+        </h3>
 
-        <div class="skills__list grid">
+        <div class="skills__list grid" id="skills-list-1" role="region" aria-labelledby="skills-toggle-1">
           <div class="skills__data">
             <div class="skills__titles">
               <h3 class="skills__name">Python</h3>
@@ -99,14 +99,15 @@
 
       <!--==================== Frontend Development ====================-->
       <div class="skills__content skills__close">
-        <div class="skills__header">
-          <i class="uil uil-html5-alt skills__icon"></i>
-          <div>
-            <h1 class="skills__title" i18n="skills__title2">{{ t:skills__title2 }}</h1>
-          </div>
-          <i class="uil uil-angle-down skills__arrow"></i>
-        </div>
-        <div class="skills__list grid">
+        <h3 class="skills__heading">
+          <button class="skills__header" type="button" id="skills-toggle-2" aria-expanded="false" aria-controls="skills-list-2">
+            <i class="uil uil-html5-alt skills__icon" aria-hidden="true"></i>
+            <span class="skills__title" i18n="skills__title2">{{ t:skills__title2 }}</span>
+            <i class="uil uil-angle-down skills__arrow" aria-hidden="true"></i>
+          </button>
+        </h3>
+
+        <div class="skills__list grid" id="skills-list-2" role="region" aria-labelledby="skills-toggle-2" hidden>
           <div class="skills__data">
             <div class="skills__titles">
               <h3 class="skills__name">React</h3>
@@ -151,14 +152,15 @@
 
       <!--==================== Backend Development ====================-->
       <div class="skills__content skills__close">
-        <div class="skills__header">
-          <i class="uil uil-server-network skills__icon"></i>
-          <div>
-            <h1 class="skills__title" i18n="skills__title3">{{ t:skills__title3 }}</h1>
-          </div>
-          <i class="uil uil-angle-down skills__arrow"></i>
-        </div>
-        <div class="skills__list grid">
+        <h3 class="skills__heading">
+          <button class="skills__header" type="button" id="skills-toggle-3" aria-expanded="false" aria-controls="skills-list-3">
+            <i class="uil uil-server-network skills__icon" aria-hidden="true"></i>
+            <span class="skills__title" i18n="skills__title3">{{ t:skills__title3 }}</span>
+            <i class="uil uil-angle-down skills__arrow" aria-hidden="true"></i>
+          </button>
+        </h3>
+
+        <div class="skills__list grid" id="skills-list-3" role="region" aria-labelledby="skills-toggle-3" hidden>
           <div class="skills__data">
             <div class="skills__titles">
               <h3 class="skills__name">Django</h3>
@@ -203,14 +205,15 @@
 
       <!--==================== Machine Learning & AI ====================-->
       <div class="skills__content skills__close">
-        <div class="skills__header">
-          <i class="uil uil-brain skills__icon"></i>
-          <div>
-            <h1 class="skills__title" i18n="skills__title4">{{ t:skills__title4 }}</h1>
-          </div>
-          <i class="uil uil-angle-down skills__arrow"></i>
-        </div>
-        <div class="skills__list grid">
+        <h3 class="skills__heading">
+          <button class="skills__header" type="button" id="skills-toggle-4" aria-expanded="false" aria-controls="skills-list-4">
+            <i class="uil uil-brain skills__icon" aria-hidden="true"></i>
+            <span class="skills__title" i18n="skills__title4">{{ t:skills__title4 }}</span>
+            <i class="uil uil-angle-down skills__arrow" aria-hidden="true"></i>
+          </button>
+        </h3>
+
+        <div class="skills__list grid" id="skills-list-4" role="region" aria-labelledby="skills-toggle-4" hidden>
           <div class="skills__data">
             <div class="skills__titles">
               <h3 class="skills__name" id="skill-fine-tuning" i18n="skills__fine_tuning">{{ t:skills__fine_tuning }}</h3>
@@ -219,6 +222,13 @@
             <div class="skills__bar" role="progressbar" aria-labelledby="skill-fine-tuning" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
               <div class="skills__percentage skills__full"></div>
             </div>
+            <details class="skills__evidence">
+              <summary><span i18n="skills__practice">{{ t:skills__practice }}</span><span class="skills__evidence-indicator" aria-hidden="true">+</span></summary>
+              <div class="skills__evidence-body">
+                <p i18n="skills__evidence_fine_tuning">{{ t:skills__evidence_fine_tuning }}</p>
+                <a href="project-deepfake.html#implementation"><span i18n="skills__evidence_fine_tuning_link">{{ t:skills__evidence_fine_tuning_link }}</span><span aria-hidden="true"> ↗</span></a>
+              </div>
+            </details>
           </div>
 
           <div class="skills__data">
@@ -229,6 +239,13 @@
             <div class="skills__bar" role="progressbar" aria-labelledby="skill-post-training" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
               <div class="skills__percentage skills__full"></div>
             </div>
+            <details class="skills__evidence">
+              <summary><span i18n="skills__practice">{{ t:skills__practice }}</span><span class="skills__evidence-indicator" aria-hidden="true">+</span></summary>
+              <div class="skills__evidence-body">
+                <p i18n="skills__evidence_post_training">{{ t:skills__evidence_post_training }}</p>
+                <a href="project-deepfake.html#implementation"><span i18n="skills__evidence_post_training_link">{{ t:skills__evidence_post_training_link }}</span><span aria-hidden="true"> ↗</span></a>
+              </div>
+            </details>
           </div>
 
           <div class="skills__data">
@@ -239,6 +256,13 @@
             <div class="skills__bar" role="progressbar" aria-labelledby="skill-agents" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
               <div class="skills__percentage skills__full"></div>
             </div>
+            <details class="skills__evidence">
+              <summary><span i18n="skills__practice">{{ t:skills__practice }}</span><span class="skills__evidence-indicator" aria-hidden="true">+</span></summary>
+              <div class="skills__evidence-body">
+                <p i18n="skills__evidence_agents">{{ t:skills__evidence_agents }}</p>
+                <a href="project-voice-agent.html"><span i18n="skills__evidence_agents_link">{{ t:skills__evidence_agents_link }}</span><span aria-hidden="true"> ↗</span></a>
+              </div>
+            </details>
           </div>
 
           <div class="skills__data">
@@ -249,6 +273,13 @@
             <div class="skills__bar" role="progressbar" aria-labelledby="skill-knowledge" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
               <div class="skills__percentage skills__full"></div>
             </div>
+            <details class="skills__evidence">
+              <summary><span i18n="skills__practice">{{ t:skills__practice }}</span><span class="skills__evidence-indicator" aria-hidden="true">+</span></summary>
+              <div class="skills__evidence-body">
+                <p i18n="skills__evidence_knowledge">{{ t:skills__evidence_knowledge }}</p>
+                <a href="project-rag.html"><span i18n="skills__evidence_knowledge_link">{{ t:skills__evidence_knowledge_link }}</span><span aria-hidden="true"> ↗</span></a>
+              </div>
+            </details>
           </div>
 
           <div class="skills__data">
@@ -259,6 +290,13 @@
             <div class="skills__bar" role="progressbar" aria-labelledby="skill-generation" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
               <div class="skills__percentage skills__full"></div>
             </div>
+            <details class="skills__evidence">
+              <summary><span i18n="skills__practice">{{ t:skills__practice }}</span><span class="skills__evidence-indicator" aria-hidden="true">+</span></summary>
+              <div class="skills__evidence-body">
+                <p i18n="skills__evidence_skill_generation">{{ t:skills__evidence_skill_generation }}</p>
+                <a href="#qualification" data-qualification-work><span i18n="skills__evidence_skill_generation_link">{{ t:skills__evidence_skill_generation_link }}</span><span aria-hidden="true"> ↗</span></a>
+              </div>
+            </details>
           </div>
 
           <div class="skills__data">
@@ -269,6 +307,13 @@
             <div class="skills__bar" role="progressbar" aria-labelledby="skill-agent-evaluation" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
               <div class="skills__percentage skills__full"></div>
             </div>
+            <details class="skills__evidence">
+              <summary><span i18n="skills__practice">{{ t:skills__practice }}</span><span class="skills__evidence-indicator" aria-hidden="true">+</span></summary>
+              <div class="skills__evidence-body">
+                <p i18n="skills__evidence_agent_evaluation">{{ t:skills__evidence_agent_evaluation }}</p>
+                <a href="#qualification" data-qualification-work><span i18n="skills__evidence_agent_evaluation_link">{{ t:skills__evidence_agent_evaluation_link }}</span><span aria-hidden="true"> ↗</span></a>
+              </div>
+            </details>
           </div>
 
           <div class="skills__data">
@@ -315,14 +360,15 @@
 
       <!--==================== Databases ====================-->
       <div class="skills__content skills__close">
-        <div class="skills__header">
-          <i class="uil uil-database skills__icon"></i>
-          <div>
-            <h1 class="skills__title" i18n="skills__title5">{{ t:skills__title5 }}</h1>
-          </div>
-          <i class="uil uil-angle-down skills__arrow"></i>
-        </div>
-        <div class="skills__list grid">
+        <h3 class="skills__heading">
+          <button class="skills__header" type="button" id="skills-toggle-5" aria-expanded="false" aria-controls="skills-list-5">
+            <i class="uil uil-database skills__icon" aria-hidden="true"></i>
+            <span class="skills__title" i18n="skills__title5">{{ t:skills__title5 }}</span>
+            <i class="uil uil-angle-down skills__arrow" aria-hidden="true"></i>
+          </button>
+        </h3>
+
+        <div class="skills__list grid" id="skills-list-5" role="region" aria-labelledby="skills-toggle-5" hidden>
           <div class="skills__data">
             <div class="skills__titles">
               <h3 class="skills__name">MySQL</h3>
@@ -407,14 +453,15 @@
 
       <!--==================== Development Tools ====================-->
       <div class="skills__content skills__close">
-        <div class="skills__header">
-          <i class="uil uil-wrench skills__icon"></i>
-          <div>
-            <h1 class="skills__title" i18n="skills__title6">{{ t:skills__title6 }}</h1>
-          </div>
-          <i class="uil uil-angle-down skills__arrow"></i>
-        </div>
-        <div class="skills__list grid">
+        <h3 class="skills__heading">
+          <button class="skills__header" type="button" id="skills-toggle-6" aria-expanded="false" aria-controls="skills-list-6">
+            <i class="uil uil-wrench skills__icon" aria-hidden="true"></i>
+            <span class="skills__title" i18n="skills__title6">{{ t:skills__title6 }}</span>
+            <i class="uil uil-angle-down skills__arrow" aria-hidden="true"></i>
+          </button>
+        </h3>
+
+        <div class="skills__list grid" id="skills-list-6" role="region" aria-labelledby="skills-toggle-6" hidden>
           <div class="skills__data">
             <div class="skills__titles">
               <h3 class="skills__name">Git</h3>

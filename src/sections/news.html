@@ -3,14 +3,20 @@
   <span class="section__subtitle" i18n="news__subtitle">{{ t:news__subtitle }}</span>
 
   <div class="news__container container">
-    <!-- 这里设置一个固定高度 + overflow: auto 以实现上下滚动 -->
     <div class="news__content">
       <ul class="news__list">
-        <!-- 每条新闻都可以是一个 li -->
-        {{ each:news:components/news-item.html }}
-
-        <!-- 根据需要继续添加更多新闻 -->
+        {{ each:news-recent:components/news-item.html }}
       </ul>
+      <details class="news__archive">
+        <summary class="news__toggle">
+          <span class="news__show-more" i18n="news__show_more">{{ t:news__show_more }}</span>
+          <span class="news__show-less" i18n="news__show_less">{{ t:news__show_less }}</span>
+          <i class="uil uil-angle-down" aria-hidden="true"></i>
+        </summary>
+        <ul class="news__list news__archive-list">
+          {{ each:news-archive:components/news-item.html }}
+        </ul>
+      </details>
     </div>
   </div>
 </section>

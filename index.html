@@ -15,7 +15,28 @@
 
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <title>Here is Mycroft</title>
+    <link rel="stylesheet" href="assets/css/content-updates.css" />
+    <link rel="stylesheet" href="assets/css/controls.css" />
+    <link rel="stylesheet" href="assets/css/projects.css" />
+
+      <title i18n="seo__index_title">Hongdao Meng — AI Engineer &amp; Photographer</title>
+    <meta name="description" content="Hongdao Meng is an AI Engineer at TikTok in San Jose, working on agents, knowledge bases, and evaluation. Explore his projects, research, and photography." i18n="seo__index_description" i18n-only="content" />
+    <link rel="canonical" href="https://menghongdao.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hongdao Meng" />
+    <meta property="og:url" content="https://menghongdao.com/" />
+    <meta property="og:title" content="Hongdao Meng — AI Engineer &amp; Photographer" i18n="seo__index_title" i18n-only="content" />
+    <meta property="og:description" content="Hongdao Meng is an AI Engineer at TikTok in San Jose, working on agents, knowledge bases, and evaluation. Explore his projects, research, and photography." i18n="seo__index_description" i18n-only="content" />
+    <meta property="og:locale" content="en_US" i18n="seo__locale" i18n-only="content" />
+    <meta property="og:image" content="https://menghongdao.com/assets/img/social-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Hongdao Meng — AI Engineer. Agents, knowledge systems, and photography." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hongdao Meng — AI Engineer &amp; Photographer" i18n="seo__index_title" i18n-only="content" />
+    <meta name="twitter:description" content="Hongdao Meng is an AI Engineer at TikTok in San Jose, working on agents, knowledge bases, and evaluation. Explore his projects, research, and photography." i18n="seo__index_description" i18n-only="content" />
+    <meta name="twitter:image" content="https://menghongdao.com/assets/img/social-card.png" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://menghongdao.com/#person","name":"Hongdao Meng","alternateName":"Mycroft","url":"https://menghongdao.com/","jobTitle":"AI Engineer","sameAs":["https://github.com/Mycroft-s","https://www.linkedin.com/in/hongdao-meng-70222b306/"]}</script>
   </head>
   <body>
     <!--==================== HEADER ====================-->
@@ -78,22 +99,30 @@
               </a>
             </li>
             <li class="nav__item">
-              <div class="nav__link" id="translate" value="en">
+              <button class="nav__link nav__control" id="translate" type="button" value="en">
                 <svg class="icon nav__icon-svg" aria-hidden="true">
                   <use xlink:href="#icon-fanyi"></use>
                 </svg>
-                <a class="=nav__link" id="nav__translate">Translate</a>
-              </div>
+                <span id="nav__translate" aria-hidden="true">En/中</span>
+                <span class="control-sr-only" i18n="controls__language">Switch language</span>
+              </button>
             </li>
           </ul>
-          <i class="uil uil-times nav__close" id="nav-close"></i>
+          <button class="nav__close nav__control" id="nav-close" type="button">
+            <i class="uil uil-times" aria-hidden="true"></i>
+            <span class="control-sr-only" i18n="controls__close_menu">Close navigation menu</span>
+          </button>
         </div>
 
         <div class="nav__btns">
-          <i class="uil uil-moon change-theme" id="theme-button"></i>
-          <div class="nav__toggle" id="nav-toggle">
-            <i class="uil uil-apps"></i>
-          </div>
+          <button class="change-theme nav__control" id="theme-button" type="button" aria-pressed="false">
+            <i class="uil uil-moon" data-theme-icon aria-hidden="true"></i>
+            <span class="control-sr-only" i18n="controls__dark_mode">Dark mode</span>
+          </button>
+          <button class="nav__toggle nav__control" id="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false">
+            <i class="uil uil-apps" aria-hidden="true"></i>
+            <span class="control-sr-only" i18n="controls__menu">Open navigation menu</span>
+          </button>
         </div>
       </nav>
     </header>
@@ -156,10 +185,16 @@
               <h1 class="home__title" i18n="home__title">Here is Hongdao Meng</h1>
               <h3 class="home__subtitle" i18n="home__subtitle">AI Engineer</h3>
               <p class="home__description" i18n="home__description">Based in San Jose, I work on Transaction Agent in TikTok’s GMPT Transaction Platform team, focusing on high-performance knowledge bases, automated skill generation, and offline agent evaluation and self-improvement.</p>
-              <a href="#contact" class="button button-flex">
-                <span i18n="home__contact">Contact Me</span>
-                <i class="uil uil-message button__icon"></i>
-              </a>
+              <div class="home__actions">
+                <a href="#contact" class="button button--flex">
+                  <span i18n="home__contact">Contact Me</span>
+                  <i class="uil uil-message button__icon" aria-hidden="true"></i>
+                </a>
+                <a href="#portfolio" class="home__selected project-link">
+                  <span i18n="project__home_selected">Selected projects</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
             </div>
           </div>
           <div class="home__scroll">
@@ -229,68 +264,62 @@
         <span class="section__subtitle" i18n="news__subtitle">My Recent Updates</span>
 
         <div class="news__container container">
-          <!-- 这里设置一个固定高度 + overflow: auto 以实现上下滚动 -->
           <div class="news__content">
             <ul class="news__list">
-              <!-- 每条新闻都可以是一个 li -->
               <li class="news__item">
-                <h3 class="news__date">2026.7.13</h3>
-                <p class="news__description">I joined TikTok’s GMPT Transaction Platform team as an AI Engineer, working on Transaction Agent. My focus is building high-performance knowledge bases, automating skill generation, and developing offline pipelines for agent evaluation and self-improvement, with the goal of building a self-improving agent.<br>
-              我加入了 TikTok GMPT 旗下的 Transaction Platform 团队，担任 AI 工程师，从事 Transaction Agent 研发。工作聚焦于高性能知识库建设、Skill 自动生成，以及 Agent 评测与自提升的离线链路，目标是构建能够持续自我改进的 Agent。</p>
+                <h3 class="news__date"><time datetime="2026-07-13">2026.07.13</time></h3>
+                <p class="news__description" i18n="news__item_2026_07_13">I joined TikTok’s GMPT Transaction Platform team as an AI Engineer, building Transaction Agent through high-performance knowledge bases, automated skill generation, and offline evaluation and self-improvement.</p>
               </li>
               <li class="news__item">
-                <h3 class="news__date">2025.11.7</h3>
-                <p class="news__description">I gave a presentation on recommendation systems at the student learning hub event held by C2smarter Center.<br>
-              我在C2smarter Center 举办的student learning hub活动中，做了关于推荐系统的分享。</p>
+                <h3 class="news__date"><time datetime="2025-11-07">2025.11.07</time></h3>
+                <p class="news__description" i18n="news__item_2025_11_07">I gave a presentation on recommendation systems at the student learning hub event held by C2smarter Center.</p>
               </li>
               <li class="news__item">
-                <h3 class="news__date">2025.9.10</h3>
-                <p class="news__description">Excited to share that I’ve accepted a 2026 spring internship offer from TikTok! I’ll be joining the e-commerce recommendation infrastructure team, focusing on Feature Service and User data accessor.<br>
-              我很高兴地告诉大家，我已经接受了Tiktok 2026年春季实习的邀请！我将加入电子商务推荐基础设施团队，专注于功能服务和用户数据访问。</p>
+                <h3 class="news__date"><time datetime="2025-09-10">2025.09.10</time></h3>
+                <p class="news__description" i18n="news__item_2025_09_10">Excited to share that I’ve accepted a 2026 spring internship offer from TikTok! I’ll be joining the e-commerce recommendation infrastructure team, focusing on Feature Service and User data accessor.</p>
               </li>
-              <li class="news__item">
-                <h3 class="news__date">2025.4.16</h3>
-                <p class="news__description">Excited to share that I’ve accepted a 2025 summer internship offer from TikTok! I’ll be joining the e-commerce team, working on recommendation infrastructure.<br>
-              我已拿到 TikTok 的暑期实习 offer，2025 年暑假将在 TikTok 电商部门从事推荐系统架构的相关工作。</p>
-              </li>
-              <li class="news__item">
-                <h3 class="news__date">2025.4.6</h3>
-                <p class="news__description">I updated my photography works in my website.<br>
-              我在网站上更新了自己的摄影作品。</p>
-              </li>
-              <li class="news__item">
-                <h3 class="news__date">2025.3.15</h3>
-                <p class="news__description">I started my research on automated deployment with AI (CI/CD)!<br>
-              我开始了关于AI结合的自动化部署（CI/CD）的研究！</p>
-              </li>
-              <li class="news__item">
-                <h3 class="news__date">2025.1.15</h3>
-                <p class="news__description">I'm happy to share that I have started my Developer Assistant job in C2SMARTER Center!<br>
-              我很高兴地告诉大家，我已经在C2SMARTER Center开始了我的开发助理工作！</p>
-              </li>
-              <li class="news__item">
-                <h3 class="news__date">2024.12.24</h3>
-                <p class="news__description">I got 3.8 GPA for my frist semester!<br>
-              我在NYU的第一学期的GPA是3.8 ！</p>
-              </li>
-              <li class="news__item">
-                <h3 class="news__date">2024.12.20</h3>
-                <p class="news__description">My paper Federated Multi-view Multi-Label Classification was accepted by IEEE TBD.<br>
-              我作为第一作者的论文《Federated Multi-view Multi-Label Classification》被IEEE TBD接受。</p>
-              </li>
-              <li class="news__item">
-                <h3 class="news__date">2024.9.3</h3>
-                <p class="news__description">I started my work and research on deepfake detection!<br>
-              我开始了关于深度伪造检测的工作和研究！</p>
-              </li>
-              <li class="news__item">
-                <h3 class="news__date">2024.9.1</h3>
-                <p class="news__description">I'm happy to share that I've started my master of computer science at New York University!<br>
-              我很高兴地告诉大家，我已经开始在纽约大学攻读计算机科学硕士学位了！</p>
-              </li>
-
-              <!-- 根据需要继续添加更多新闻 -->
             </ul>
+            <details class="news__archive">
+              <summary class="news__toggle">
+                <span class="news__show-more" i18n="news__show_more">Earlier updates</span>
+                <span class="news__show-less" i18n="news__show_less">Show fewer updates</span>
+                <i class="uil uil-angle-down" aria-hidden="true"></i>
+              </summary>
+              <ul class="news__list news__archive-list">
+                <li class="news__item">
+                  <h3 class="news__date"><time datetime="2025-04-16">2025.04.16</time></h3>
+                  <p class="news__description" i18n="news__item_2025_04_16">Excited to share that I’ve accepted a 2025 summer internship offer from TikTok! I’ll be joining the e-commerce team, working on recommendation infrastructure.</p>
+                </li>
+                <li class="news__item">
+                  <h3 class="news__date"><time datetime="2025-04-06">2025.04.06</time></h3>
+                  <p class="news__description" i18n="news__item_2025_04_06">I updated my photography works in my website.</p>
+                </li>
+                <li class="news__item">
+                  <h3 class="news__date"><time datetime="2025-03-15">2025.03.15</time></h3>
+                  <p class="news__description" i18n="news__item_2025_03_15">I started my research on automated deployment with AI (CI/CD)!</p>
+                </li>
+                <li class="news__item">
+                  <h3 class="news__date"><time datetime="2025-01-15">2025.01.15</time></h3>
+                  <p class="news__description" i18n="news__item_2025_01_15">I&#39;m happy to share that I have started my Developer Assistant job in C2SMARTER Center!</p>
+                </li>
+                <li class="news__item">
+                  <h3 class="news__date"><time datetime="2024-12-24">2024.12.24</time></h3>
+                  <p class="news__description" i18n="news__item_2024_12_24">I got 3.8 GPA for my first semester!</p>
+                </li>
+                <li class="news__item">
+                  <h3 class="news__date"><time datetime="2024-12-20">2024.12.20</time></h3>
+                  <p class="news__description" i18n="news__item_2024_12_20">My paper Federated Multi-view Multi-Label Classification was accepted by IEEE TBD.</p>
+                </li>
+                <li class="news__item">
+                  <h3 class="news__date"><time datetime="2024-09-03">2024.09.03</time></h3>
+                  <p class="news__description" i18n="news__item_2024_09_03">I started my work and research on deepfake detection!</p>
+                </li>
+                <li class="news__item">
+                  <h3 class="news__date"><time datetime="2024-09-01">2024.09.01</time></h3>
+                  <p class="news__description" i18n="news__item_2024_09_01">I&#39;m happy to share that I&#39;ve started my master of computer science at New York University!</p>
+                </li>
+              </ul>
+            </details>
           </div>
         </div>
       </section>
@@ -302,15 +331,15 @@
           <div>
             <!--==================== Programming Languages ====================-->
             <div class="skills__content skills__open">
-              <div class="skills__header">
-                <i class="uil uil-brackets-curly skills__icon"></i>
-                <div>
-                  <h1 class="skills__title" i18n="skills__title1">Programming Languages</h1>
-                </div>
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
+              <h3 class="skills__heading">
+                <button class="skills__header" type="button" id="skills-toggle-1" aria-expanded="true" aria-controls="skills-list-1">
+                  <i class="uil uil-brackets-curly skills__icon" aria-hidden="true"></i>
+                  <span class="skills__title" i18n="skills__title1">Programming Languages</span>
+                  <i class="uil uil-angle-down skills__arrow" aria-hidden="true"></i>
+                </button>
+              </h3>
 
-              <div class="skills__list grid">
+              <div class="skills__list grid" id="skills-list-1" role="region" aria-labelledby="skills-toggle-1">
                 <div class="skills__data">
                   <div class="skills__titles">
                     <h3 class="skills__name">Python</h3>
@@ -395,14 +424,15 @@
 
             <!--==================== Frontend Development ====================-->
             <div class="skills__content skills__close">
-              <div class="skills__header">
-                <i class="uil uil-html5-alt skills__icon"></i>
-                <div>
-                  <h1 class="skills__title" i18n="skills__title2">Frontend Development</h1>
-                </div>
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
-              <div class="skills__list grid">
+              <h3 class="skills__heading">
+                <button class="skills__header" type="button" id="skills-toggle-2" aria-expanded="false" aria-controls="skills-list-2">
+                  <i class="uil uil-html5-alt skills__icon" aria-hidden="true"></i>
+                  <span class="skills__title" i18n="skills__title2">Frontend Development</span>
+                  <i class="uil uil-angle-down skills__arrow" aria-hidden="true"></i>
+                </button>
+              </h3>
+
+              <div class="skills__list grid" id="skills-list-2" role="region" aria-labelledby="skills-toggle-2" hidden>
                 <div class="skills__data">
                   <div class="skills__titles">
                     <h3 class="skills__name">React</h3>
@@ -447,14 +477,15 @@
 
             <!--==================== Backend Development ====================-->
             <div class="skills__content skills__close">
-              <div class="skills__header">
-                <i class="uil uil-server-network skills__icon"></i>
-                <div>
-                  <h1 class="skills__title" i18n="skills__title3">Backend Development</h1>
-                </div>
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
-              <div class="skills__list grid">
+              <h3 class="skills__heading">
+                <button class="skills__header" type="button" id="skills-toggle-3" aria-expanded="false" aria-controls="skills-list-3">
+                  <i class="uil uil-server-network skills__icon" aria-hidden="true"></i>
+                  <span class="skills__title" i18n="skills__title3">Backend Development</span>
+                  <i class="uil uil-angle-down skills__arrow" aria-hidden="true"></i>
+                </button>
+              </h3>
+
+              <div class="skills__list grid" id="skills-list-3" role="region" aria-labelledby="skills-toggle-3" hidden>
                 <div class="skills__data">
                   <div class="skills__titles">
                     <h3 class="skills__name">Django</h3>
@@ -499,14 +530,15 @@
 
             <!--==================== Machine Learning & AI ====================-->
             <div class="skills__content skills__close">
-              <div class="skills__header">
-                <i class="uil uil-brain skills__icon"></i>
-                <div>
-                  <h1 class="skills__title" i18n="skills__title4">Machine Learning & AI</h1>
-                </div>
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
-              <div class="skills__list grid">
+              <h3 class="skills__heading">
+                <button class="skills__header" type="button" id="skills-toggle-4" aria-expanded="false" aria-controls="skills-list-4">
+                  <i class="uil uil-brain skills__icon" aria-hidden="true"></i>
+                  <span class="skills__title" i18n="skills__title4">Machine Learning & AI</span>
+                  <i class="uil uil-angle-down skills__arrow" aria-hidden="true"></i>
+                </button>
+              </h3>
+
+              <div class="skills__list grid" id="skills-list-4" role="region" aria-labelledby="skills-toggle-4" hidden>
                 <div class="skills__data">
                   <div class="skills__titles">
                     <h3 class="skills__name" id="skill-fine-tuning" i18n="skills__fine_tuning">Fine-tuning</h3>
@@ -515,6 +547,13 @@
                   <div class="skills__bar" role="progressbar" aria-labelledby="skill-fine-tuning" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
                     <div class="skills__percentage skills__full"></div>
                   </div>
+                  <details class="skills__evidence">
+                    <summary><span i18n="skills__practice">Practice</span><span class="skills__evidence-indicator" aria-hidden="true">+</span></summary>
+                    <div class="skills__evidence-body">
+                      <p i18n="skills__evidence_fine_tuning">A Vision Transformer training pipeline for deepfake classification, using class-weighted loss and checkpoint evaluation.</p>
+                      <a href="project-deepfake.html#implementation"><span i18n="skills__evidence_fine_tuning_link">Explore the deepfake project</span><span aria-hidden="true"> ↗</span></a>
+                    </div>
+                  </details>
                 </div>
 
                 <div class="skills__data">
@@ -525,6 +564,13 @@
                   <div class="skills__bar" role="progressbar" aria-labelledby="skill-post-training" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
                     <div class="skills__percentage skills__full"></div>
                   </div>
+                  <details class="skills__evidence">
+                    <summary><span i18n="skills__practice">Practice</span><span class="skills__evidence-indicator" aria-hidden="true">+</span></summary>
+                    <div class="skills__evidence-body">
+                      <p i18n="skills__evidence_post_training">Connecting model adaptation with evaluation: compare checkpoints and inspect precision, recall, and F1 before choosing a model. The deepfake project shows the related fine-tuning and evaluation workflow.</p>
+                      <a href="project-deepfake.html#implementation"><span i18n="skills__evidence_post_training_link">View the related workflow</span><span aria-hidden="true"> ↗</span></a>
+                    </div>
+                  </details>
                 </div>
 
                 <div class="skills__data">
@@ -535,6 +581,13 @@
                   <div class="skills__bar" role="progressbar" aria-labelledby="skill-agents" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
                     <div class="skills__percentage skills__full"></div>
                   </div>
+                  <details class="skills__evidence">
+                    <summary><span i18n="skills__practice">Practice</span><span class="skills__evidence-indicator" aria-hidden="true">+</span></summary>
+                    <div class="skills__evidence-body">
+                      <p i18n="skills__evidence_agents">A voice-first assistant connects conversation, tool calling, and persistent task data through LangChain and FastAPI.</p>
+                      <a href="project-voice-agent.html"><span i18n="skills__evidence_agents_link">Explore the voice agent</span><span aria-hidden="true"> ↗</span></a>
+                    </div>
+                  </details>
                 </div>
 
                 <div class="skills__data">
@@ -545,6 +598,13 @@
                   <div class="skills__bar" role="progressbar" aria-labelledby="skill-knowledge" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
                     <div class="skills__percentage skills__full"></div>
                   </div>
+                  <details class="skills__evidence">
+                    <summary><span i18n="skills__practice">Practice</span><span class="skills__evidence-indicator" aria-hidden="true">+</span></summary>
+                    <div class="skills__evidence-body">
+                      <p i18n="skills__evidence_knowledge">Hybrid sparse and dense retrieval with BGE-M3 and Milvus, followed by result fusion and reranking. At TikTok, my current focus also includes high-performance knowledge bases.</p>
+                      <a href="project-rag.html"><span i18n="skills__evidence_knowledge_link">Explore the retrieval project</span><span aria-hidden="true"> ↗</span></a>
+                    </div>
+                  </details>
                 </div>
 
                 <div class="skills__data">
@@ -555,6 +615,13 @@
                   <div class="skills__bar" role="progressbar" aria-labelledby="skill-generation" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
                     <div class="skills__percentage skills__full"></div>
                   </div>
+                  <details class="skills__evidence">
+                    <summary><span i18n="skills__practice">Practice</span><span class="skills__evidence-indicator" aria-hidden="true">+</span></summary>
+                    <div class="skills__evidence-body">
+                      <p i18n="skills__evidence_skill_generation">Automated skill generation for Transaction Agent in TikTok’s GMPT Transaction Platform team, as part of building a self-improving agent.</p>
+                      <a href="#qualification" data-qualification-work><span i18n="skills__evidence_skill_generation_link">View my current role</span><span aria-hidden="true"> ↗</span></a>
+                    </div>
+                  </details>
                 </div>
 
                 <div class="skills__data">
@@ -565,6 +632,13 @@
                   <div class="skills__bar" role="progressbar" aria-labelledby="skill-agent-evaluation" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
                     <div class="skills__percentage skills__full"></div>
                   </div>
+                  <details class="skills__evidence">
+                    <summary><span i18n="skills__practice">Practice</span><span class="skills__evidence-indicator" aria-hidden="true">+</span></summary>
+                    <div class="skills__evidence-body">
+                      <p i18n="skills__evidence_agent_evaluation">Building an offline evaluation and self-improvement pipeline for Transaction Agent, connecting evaluation feedback to the next iteration.</p>
+                      <a href="#qualification" data-qualification-work><span i18n="skills__evidence_agent_evaluation_link">View my current role</span><span aria-hidden="true"> ↗</span></a>
+                    </div>
+                  </details>
                 </div>
 
                 <div class="skills__data">
@@ -611,14 +685,15 @@
 
             <!--==================== Databases ====================-->
             <div class="skills__content skills__close">
-              <div class="skills__header">
-                <i class="uil uil-database skills__icon"></i>
-                <div>
-                  <h1 class="skills__title" i18n="skills__title5">Databases</h1>
-                </div>
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
-              <div class="skills__list grid">
+              <h3 class="skills__heading">
+                <button class="skills__header" type="button" id="skills-toggle-5" aria-expanded="false" aria-controls="skills-list-5">
+                  <i class="uil uil-database skills__icon" aria-hidden="true"></i>
+                  <span class="skills__title" i18n="skills__title5">Databases</span>
+                  <i class="uil uil-angle-down skills__arrow" aria-hidden="true"></i>
+                </button>
+              </h3>
+
+              <div class="skills__list grid" id="skills-list-5" role="region" aria-labelledby="skills-toggle-5" hidden>
                 <div class="skills__data">
                   <div class="skills__titles">
                     <h3 class="skills__name">MySQL</h3>
@@ -703,14 +778,15 @@
 
             <!--==================== Development Tools ====================-->
             <div class="skills__content skills__close">
-              <div class="skills__header">
-                <i class="uil uil-wrench skills__icon"></i>
-                <div>
-                  <h1 class="skills__title" i18n="skills__title6">Development Tools</h1>
-                </div>
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
-              <div class="skills__list grid">
+              <h3 class="skills__heading">
+                <button class="skills__header" type="button" id="skills-toggle-6" aria-expanded="false" aria-controls="skills-list-6">
+                  <i class="uil uil-wrench skills__icon" aria-hidden="true"></i>
+                  <span class="skills__title" i18n="skills__title6">Development Tools</span>
+                  <i class="uil uil-angle-down skills__arrow" aria-hidden="true"></i>
+                </button>
+              </h3>
+
+              <div class="skills__list grid" id="skills-list-6" role="region" aria-labelledby="skills-toggle-6" hidden>
                 <div class="skills__data">
                   <div class="skills__titles">
                     <h3 class="skills__name">Git</h3>
@@ -836,232 +912,197 @@
         </div>
       </section>
       <section class="qualification section" id="qualification">
-        <h2 class="section__title" i18n="qualification__title">Experience</h2>
-        <span class="section__subtitle" i18n="qualification__subtitle"
-          >My Educational & Professional Journey</span>
+        <h2 class="section__title" id="qualification-heading" i18n="qualification__title">Experience</h2>
+        <span class="section__subtitle" i18n="qualification__subtitle">My Educational & Professional Journey</span>
         <div class="qualification__container container">
-          <div class="qualification__tabs">
-            <div
-              class="qualification__button button--flex qualification__active"
-              data-target="#work"
-            >
-              <i class="uil uil-briefcase-alt qualification__icon"></i>
+          <div class="qualification__tabs" role="tablist" aria-labelledby="qualification-heading">
+            <button type="button" class="qualification__button button--flex qualification__active" data-target="#work" role="tab" id="tab-work" aria-controls="work" aria-selected="true" tabindex="0">
+              <i class="uil uil-briefcase-alt qualification__icon" aria-hidden="true"></i>
               <span i18n="work">Work</span>
-            </div>
-
-            <div class="qualification__button button--flex" data-target="#education">
-              <i class="uil uil-graduation-cap qualification__icon"></i>
+            </button>
+            <button type="button" class="qualification__button button--flex" data-target="#education" role="tab" id="tab-education" aria-controls="education" aria-selected="false" tabindex="-1">
+              <i class="uil uil-graduation-cap qualification__icon" aria-hidden="true"></i>
               <span i18n="education">Education</span>
-            </div>
+            </button>
           </div>
           <div class="qualification__sections">
-            <!--==================== QUALIFICATION CONTENT 1 (Work) ====================-->
-            <div class="qualification__content qualification__active" data-content id="work">
-              <!-- Current role; continue the alternating timeline into earlier roles. -->
-              <div class="qualification__data">
-                <div></div>
+            <div class="qualification__content qualification__active" data-content id="work" role="tabpanel" aria-labelledby="tab-work">
+              <div class="qualification__data qualification__data--right">
                 <div class="qualification__marker">
                   <a class="qualification__badge qualification__badge--link" href="https://www.linkedin.com/company/tiktok/" target="_blank" rel="noopener noreferrer">
-                    <img class="qualification__logo" src="assets/img/organizations/tiktok.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <img class="qualification__logo" src="assets/img/organizations/tiktok.png" alt="" width="48" height="48" loading="lazy" decoding="async">
                     <span class="qualification__link-indicator" aria-hidden="true">in</span>
-                    <span class="qualification__link-label">TikTok · <span i18n="qualification__linkedin">LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab"> (opens in a new tab)</span></span>
+                    <span class="qualification__link-label"><span i18n="organization__tiktok">TikTok</span> · <span i18n="qualification__linkedin">View on LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab">Opens in a new tab</span></span>
                   </a>
-                  <span class="qualification__line"></span>
+                  <span class="qualification__line" aria-hidden="true"></span>
                 </div>
                 <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification10__title">AI Engineer</h3>
                   <span class="qualification__subtitle" i18n="qualification10__subtitle">TikTok · GMPT / Transaction Platform, San Jose</span>
                   <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    <span i18n="qualification10__date">Jul. 13, 2026 – Present</span>
+                    <i class="uil uil-calendar-alt" aria-hidden="true"></i>
+                    <span i18n="qualification10__date">Jul 13, 2026 – Present</span>
                   </div>
                 </div>
               </div>
-
-              <!--==================== QUALIFICATION tiktok  ====================-->
-              <div class="qualification__data">
-                <div class="qualification__entry">
-                  <h3 class="qualification__title" i18n="qualification8__title">Software Engineer Intern</h3>
-                  <span class="qualification__subtitle" i18n="qualification8__subtitle">Tiktok, Seattle </span>
-                  <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    May. 2025 - Sep. 2025, Jan. 2026 - May 2026
-                  </div>
-                </div>
+              <div class="qualification__data qualification__data--left">
                 <div class="qualification__marker">
                   <a class="qualification__badge qualification__badge--link" href="https://www.linkedin.com/company/tiktok/" target="_blank" rel="noopener noreferrer">
-                    <img class="qualification__logo" src="assets/img/organizations/tiktok.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <img class="qualification__logo" src="assets/img/organizations/tiktok.png" alt="" width="48" height="48" loading="lazy" decoding="async">
                     <span class="qualification__link-indicator" aria-hidden="true">in</span>
-                    <span class="qualification__link-label">TikTok · <span i18n="qualification__linkedin">LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab"> (opens in a new tab)</span></span>
+                    <span class="qualification__link-label"><span i18n="organization__tiktok">TikTok</span> · <span i18n="qualification__linkedin">View on LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab">Opens in a new tab</span></span>
                   </a>
-                  <span class="qualification__line"></span>
+                  <span class="qualification__line" aria-hidden="true"></span>
+                </div>
+                <div class="qualification__entry">
+                  <h3 class="qualification__title" i18n="qualification8__title">Software Engineer Intern</h3>
+                  <span class="qualification__subtitle" i18n="qualification8__subtitle">TikTok, Seattle</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt" aria-hidden="true"></i>
+                    <span i18n="qualification8__date">May 2025 – Sep 2025; Jan 2026 – May 2026</span>
+                  </div>
                 </div>
               </div>
-
-               <!--==================== QUALIFICATION C2smarter  ====================-->
-               <div class="qualification__data">
-                <div></div>
+              <div class="qualification__data qualification__data--right">
                 <div class="qualification__marker">
                   <a class="qualification__badge qualification__badge--link" href="https://www.linkedin.com/company/c2smart-center/" target="_blank" rel="noopener noreferrer">
-                    <img class="qualification__logo" src="assets/img/organizations/c2smarter.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <img class="qualification__logo" src="assets/img/organizations/c2smarter.png" alt="" width="48" height="48" loading="lazy" decoding="async">
                     <span class="qualification__link-indicator" aria-hidden="true">in</span>
-                    <span class="qualification__link-label">C2SMARTER · <span i18n="qualification__linkedin">LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab"> (opens in a new tab)</span></span>
+                    <span class="qualification__link-label"><span i18n="organization__c2smarter">C2SMARTER Center</span> · <span i18n="qualification__linkedin">View on LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab">Opens in a new tab</span></span>
                   </a>
-                  <span class="qualification__line"></span>
+                  <span class="qualification__line" aria-hidden="true"></span>
                 </div>
                 <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification7__title">Software Engineer Intern</h3>
-                  <span class="qualification__subtitle" i18n="qualification7__subtitle"><a href='https://c2smart.engineering.nyu.edu/' target='_blank' rel='noopener'>C2SMARTER Center</a> (Feb. 2025- Present), New York</span>
+                  <span class="qualification__subtitle" i18n="qualification7__subtitle"><a href="https://c2smart.engineering.nyu.edu/" target="_blank" rel="noopener noreferrer">C2SMARTER Center</a>, New York</span>
                   <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    Feb. 2025 - Dec. 2025
+                    <i class="uil uil-calendar-alt" aria-hidden="true"></i>
+                    <span i18n="qualification7__date">Feb 2025 – Dec 2025</span>
                   </div>
                 </div>
               </div>
-
-              <!--==================== QUALIFICATION Freeleaps  ====================-->
-              <div class="qualification__data">
-                <div class="qualification__entry">
-                  <h3 class="qualification__title" i18n="qualification9__title">AI Engineer Intern</h3>
-                  <span class="qualification__subtitle" i18n="qualification9__subtitle"><a href='https://freeleaps.com/home/' target='_blank' rel='noopener'>Freeleaps</a>, Seattle</span>
-                  <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    Mar. 2025 - May 2025
-                  </div>
-                </div>
+              <div class="qualification__data qualification__data--left">
                 <div class="qualification__marker">
                   <a class="qualification__badge qualification__badge--link" href="https://www.linkedin.com/company/freeleaps/" target="_blank" rel="noopener noreferrer">
-                    <img class="qualification__logo" src="assets/img/organizations/freeleaps.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <img class="qualification__logo" src="assets/img/organizations/freeleaps.png" alt="" width="48" height="48" loading="lazy" decoding="async">
                     <span class="qualification__link-indicator" aria-hidden="true">in</span>
-                    <span class="qualification__link-label">Freeleaps · <span i18n="qualification__linkedin">LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab"> (opens in a new tab)</span></span>
+                    <span class="qualification__link-label"><span i18n="organization__freeleaps">Freeleaps</span> · <span i18n="qualification__linkedin">View on LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab">Opens in a new tab</span></span>
                   </a>
-                  <span class="qualification__line"></span>
+                  <span class="qualification__line" aria-hidden="true"></span>
+                </div>
+                <div class="qualification__entry">
+                  <h3 class="qualification__title" i18n="qualification9__title">AI Engineer Intern</h3>
+                  <span class="qualification__subtitle" i18n="qualification9__subtitle"><a href="https://freeleaps.com/home/" target="_blank" rel="noopener noreferrer">Freeleaps</a>, Seattle</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt" aria-hidden="true"></i>
+                    <span i18n="qualification9__date">Mar 2025 – May 2025</span>
+                  </div>
                 </div>
               </div>
-
-              <!--==================== QUALIFICATION DeepFake Detection ====================-->
-              <div class="qualification__data">
-                <div></div>
+              <div class="qualification__data qualification__data--right">
                 <div class="qualification__marker">
-                  <span class="qualification__badge qualification__badge--symbol" aria-hidden="true">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4 5 7 8 9 3-2 8-5 8-9V6z"/><path d="m8 12 3 3 5-6"/></svg>
-                  </span>
-                  <span class="qualification__line"></span>
+                  <span class="qualification__badge qualification__badge--symbol" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4 5 7 8 9 3-2 8-5 8-9V6z"/><path d="m8 12 3 3 5-6"/></svg></span>
+                  <span class="qualification__line" aria-hidden="true"></span>
                 </div>
                 <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification4__title">AI Engineer Intern</h3>
                   <span class="qualification__subtitle" i18n="qualification4__subtitle">DeepFake Detection Startup, New York</span>
                   <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    Sep. 2024 - Dec. 2024
+                    <i class="uil uil-calendar-alt" aria-hidden="true"></i>
+                    <span i18n="qualification4__date">Sep 2024 – Dec 2024</span>
                   </div>
                 </div>
               </div>
-
-              <!--==================== QUALIFICATION QingTeng ====================-->
-              <div class="qualification__data">
-                <div class="qualification__entry">
-                  <h3 class="qualification__title" i18n="qualification5__title">AI Algorithms Engineer Intern</h3>
-                  <span class="qualification__subtitle" i18n="qualification5__subtitle">QingTeng, Cloud Platform R&D Department, Beijing</span>
-                  <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    Feb. 2024 - Aug. 2024
-                  </div>
-                </div>
+              <div class="qualification__data qualification__data--left">
                 <div class="qualification__marker">
                   <a class="qualification__badge qualification__badge--link" href="https://www.linkedin.com/company/%E9%9D%92%E8%97%A4%E4%BA%91%E5%AE%89%E5%85%A8/" target="_blank" rel="noopener noreferrer">
-                    <img class="qualification__logo" src="assets/img/organizations/qingteng.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <img class="qualification__logo" src="assets/img/organizations/qingteng.png" alt="" width="48" height="48" loading="lazy" decoding="async">
                     <span class="qualification__link-indicator" aria-hidden="true">in</span>
-                    <span class="qualification__link-label">QingTeng · <span i18n="qualification__linkedin">LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab"> (opens in a new tab)</span></span>
+                    <span class="qualification__link-label"><span i18n="organization__qingteng">QingTeng</span> · <span i18n="qualification__linkedin">View on LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab">Opens in a new tab</span></span>
                   </a>
-                  <span class="qualification__line"></span>
+                  <span class="qualification__line" aria-hidden="true"></span>
+                </div>
+                <div class="qualification__entry">
+                  <h3 class="qualification__title" i18n="qualification5__title">AI Algorithms Engineer Intern</h3>
+                  <span class="qualification__subtitle" i18n="qualification5__subtitle">QingTeng · Cloud Platform R&amp;D Department, Beijing</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt" aria-hidden="true"></i>
+                    <span i18n="qualification5__date">Feb 2024 – Aug 2024</span>
+                  </div>
                 </div>
               </div>
-
-              <!--==================== QUALIFICATION Data Mining Lab ====================-->
-              <div class="qualification__data">
-                <div></div>
+              <div class="qualification__data qualification__data--right">
                 <div class="qualification__marker">
                   <a class="qualification__badge qualification__badge--link" href="https://www.linkedin.com/school/beijing-university-of-technology/" target="_blank" rel="noopener noreferrer">
-                    <img class="qualification__logo" src="assets/img/organizations/bjut.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <img class="qualification__logo" src="assets/img/organizations/bjut.png" alt="" width="48" height="48" loading="lazy" decoding="async">
                     <span class="qualification__link-indicator" aria-hidden="true">in</span>
-                    <span class="qualification__link-label"><span i18n="qualification2__subtitle">Beijing University of Technology</span> · <span i18n="qualification__linkedin">LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab"> (opens in a new tab)</span></span>
+                    <span class="qualification__link-label"><span i18n="organization__bjut">Beijing University of Technology</span> · <span i18n="qualification__linkedin">View on LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab">Opens in a new tab</span></span>
                   </a>
-                  <!-- 最后一个不要加 qualification__line -->
+
                 </div>
                 <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification6__title">AI Researcher</h3>
-                  <span class="qualification__subtitle" i18n="qualification6__subtitle">Data Mining & Security Lab, Beijing</span>
+                  <span class="qualification__subtitle" i18n="qualification6__subtitle">Data Mining &amp; Security Lab, Beijing</span>
                   <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    Sep. 2022 - Jul. 2024
+                    <i class="uil uil-calendar-alt" aria-hidden="true"></i>
+                    <span i18n="qualification6__date">Sep 2022 – Jul 2024</span>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!--==================== QUALIFICATION CONTENT 2 (Education) ====================-->
-            <div class="qualification__content" data-content id="education">
-              <!--==================== QUALIFICATION 1 ====================-->
-              <div class="qualification__data">
+            <div class="qualification__content" data-content id="education" role="tabpanel" aria-labelledby="tab-education" hidden>
+              <div class="qualification__data qualification__data--left">
+                <div class="qualification__marker">
+                  <a class="qualification__badge qualification__badge--link" href="https://www.linkedin.com/school/new-york-university/" target="_blank" rel="noopener noreferrer">
+                    <img class="qualification__logo" src="assets/img/organizations/nyu.png" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span class="qualification__link-indicator" aria-hidden="true">in</span>
+                    <span class="qualification__link-label"><span i18n="organization__nyu">New York University</span> · <span i18n="qualification__linkedin">View on LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab">Opens in a new tab</span></span>
+                  </a>
+                  <span class="qualification__line" aria-hidden="true"></span>
+                </div>
                 <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification1__title">Master of Science in Computer Science</h3>
                   <span class="qualification__subtitle" i18n="qualification1__subtitle">New York University</span>
                   <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    2024.9 - 2026.5
+                    <i class="uil uil-calendar-alt" aria-hidden="true"></i>
+                    <span i18n="qualification1__date">Sep 2024 – May 2026</span>
                   </div>
                 </div>
-
-                <div class="qualification__marker">
-                  <a class="qualification__badge qualification__badge--link" href="https://www.linkedin.com/school/new-york-university/" target="_blank" rel="noopener noreferrer">
-                    <img class="qualification__logo" src="assets/img/organizations/nyu.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
-                    <span class="qualification__link-indicator" aria-hidden="true">in</span>
-                    <span class="qualification__link-label"><span i18n="qualification1__subtitle">New York University</span> · <span i18n="qualification__linkedin">LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab"> (opens in a new tab)</span></span>
-                  </a>
-                  <span class="qualification__line"></span>
-                </div>
               </div>
-
-              <!--==================== QUALIFICATION 2 ====================-->
-              <div class="qualification__data">
-                <div></div>
+              <div class="qualification__data qualification__data--right">
                 <div class="qualification__marker">
                   <a class="qualification__badge qualification__badge--link" href="https://www.linkedin.com/school/beijing-university-of-technology/" target="_blank" rel="noopener noreferrer">
-                    <img class="qualification__logo" src="assets/img/organizations/bjut.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+                    <img class="qualification__logo" src="assets/img/organizations/bjut.png" alt="" width="48" height="48" loading="lazy" decoding="async">
                     <span class="qualification__link-indicator" aria-hidden="true">in</span>
-                    <span class="qualification__link-label"><span i18n="qualification2__subtitle">Beijing University of Technology</span> · <span i18n="qualification__linkedin">LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab"> (opens in a new tab)</span></span>
+                    <span class="qualification__link-label"><span i18n="organization__bjut">Beijing University of Technology</span> · <span i18n="qualification__linkedin">View on LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab">Opens in a new tab</span></span>
                   </a>
-                  <span class="qualification__line"></span>
+                  <span class="qualification__line" aria-hidden="true"></span>
                 </div>
                 <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification2__title">Bachelor of Engineering in Information Security</h3>
                   <span class="qualification__subtitle" i18n="qualification2__subtitle">Beijing University of Technology</span>
                   <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    2020.9 - 2024.6
+                    <i class="uil uil-calendar-alt" aria-hidden="true"></i>
+                    <span i18n="qualification2__date">Sep 2020 – Jun 2024</span>
                   </div>
                 </div>
               </div>
+              <div class="qualification__data qualification__data--left">
+                <div class="qualification__marker">
+                  <a class="qualification__badge qualification__badge--link" href="https://www.linkedin.com/school/no8ms/" target="_blank" rel="noopener noreferrer">
+                    <img class="qualification__logo" src="assets/img/organizations/beijing-no8.png" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span class="qualification__link-indicator" aria-hidden="true">in</span>
+                    <span class="qualification__link-label"><span i18n="organization__beijing-no8">Beijing No.8 High School</span> · <span i18n="qualification__linkedin">View on LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab">Opens in a new tab</span></span>
+                  </a>
 
-              <!--==================== QUALIFICATION 3 ====================-->
-              <div class="qualification__data">
+                </div>
                 <div class="qualification__entry">
                   <h3 class="qualification__title" i18n="qualification3__title">Outstanding student of Beijing Soaring Program</h3>
                   <span class="qualification__subtitle" i18n="qualification3__subtitle">Beijing No.8 High School (Top3 in Beijing)</span>
                   <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    2017.9 - 2020.7
+                    <i class="uil uil-calendar-alt" aria-hidden="true"></i>
+                    <span i18n="qualification3__date">Sep 2017 – Jul 2020</span>
                   </div>
-                </div>
-
-                <div class="qualification__marker">
-                  <a class="qualification__badge qualification__badge--link" href="https://www.linkedin.com/school/no8ms/" target="_blank" rel="noopener noreferrer">
-                    <img class="qualification__logo" src="assets/img/organizations/beijing-no8.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
-                    <span class="qualification__link-indicator" aria-hidden="true">in</span>
-                    <span class="qualification__link-label"><span i18n="qualification__beijing_no8">Beijing No.8 High School</span> · <span i18n="qualification__linkedin">LinkedIn</span><span aria-hidden="true"> ↗</span><span class="qualification__link-note" i18n="qualification__new_tab"> (opens in a new tab)</span></span>
-                  </a>
-                  <!-- 最后一个不要加 qualification__line -->
                 </div>
               </div>
             </div>
@@ -1073,74 +1114,87 @@
         <span class="section__subtitle" i18n="portfolio__subtitle"
           >Recent Projects</span>
 
+        <div class="selected-projects container">
+          <div class="selected-projects__heading"><h3 i18n="project__selected">Selected work</h3><p i18n="project__selected_hint">Three projects, a closer look</p></div>
+          <div class="selected-projects__grid">
+            <a class="selected-project" href="project-deepfake.html">
+              <div class="selected-project__top"><span>01</span><span aria-hidden="true">↗</span></div>
+              <div class="selected-project__symbol" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m16 3 10 4v8c0 6-5 10-10 14C11 25 6 21 6 15V7z"/><path d="m11 16 3 3 7-7"/></svg></div>
+              <h4 i18n="case_deepfake__short">Deepfake Detection</h4>
+              <p i18n="case_deepfake__card">Image and audio detection, from uploaded media to model predictions.</p>
+              <span class="selected-project__read" i18n="project__read_case">Explore the project →</span>
+            </a>
+            <a class="selected-project" href="project-rag.html">
+              <div class="selected-project__top"><span>02</span><span aria-hidden="true">↗</span></div>
+              <div class="selected-project__symbol" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="13" cy="7" rx="8" ry="3"/><path d="M5 7v14c0 4 16 4 16 0V7M5 14c0 4 16 4 16 0"/><circle cx="23" cy="23" r="5"/><path d="m27 27 3 3"/></svg></div>
+              <h4 i18n="case_rag__short">Hybrid Retrieval for RAG</h4>
+              <p i18n="case_rag__card">Sparse and dense search meet query expansion and reranking.</p>
+              <span class="selected-project__read" i18n="project__read_case">Explore the project →</span>
+            </a>
+            <a class="selected-project" href="project-voice-agent.html">
+              <div class="selected-project__top"><span>03</span><span aria-hidden="true">↗</span></div>
+              <div class="selected-project__symbol" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="11" y="3" width="10" height="17" rx="5"/><path d="M7 15v1a9 9 0 0 0 18 0v-1M16 25v5m-5 0h10"/></svg></div>
+              <h4 i18n="case_voice-agent__short">Voice-Driven AI Agent</h4>
+              <p i18n="case_voice-agent__card">A conversational prototype for reminders, records, and everyday tasks.</p>
+              <span class="selected-project__read" i18n="project__read_case">Explore the project →</span>
+            </a>
+          </div>
+        </div>
+
+        <h3 class="portfolio__all-label" i18n="project__all">More projects & research</h3>
         <div class="portfolio__container container swiper-container">
           <div class="swiper-wrapper">
             <!--==================== PORTFOLIO 1 ====================-->
 
             <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/fake-profile.jpg" alt="" class="portfolio__img" />
+              <img src="assets/img/fake-profile.jpg" alt="" class="portfolio__img" loading="lazy" decoding="async" />
               <div class="portfolio_">
                 <h3 class="portfolio__title" i18n="portfolio1__title">DeepFake Detection Platform</h3>
-                <p class="portfolio__description" i18n="portfolio1__description">Developed core modules using React and TypeScript, optimized model performance, and deployed on AWS, supporting 1,200+ concurrent users.</p>
-                <a href="https://github.com/Mycroft-s/image_and_audio_deepfakededtection" target="_blank" rel="noopener" class="button button--flex button--small portfolio__button">
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
+                <p class="portfolio__description" i18n="portfolio1__description">An image and audio deepfake detection application, with upload-to-prediction workflows and a separate Vision Transformer fine-tuning pipeline.</p>
+                <div class="project-actions"><a class="project-link project-link--primary" href="project-deepfake.html"><span i18n="project__details">Details</span><span aria-hidden="true">→</span></a>
+            <a class="project-link" href="https://github.com/Mycroft-s/image_and_audio_deepfakededtection" target="_blank" rel="noopener noreferrer"><span i18n="project__code">Code</span><span aria-hidden="true">↗</span></a></div>
               </div>
             </div>
             <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/rag.jpg" alt="" class="portfolio__img" />
+              <img src="assets/img/rag.jpg" alt="" class="portfolio__img" loading="lazy" decoding="async" />
               <div class="portfolio_">
-                <h3 class="portfolio__title" i18n="portfolio2__title">RAG-based Chatbot System</h3>
-                <p class="portfolio__description" i18n="portfolio2__description">Designed hybrid retrieval framework with LangChain and MilvusDB, enhancing query performance and improving search relevance by 21.7%.</p>
-                <a href="https://github.com/Mycroft-s/Web-Search-Engines-CS-GY-6913-A" target="_blank" rel="noopener" class="button button--flex button--small portfolio__button">
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
+                <h3 class="portfolio__title" i18n="portfolio2__title">Hybrid Retrieval for RAG</h3>
+                <p class="portfolio__description" i18n="portfolio2__description">Combines BGE-M3 sparse and dense retrieval in Milvus with query expansion and reranking to improve the relevance of retrieved context.</p>
+                <div class="project-actions"><a class="project-link project-link--primary" href="project-rag.html"><span i18n="project__details">Details</span><span aria-hidden="true">→</span></a>
+            <a class="project-link" href="https://github.com/Mycroft-s/Web-Search-Engines-CS-GY-6913-A/tree/main/Hybrid_search_bgem3_LLMs" target="_blank" rel="noopener noreferrer"><span i18n="project__code">Code</span><span aria-hidden="true">↗</span></a></div>
               </div>
             </div>
             <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/portfolio3.jpg" alt="" class="portfolio__img" />
+              <img src="assets/img/portfolio3.jpg" alt="" class="portfolio__img" loading="lazy" decoding="async" />
               <div class="portfolio_">
                 <h3 class="portfolio__title" i18n="portfolio3__title">Real-time Threat Detection Platform</h3>
                 <p class="portfolio__description" i18n="portfolio3__description">Developed with Spring Boot and Kafka, processing 150k+ daily security logs, reducing alert latency by 22% through optimized SQL queries.</p>
-                <a href="https://github.com/Mycroft-s" target="_blank" rel="noopener" class="button button--flex button--small portfolio__button">
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
+                <div class="project-actions"><a class="project-link project-link--primary" href="#qualification"><span i18n="project__experience">Related experience</span><span aria-hidden="true">→</span></a></div>
               </div>
             </div>
             <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/deepfake_cover.jpg" alt="Voice-driven AI Agents" class="portfolio__img" />
+              <img src="assets/img/FMVML.png" alt="Federated multi-view multi-label learning" class="portfolio__img" loading="lazy" decoding="async" />
               <div class="portfolio_">
-                <h3 class="portfolio__title" i18n="portfolio4__title">Federated Multi-View Multi-Label Learning</h3>
+                <h3 class="portfolio__title" i18n="portfolio4__title">Federated Multi-View Multi-Label Classification</h3>
                 <p class="portfolio__description" i18n="portfolio4__description">Published research in IEEE Transactions on Big Data, introducing the FMVML method, which improved average precision by 8.3%.</p>
-                <a href="https://github.com/Mycroft-s/voice-driven-AI-agents" target="_blank" rel="noopener" class="button button--flex button--small portfolio__button">
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
+                <div class="project-actions"><a class="project-link project-link--primary" href="https://ieeexplore.ieee.org/document/10816109" target="_blank" rel="noopener noreferrer"><span i18n="project__paper">Paper</span><span aria-hidden="true">↗</span></a></div>
               </div>
             </div>
             <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/portfolio1.jpg" alt="Intelligent Health Assistant" class="portfolio__img" />
+              <img src="assets/img/portfolio1.jpg" alt="Intelligent Health Assistant" class="portfolio__img" loading="lazy" decoding="async" />
               <div class="portfolio_">
                 <h3 class="portfolio__title" i18n="portfolio5__title">Intelligent Health Assistant - Voice-Driven AI Agent</h3>
                 <p class="portfolio__description" i18n="portfolio5__description">An intelligent health assistant AI agent system designed specifically for elderly people, providing personalized health management services through voice interaction, integrated with LangChain and real-time voice processing technologies.</p>
-                <a href="https://github.com/Mycroft-s/voice-driven-AI-agents" target="_blank" rel="noopener" class="button button--flex button--small portfolio__button">
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
+                <div class="project-actions"><a class="project-link project-link--primary" href="project-voice-agent.html"><span i18n="project__details">Details</span><span aria-hidden="true">→</span></a>
+            <a class="project-link" href="https://github.com/Mycroft-s/voice-driven-AI-agents" target="_blank" rel="noopener noreferrer"><span i18n="project__code">Code</span><span aria-hidden="true">↗</span></a></div>
               </div>
             </div>
             <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/portfolio2.jpg" alt="Voice-driven AI Agents" class="portfolio__img" />
+              <img src="assets/img/portfolio2.jpg" alt="Recommendation systems presentation" class="portfolio__img" loading="lazy" decoding="async" />
               <div class="portfolio_">
                 <h3 class="portfolio__title" i18n="portfolio6__title">Presentation on Recommendation System</h3>
                 <p class="portfolio__description" i18n="portfolio6__description">Sharing content on recommendation systems from both academic and industrial perspectives</p>
-                <a href="https://www.youtube.com/watch?v=Xv3h8YH95ZQ" target="_blank" rel="noopener" class="button button--flex button--small portfolio__button">
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
+                <div class="project-actions"><a class="project-link project-link--primary" href="https://www.youtube.com/watch?v=Xv3h8YH95ZQ" target="_blank" rel="noopener noreferrer"><span i18n="project__video">Video</span><span aria-hidden="true">↗</span></a></div>
               </div>
             </div>
           </div>
@@ -1167,47 +1221,35 @@
             <!--==================== publication 1 ====================-->
 
             <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/FMVML.png" alt="" class="portfolio__img" />
+              <img src="assets/img/FMVML.png" alt="" class="portfolio__img" loading="lazy" decoding="async" />
               <div class="portfolio_">
                 <h3 class="portfolio__title" i18n="publication1__title">Federated Multi-View Multi-Label Classification</h3>
                 <p class="publication1__description" i18n="publication1__description">First Author. Published in IEEE Transactions on Big Data, 2025.</p>
-                <a href="https://ieeexplore.ieee.org/document/10816109" target="_blank" rel="noopener" class="button button--flex button--small portfolio__button">
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
+                <div class="project-actions"><a class="project-link project-link--primary" href="https://ieeexplore.ieee.org/document/10816109" target="_blank" rel="noopener noreferrer"><span i18n="project__paper">Paper</span><span aria-hidden="true">↗</span></a></div>
               </div>
             </div>
             <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/BMC.png" alt="" class="portfolio__img" />
+              <img src="assets/img/BMC.png" alt="" class="portfolio__img" loading="lazy" decoding="async" />
               <div class="portfolio_">
                 <h3 class="portfolio__title" i18n="publication2__title">Susceptibility Genes Identification in Salt Sensitivity of BP</h3>
                 <p class="publication2__description" i18n="publication2__description">Co-author. Published in BMC Genomics, 2024.</p>
-                <a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-024-10409-9" target="_blank" rel="noopener" class="button button--flex button--small portfolio__button">
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
+                <div class="project-actions"><a class="project-link project-link--primary" href="https://doi.org/10.1186/s12864-024-10409-9" target="_blank" rel="noopener noreferrer"><span i18n="project__paper">Paper</span><span aria-hidden="true">↗</span></a></div>
               </div>
             </div>
             <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/multi.jpg" alt="" class="portfolio__img" />
+              <img src="assets/img/multi.jpg" alt="" class="portfolio__img" loading="lazy" decoding="async" />
               <div class="portfolio_">
                 <h3 class="portfolio__title" i18n="publication3__title">Multi-Omics Big Data Analysis in Hypertension Research</h3>
                 <p class="publication3__description" i18n="publication3__description">Co-author. Published in Chinese Journal of Cardiology, 2023.</p>
-                <a href="https://d.wanfangdata.com.cn/periodical/Ch9QZXJpb2RpY2FsQ0hJTmV3UzIwMjQxMTA1MTcxMzA0Eg5neHl6ejIwMjQwMjAwNhoIa2hidnJoMms%3D" target="_blank" rel="noopener" class="button button--flex button--small portfolio__button">
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
+                <div class="project-actions"><a class="project-link project-link--primary" href="https://d.wanfangdata.com.cn/periodical/Ch9QZXJpb2RpY2FsQ0hJTmV3UzIwMjQxMTA1MTcxMzA0Eg5neHl6ejIwMjQwMjAwNhoIa2hidnJoMms%3D" target="_blank" rel="noopener noreferrer"><span i18n="project__paper">Paper</span><span aria-hidden="true">↗</span></a></div>
               </div>
             </div>
             <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/patent.png" alt="" class="portfolio__img" />
+              <img src="assets/img/patent.png" alt="" class="portfolio__img" loading="lazy" decoding="async" />
               <div class="portfolio_">
                 <h3 class="portfolio__title" i18n="publication4__title">Key Methods of Multi-Modal Information Fusion</h3>
                 <p class="publication4__description" i18n="publication4__description">First Author. Patent (Application Number: 2023111952962), 2023.</p>
-                <a href="https://www.xjishu.com/zhuanli/55/202311195296.html" target="_blank" rel="noopener" class="button button--flex button--small portfolio__button">
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
+                <div class="project-actions"><a class="project-link project-link--primary" href="https://www.xjishu.com/zhuanli/55/202311195296.html" target="_blank" rel="noopener noreferrer"><span i18n="project__patent">Patent</span><span aria-hidden="true">↗</span></a></div>
               </div>
             </div>
           </div>
@@ -1231,329 +1273,123 @@
         <div class="photography__container container swiper-container">
           <div class="swiper-wrapper">
             <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202401.jpg" alt="Night street photography" class="photography__img" />
+              <a class="photography__photo-link" href="photography.html?photo=photo-202401">
+                <img src="assets/img/gallery/photo-202401-thumb.webp" alt="Sunlight on curved red canyon walls" class="photography__img" width="1080" height="1440" loading="lazy" decoding="async" />
+              </a>
               <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
+                <h3 class="photography__title" i18n="home__photo-202401__title">Light winding through red stone</h3>
+                <p class="photography__description" i18n="home__photo-202401__description">2024 · Sony a7C II</p>
               </div>
             </div>
             <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202402.jpg" alt="Mountain landscape" class="photography__img" />
+              <a class="photography__photo-link" href="photography.html?photo=photo-202413">
+                <img src="assets/img/gallery/photo-202413-thumb.webp" alt="White clouds over a blue bay and harbor" class="photography__img" width="1620" height="1080" loading="lazy" decoding="async" />
+              </a>
               <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
+                <h3 class="photography__title" i18n="home__photo-202413__title">Clouds drifting above a blue harbor</h3>
+                <p class="photography__description" i18n="home__photo-202413__description">2024 · Film · Nikon FE2</p>
               </div>
             </div>
             <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202403.jpg" alt="Mountain landscape" class="photography__img" />
+              <a class="photography__photo-link" href="photography.html?photo=photo-202402">
+                <img src="assets/img/gallery/photo-202402-thumb.webp" alt="Red bicycle beside a tree with a waterfront skyline" class="photography__img" width="1080" height="1620" loading="lazy" decoding="async" />
+              </a>
               <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
+                <h3 class="photography__title" i18n="home__photo-202402__title">A bicycle rests beneath the trees</h3>
+                <p class="photography__description" i18n="home__photo-202402__description">2024 · Sony a7C II</p>
               </div>
             </div>
             <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202404.jpg" alt="Mountain landscape" class="photography__img" />
+              <a class="photography__photo-link" href="photography.html?photo=photo-202301">
+                <img src="assets/img/gallery/photo-202301-thumb.webp" alt="Sun low on the horizon under a pink sky" class="photography__img" width="1080" height="1724" loading="lazy" decoding="async" />
+              </a>
               <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
+                <h3 class="photography__title" i18n="home__photo-202301__title">A low sun beneath a pink sky</h3>
+                <p class="photography__description" i18n="home__photo-202301__description">2023 · Sony a6400</p>
               </div>
             </div>
             <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202405.jpg" alt="Night street photography" class="photography__img" />
+              <a class="photography__photo-link" href="photography.html?photo=photo-202302">
+                <img src="assets/img/gallery/photo-202302-thumb.webp" alt="People standing in shallow water near the shore" class="photography__img" width="1616" height="1080" loading="lazy" decoding="async" />
+              </a>
               <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
+                <h3 class="photography__title" i18n="home__photo-202302__title">Figures wading along the quiet shore</h3>
+                <p class="photography__description" i18n="home__photo-202302__description">2023 · Sony a6400</p>
               </div>
             </div>
             <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202406.jpg" alt="Night street photography" class="photography__img" />
+              <a class="photography__photo-link" href="photography.html?photo=photo-202303">
+                <img src="assets/img/gallery/photo-202303-thumb.webp" alt="White pigeons perched on a wall against a pink sky" class="photography__img" width="1080" height="1440" loading="lazy" decoding="async" />
+              </a>
               <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
+                <h3 class="photography__title" i18n="home__photo-202303__title">White pigeons against a pink sky</h3>
+                <p class="photography__description" i18n="home__photo-202303__description">2023 · Sony a6400</p>
               </div>
             </div>
             <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202407.jpg" alt="Mountain landscape" class="photography__img" />
+              <a class="photography__photo-link" href="photography.html?photo=photo-202201">
+                <img src="assets/img/gallery/photo-202201-thumb.webp" alt="Pink tulips in a green garden" class="photography__img" width="6000" height="4000" loading="lazy" decoding="async" />
+              </a>
               <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
+                <h3 class="photography__title" i18n="home__photo-202201__title">Pink tulips across a green garden</h3>
+                <p class="photography__description" i18n="home__photo-202201__description">2022 · Sony a6400</p>
               </div>
             </div>
             <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202408.jpg" alt="Mountain landscape" class="photography__img" />
+              <a class="photography__photo-link" href="photography.html?photo=photo-202202">
+                <img src="assets/img/gallery/photo-202202-thumb.webp" alt="Sunlight filtering through white flowering branches" class="photography__img" width="6000" height="4000" loading="lazy" decoding="async" />
+              </a>
               <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
+                <h3 class="photography__title" i18n="home__photo-202202__title">White blossoms catching the sunlight</h3>
+                <p class="photography__description" i18n="home__photo-202202__description">2022 · Sony a6400</p>
               </div>
             </div>
             <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202409.jpg" alt="Mountain landscape" class="photography__img" />
+              <a class="photography__photo-link" href="photography.html?photo=photo-202203">
+                <img src="assets/img/gallery/photo-202203-thumb.webp" alt="Black-and-white bird in flight beside a brick wall" class="photography__img" width="6000" height="4000" loading="lazy" decoding="async" />
+              </a>
               <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
+                <h3 class="photography__title" i18n="home__photo-202203__title">A bird passing the brick wall</h3>
+                <p class="photography__description" i18n="home__photo-202203__description">2022 · Sony a6400</p>
               </div>
             </div>
             <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202410.jpg" alt="Night street photography" class="photography__img" />
+              <a class="photography__photo-link" href="photography.html?photo=photo-202209">
+                <img src="assets/img/gallery/photo-202209-thumb.webp" alt="Pink and purple sunset clouds over city buildings" class="photography__img" width="5916" height="3944" loading="lazy" decoding="async" />
+              </a>
               <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
+                <h3 class="photography__title" i18n="home__photo-202209__title">Purple clouds over the city</h3>
+                <p class="photography__description" i18n="home__photo-202209__description">2021 · Sony a6400</p>
               </div>
             </div>
             <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202411.jpg" alt="Night street photography" class="photography__img" />
+              <a class="photography__photo-link" href="photography.html?photo=photo-202101">
+                <img src="assets/img/gallery/photo-202101-thumb.webp" alt="Reeds beside a lake with a city skyline beyond" class="photography__img" width="3808" height="4900" loading="lazy" decoding="async" />
+              </a>
               <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
+                <h3 class="photography__title" i18n="home__photo-202101__title">Reeds along the city’s edge</h3>
+                <p class="photography__description" i18n="home__photo-202101__description">2021 · Sony a6400</p>
               </div>
             </div>
             <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202412.jpg" alt="Night street photography" class="photography__img" />
+              <a class="photography__photo-link" href="photography.html?photo=photo-202102">
+                <img src="assets/img/gallery/photo-202102-thumb.webp" alt="Layers of mountain ridges beneath a pale blue sky" class="photography__img" width="3808" height="4900" loading="lazy" decoding="async" />
+              </a>
               <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202413.jpg" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202414.jpg" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202415.jpg" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2024/202416.jpg" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2023/202301.png" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2023/202302.png" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2023/202303.png" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2023/202304.png" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2023/202305.png" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2023/202306.png" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2023/202307.png" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2023/202308.png" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2023/202309.png" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2022/202201.jpg" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2022/202202.jpg" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2022/202203.JPG" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2022/202204.jpg" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2022/202205.jpg" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2022/202206.jpg" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2022/202207.jpg" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2022/202208.JPG" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2022/202209.jpg" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2022/202210.jpg" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2021/202101.png" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2021/202102.png" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2021/202103.png" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2021/202104.png" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2021/202105.png" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2021/202106.png" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2021/202107.png" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2021/202108.png" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2021/202109.png" alt="Mountain landscape" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
-              </div>
-            </div>
-            <div class="photography__content grid swiper-slide">
-              <img src="assets/img/2021/202110.png" alt="Night street photography" class="photography__img" />
-              <div class="photography__data">
-                <h3 class="photography__title">Name</h3>
-                <p class="photography__description">description.</p>
+                <h3 class="photography__title" i18n="home__photo-202102__title">Mountain ridges dissolve into blue</h3>
+                <p class="photography__description" i18n="home__photo-202102__description">2021 · Sony a6400</p>
               </div>
             </div>
           </div>
 
-          <!-- 给摄影区独立的 class -->
-          <div class="swiper-button-next photography-button-next">
-            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-          </div>
-          <div class="swiper-button-prev photography-button-prev">
-            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-          </div>
+          <button type="button" class="swiper-button-next photography-button-next" aria-labelledby="photography-next-label">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon" aria-hidden="true"></i>
+            <span class="content-sr-only" id="photography-next-label" i18n="photography__next">Next photograph</span>
+          </button>
+          <button type="button" class="swiper-button-prev photography-button-prev" aria-labelledby="photography-previous-label">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon" aria-hidden="true"></i>
+            <span class="content-sr-only" id="photography-previous-label" i18n="photography__previous">Previous photograph</span>
+          </button>
           <div class="swiper-pagination photography-pagination"></div>
         </div>
         <div class="photography__archive-link">
@@ -1571,27 +1407,40 @@
         <div class="contact__container container grid">
           <div>
             <div class="contact__information">
-              <i class="uil uil-phone-alt contact__icon"></i>
+              <i class="uil uil-phone-alt contact__icon" aria-hidden="true"></i>
 
               <div>
                 <h3 class="contact__title" i18n="tel">Phone</h3>
-                <span class="contact__subtitle" i18n="tel__number"
-                  >+1 (718) 306-3737/ +86 18500305220</span>
+                <div class="contact__subtitle">
+                  <a class="contact__link contact__phone" href="tel:+17183063737">+1 (718) 306-3737</a>
+                  <span aria-hidden="true"> / </span>
+                  <a class="contact__link contact__phone" href="tel:+8618500305220">+86 18500305220</a>
+                </div>
               </div>
             </div>
 
             <div class="contact__information">
-              <i class="uil uil-envelope contact__icon"></i>
+              <i class="uil uil-envelope contact__icon" aria-hidden="true"></i>
 
               <div>
                 <h3 class="contact__title" i18n="email">E-mail</h3>
-                <span class="contatc__subtitle" i18n="email__address"
-                  >mycrofthd@gmail.com</span>
+                <div class="contact__email-actions">
+                  <a class="contact__link" id="contact-email" href="mailto:mycrofthd@gmail.com" i18n="email__address">mycrofthd@gmail.com</a>
+                  <button class="contact__copy" id="contact-copy-email" type="button" aria-describedby="contact-copy-status" hidden>
+                    <i class="uil uil-copy" aria-hidden="true"></i>
+                    <span i18n="contact__copy">Copy email</span>
+                  </button>
+                </div>
+                <p class="contact__copy-status" id="contact-copy-status" role="status" aria-live="polite"></p>
+                <div class="contact__copy-fallback" id="contact-copy-fallback" hidden>
+                  <label for="contact-copy-field" i18n="contact__manual_copy">Email address to copy</label>
+                  <input class="contact__copy-field" id="contact-copy-field" type="email" value="mycrofthd@gmail.com" readonly />
+                </div>
               </div>
             </div>
 
             <div class="contact__information">
-              <i class="uil uil-map-marker contact__icon"></i>
+              <i class="uil uil-map-marker contact__icon" aria-hidden="true"></i>
 
               <div>
                 <h3 class="contact__title" i18n="location">Location</h3>
@@ -1600,6 +1449,10 @@
               </div>
             </div>
           </div>
+        </div>
+        <div id="contact-copy-messages" hidden>
+          <span i18n="contact__copied">Email address copied.</span>
+          <span i18n="contact__copy_failed">Copy unavailable. Select and copy the address below.</span>
         </div>
       </section>
     </main>
@@ -1667,5 +1520,6 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/iconfont.js"></script>
     <script type="module" src="assets/js/main.js"></script>
+  <script type="application/json" id="content-translations">{"en":{"news__item_2026_07_13":"I joined TikTok’s GMPT Transaction Platform team as an AI Engineer, building Transaction Agent through high-performance knowledge bases, automated skill generation, and offline evaluation and self-improvement.","news__item_2025_11_07":"I gave a presentation on recommendation systems at the student learning hub event held by C2smarter Center.","news__item_2025_09_10":"Excited to share that I’ve accepted a 2026 spring internship offer from TikTok! I’ll be joining the e-commerce recommendation infrastructure team, focusing on Feature Service and User data accessor.","news__item_2025_04_16":"Excited to share that I’ve accepted a 2025 summer internship offer from TikTok! I’ll be joining the e-commerce team, working on recommendation infrastructure.","news__item_2025_04_06":"I updated my photography works in my website.","news__item_2025_03_15":"I started my research on automated deployment with AI (CI/CD)!","news__item_2025_01_15":"I\u0026#39;m happy to share that I have started my Developer Assistant job in C2SMARTER Center!","news__item_2024_12_24":"I got 3.8 GPA for my first semester!","news__item_2024_12_20":"My paper Federated Multi-view Multi-Label Classification was accepted by IEEE TBD.","news__item_2024_09_03":"I started my work and research on deepfake detection!","news__item_2024_09_01":"I\u0026#39;m happy to share that I\u0026#39;ve started my master of computer science at New York University!","organization__tiktok":"TikTok","organization__c2smarter":"C2SMARTER Center","organization__freeleaps":"Freeleaps","organization__qingteng":"QingTeng","organization__bjut":"Beijing University of Technology","organization__nyu":"New York University","organization__beijing-no8":"Beijing No.8 High School","home__photo-202401__title":"Light winding through red stone","home__photo-202401__description":"2024 · Sony a7C II","home__photo-202413__title":"Clouds drifting above a blue harbor","home__photo-202413__description":"2024 · Film · Nikon FE2","home__photo-202402__title":"A bicycle rests beneath the trees","home__photo-202402__description":"2024 · Sony a7C II","home__photo-202301__title":"A low sun beneath a pink sky","home__photo-202301__description":"2023 · Sony a6400","home__photo-202302__title":"Figures wading along the quiet shore","home__photo-202302__description":"2023 · Sony a6400","home__photo-202303__title":"White pigeons against a pink sky","home__photo-202303__description":"2023 · Sony a6400","home__photo-202201__title":"Pink tulips across a green garden","home__photo-202201__description":"2022 · Sony a6400","home__photo-202202__title":"White blossoms catching the sunlight","home__photo-202202__description":"2022 · Sony a6400","home__photo-202203__title":"A bird passing the brick wall","home__photo-202203__description":"2022 · Sony a6400","home__photo-202209__title":"Purple clouds over the city","home__photo-202209__description":"2021 · Sony a6400","home__photo-202101__title":"Reeds along the city’s edge","home__photo-202101__description":"2021 · Sony a6400","home__photo-202102__title":"Mountain ridges dissolve into blue","home__photo-202102__description":"2021 · Sony a6400","qualification10__title":"AI Engineer","qualification10__subtitle":"TikTok · GMPT / Transaction Platform, San Jose","qualification10__date":"Jul 13, 2026 – Present","qualification8__title":"Software Engineer Intern","qualification8__subtitle":"TikTok, Seattle","qualification8__date":"May 2025 – Sep 2025; Jan 2026 – May 2026","qualification7__title":"Software Engineer Intern","qualification7__subtitle":"\u003ca href=\"https://c2smart.engineering.nyu.edu/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003eC2SMARTER Center\u003c/a\u003e, New York","qualification7__date":"Feb 2025 – Dec 2025","qualification9__title":"AI Engineer Intern","qualification9__subtitle":"\u003ca href=\"https://freeleaps.com/home/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003eFreeleaps\u003c/a\u003e, Seattle","qualification9__date":"Mar 2025 – May 2025","qualification4__title":"AI Engineer Intern","qualification4__subtitle":"DeepFake Detection Startup, New York","qualification4__date":"Sep 2024 – Dec 2024","qualification5__title":"AI Algorithms Engineer Intern","qualification5__subtitle":"QingTeng · Cloud Platform R\u0026amp;D Department, Beijing","qualification5__date":"Feb 2024 – Aug 2024","qualification6__title":"AI Researcher","qualification6__subtitle":"Data Mining \u0026amp; Security Lab, Beijing","qualification6__date":"Sep 2022 – Jul 2024","qualification1__title":"Master of Science in Computer Science","qualification1__subtitle":"New York University","qualification1__date":"Sep 2024 – May 2026","qualification2__title":"Bachelor of Engineering in Information Security","qualification2__subtitle":"Beijing University of Technology","qualification2__date":"Sep 2020 – Jun 2024","qualification3__title":"Outstanding student of Beijing Soaring Program","qualification3__subtitle":"Beijing No.8 High School (Top3 in Beijing)","qualification3__date":"Sep 2017 – Jul 2020","seo__index_title":"Hongdao Meng — AI Engineer \u0026 Photographer","seo__index_description":"Hongdao Meng is an AI Engineer at TikTok in San Jose, working on agents, knowledge bases, and evaluation. Explore his projects, research, and photography.","seo__locale":"en_US"},"cn":{"news__item_2026_07_13":"我加入 TikTok GMPT 旗下 Transaction Platform 团队，担任 AI 工程师，围绕高性能知识库、Skill 自动生成及离线评测与自提升，研发 Transaction Agent。","news__item_2025_11_07":"我在C2smarter Center 举办的student learning hub活动中，做了关于推荐系统的分享。","news__item_2025_09_10":"我很高兴地告诉大家，我已经接受了Tiktok 2026年春季实习的邀请！我将加入电子商务推荐基础设施团队，专注于功能服务和用户数据访问。","news__item_2025_04_16":"我已拿到 TikTok 的暑期实习 offer，2025 年暑假将在 TikTok 电商部门从事推荐系统架构的相关工作。","news__item_2025_04_06":"我在网站上更新了自己的摄影作品。","news__item_2025_03_15":"我开始了关于AI结合的自动化部署（CI/CD）的研究！","news__item_2025_01_15":"我很高兴地告诉大家，我已经在C2SMARTER Center开始了我的开发助理工作！","news__item_2024_12_24":"我在NYU的第一学期的GPA是3.8 ！","news__item_2024_12_20":"我作为第一作者的论文《Federated Multi-view Multi-Label Classification》被IEEE TBD接受。","news__item_2024_09_03":"我开始了关于深度伪造检测的工作和研究！","news__item_2024_09_01":"我很高兴地告诉大家，我已经开始在纽约大学攻读计算机科学硕士学位了！","organization__tiktok":"TikTok","organization__c2smarter":"C2SMARTER Center","organization__freeleaps":"Freeleaps","organization__qingteng":"青藤云安全","organization__bjut":"北京工业大学","organization__nyu":"纽约大学","organization__beijing-no8":"北京市第八中学","home__photo-202401__title":"光沿着红色岩壁流转","home__photo-202401__description":"2024 · Sony a7C II","home__photo-202413__title":"白云漂过蓝色海湾","home__photo-202413__description":"2024 · 胶片 · Nikon FE2","home__photo-202402__title":"树下停着一辆红色自行车","home__photo-202402__description":"2024 · Sony a7C II","home__photo-202301__title":"天边低垂着一轮红日","home__photo-202301__description":"2023 · Sony a6400","home__photo-202302__title":"浅水中站着几个身影","home__photo-202302__description":"2023 · Sony a6400","home__photo-202303__title":"粉色天空前并排的白鸽","home__photo-202303__description":"2023 · Sony a6400","home__photo-202201__title":"绿地上盛开的粉色郁金香","home__photo-202201__description":"2022 · Sony a6400","home__photo-202202__title":"白花枝头洒落点点阳光","home__photo-202202__description":"2022 · Sony a6400","home__photo-202203__title":"砖墙边掠过黑白鸟影","home__photo-202203__description":"2022 · Sony a6400","home__photo-202209__title":"城市上空铺开紫色晚霞","home__photo-202209__description":"2021 · Sony a6400","home__photo-202101__title":"芦苇湖岸远望城市楼群","home__photo-202101__description":"2021 · Sony a6400","home__photo-202102__title":"重重山脊渐渐融入蓝色","home__photo-202102__description":"2021 · Sony a6400","qualification10__title":"AI 工程师","qualification10__subtitle":"TikTok · GMPT / Transaction Platform，圣何塞（San Jose）","qualification10__date":"2026年7月13日 至 今","qualification8__title":"软件工程师实习生","qualification8__subtitle":"TikTok，西雅图","qualification8__date":"2025年5月 至 2025年9月；2026年1月 至 2026年5月","qualification7__title":"软件工程师实习生","qualification7__subtitle":"\u003ca href=\"https://c2smart.engineering.nyu.edu/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003eC2SMARTER Center\u003c/a\u003e，纽约","qualification7__date":"2025年2月 至 2025年12月","qualification9__title":"AI工程师实习生","qualification9__subtitle":"\u003ca href=\"https://freeleaps.com/home/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003eFreeleaps\u003c/a\u003e，西雅图","qualification9__date":"2025年3月 至 2025年5月","qualification4__title":"AI工程师实习生","qualification4__subtitle":"DeepFake 检测初创公司，纽约","qualification4__date":"2024年9月 至 2024年12月","qualification5__title":"AI算法工程师实习生","qualification5__subtitle":"青藤云安全 · 云平台研发部，北京","qualification5__date":"2024年2月 至 2024年8月","qualification6__title":"AI研究员","qualification6__subtitle":"数据挖掘与安全实验室，北京","qualification6__date":"2022年9月 至 2024年7月","qualification1__title":"计算机科学硕士","qualification1__subtitle":"纽约大学","qualification1__date":"2024年9月 至 2026年5月","qualification2__title":"信息安全学士","qualification2__subtitle":"北京工业大学","qualification2__date":"2020年9月 至 2024年6月","qualification3__title":"北京市翱翔计划优秀学员","qualification3__subtitle":"北京市第八中学(北京Top3)","qualification3__date":"2017年9月 至 2020年7月","seo__index_title":"孟宏道 — AI 工程师与摄影爱好者","seo__index_description":"孟宏道，现居圣何塞的 TikTok AI 工程师，专注智能体、知识库与评测。这里记录我的工程项目、研究与摄影作品。","seo__locale":"zh_CN"}}</script>
   </body>
 </html>

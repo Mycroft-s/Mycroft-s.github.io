@@ -41,10 +41,16 @@
         <h1 class="home__title" i18n="home__title">{{ t:home__title }}</h1>
         <h3 class="home__subtitle" i18n="home__subtitle">{{ t:home__subtitle }}</h3>
         <p class="home__description" i18n="home__description">{{ t:home__description }}</p>
-        <a href="#contact" class="button button-flex">
-          <span i18n="home__contact">{{ t:home__contact }}</span>
-          <i class="uil uil-message button__icon"></i>
-        </a>
+        <div class="home__actions">
+          <a href="#contact" class="button button--flex">
+            <span i18n="home__contact">{{ t:home__contact }}</span>
+            <i class="uil uil-message button__icon" aria-hidden="true"></i>
+          </a>
+          <a href="#portfolio" class="home__selected project-link">
+            <span i18n="project__home_selected">{{ t:project__home_selected }}</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </div>
     <div class="home__scroll">

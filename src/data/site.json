@@ -1,0 +1,32 @@
+{
+  "origin": "https://menghongdao.com",
+  "name": "Hongdao Meng",
+  "image": "assets/img/social-card.png",
+  "pages": {
+    "index.html": {
+      "path": "/",
+      "title": {"en": "Hongdao Meng — AI Engineer & Photographer", "cn": "孟宏道 — AI 工程师与摄影爱好者"},
+      "description": {"en": "Hongdao Meng is an AI Engineer at TikTok in San Jose, working on agents, knowledge bases, and evaluation. Explore his projects, research, and photography.", "cn": "孟宏道，现居圣何塞的 TikTok AI 工程师，专注智能体、知识库与评测。这里记录我的工程项目、研究与摄影作品。"}
+    },
+    "photography.html": {
+      "path": "/photography.html",
+      "title": {"en": "Photography — Hongdao Meng", "cn": "摄影作品 — 孟宏道"},
+      "description": {"en": "A photographic journal by Hongdao Meng. Explore digital and film photographs by year and camera, with full-screen viewing and individual photo sharing.", "cn": "孟宏道的摄影档案。按年份与相机浏览数码和胶片作品，支持全屏展映与单张照片分享。"}
+    },
+    "project-deepfake.html": {
+      "path": "/project-deepfake.html",
+      "title": {"en": "Deepfake Detection — Hongdao Meng", "cn": "深度伪造检测 — 孟宏道"},
+      "description": {"en": "Explore Hongdao Meng's deepfake detection project: the problem, implementation, model training, and source code.", "cn": "了解孟宏道的深度伪造检测项目：问题背景、工程实现、模型训练与源代码。"}
+    },
+    "project-rag.html": {
+      "path": "/project-rag.html",
+      "title": {"en": "Retrieval-Augmented Generation — Hongdao Meng", "cn": "检索增强生成 — 孟宏道"},
+      "description": {"en": "Explore Hongdao Meng's RAG project, including hybrid retrieval, reranking, and the engineering choices behind the search pipeline.", "cn": "了解孟宏道的 RAG 项目，探索混合检索、重排以及检索链路的工程设计。"}
+    },
+    "project-voice-agent.html": {
+      "path": "/project-voice-agent.html",
+      "title": {"en": "Voice-Driven AI Agent — Hongdao Meng", "cn": "语音 AI 智能体 — 孟宏道"},
+      "description": {"en": "Explore Hongdao Meng's voice-driven health assistant project, from voice interaction to agent workflows and implementation.", "cn": "了解孟宏道的语音健康助手项目，从语音交互到智能体工作流与工程实现。"}
+    }
+  }
+}

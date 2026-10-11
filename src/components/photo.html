@@ -1,7 +1,9 @@
 <div class="photography__content grid swiper-slide">
-  <img src="{{ text:src }}" alt="{{ text:alt }}" class="photography__img" />
+  <a class="photography__photo-link" href="{{ text:href }}">
+    <img src="{{ text:thumbnail }}" alt="{{ text:alt }}" class="photography__img" width="{{ text:width }}" height="{{ text:height }}" loading="lazy" decoding="async" />
+  </a>
   <div class="photography__data">
-    <h3 class="photography__title">{{ text:title }}</h3>
-    <p class="photography__description">{{ text:description }}</p>
+    <h3 class="photography__title" i18n="{{ text:titleKey }}">{{ i18n:titleKey }}</h3>
+    <p class="photography__description" i18n="{{ text:descriptionKey }}">{{ i18n:descriptionKey }}</p>
   </div>
 </div>

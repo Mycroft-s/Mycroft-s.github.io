@@ -16,6 +16,8 @@ export function initSkills(root = document) {
     content.classList.toggle('skills__open', open);
     content.classList.toggle('skills__close', !open);
     content.querySelector('.skills__header')?.setAttribute('aria-expanded', String(open));
+    const list = content.querySelector('.skills__list');
+    if (list) list.hidden = !open;
   };
 
   for (const content of contents) {

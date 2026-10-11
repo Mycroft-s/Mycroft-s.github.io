@@ -4,16 +4,17 @@
 
   <div class="photography__container container swiper-container">
     <div class="swiper-wrapper">
-      {{ each:photography:components/photo.html }}
+      {{ each:home-photos:components/photo.html }}
     </div>
 
-    <!-- 给摄影区独立的 class -->
-    <div class="swiper-button-next photography-button-next">
-      <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-    </div>
-    <div class="swiper-button-prev photography-button-prev">
-      <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-    </div>
+    <button type="button" class="swiper-button-next photography-button-next" aria-labelledby="photography-next-label">
+      <i class="uil uil-angle-right-b swiper-portfolio-icon" aria-hidden="true"></i>
+      <span class="content-sr-only" id="photography-next-label" i18n="photography__next">{{ t:photography__next }}</span>
+    </button>
+    <button type="button" class="swiper-button-prev photography-button-prev" aria-labelledby="photography-previous-label">
+      <i class="uil uil-angle-left-b swiper-portfolio-icon" aria-hidden="true"></i>
+      <span class="content-sr-only" id="photography-previous-label" i18n="photography__previous">{{ t:photography__previous }}</span>
+    </button>
     <div class="swiper-pagination photography-pagination"></div>
   </div>
   <div class="photography__archive-link">

@@ -1,4 +1,4 @@
 <li class="news__item">
-  <h3 class="news__date">{{ text:date }}</h3>
-  <p class="news__description">{{ html:descriptionHtml }}</p>
+  <h3 class="news__date"><time datetime="{{ text:date }}">{{ text:dateLabel }}</time></h3>
+  <p class="news__description" i18n="{{ text:descriptionKey }}">{{ i18n:descriptionKey }}</p>
 </li>

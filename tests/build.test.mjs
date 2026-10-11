@@ -6,7 +6,7 @@ import { copyFile, mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promi
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { renderSite } from '../scripts/build-lib.mjs';
+import { renderSite, escapeHtml } from '../scripts/build-lib.mjs';
 import { groupPhotos, normalizePhotos } from '../scripts/gallery-lib.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -51,14 +51,14 @@ test('generated homepage contains complete static content and is current', async
   }
   const news = JSON.parse(await readFile(join(root, 'src/data/news.json'), 'utf8'));
   const compact = (value) => value.replace(/\s+/g, ' ').trim();
-  for (const entry of news) assert.ok(compact(html).includes(compact(entry.descriptionHtml)));
+  for (const entry of news) assert.ok(compact(html).includes(compact(escapeHtml(entry.description.en))));
   assert.match(html, /<script type="module" src="assets\/js\/main\.js"><\/script>/);
-  assert.doesNotMatch(html, /<script[^>]*jquery|\{\{|\}\}/);
+  assert.doesNotMatch(html, /<script[^>]*jquery|\{\{\s*(?:include|each|t|i18n|text|html):/);
 });
 
 test('authored markup is preserved, and plain data fields are HTML-escaped', async (t) => {
-  const { directory, write } = await fixture(t, '{{ t:title }}\n{{ each:entries:item.html }}');
-  await write('src/item.html', '<p>{{ text:label }}</p><p>{{ html:descriptionHtml }}</p>');
+  const { directory, write } = await fixture(t, '{{ t:title }}\n{{ each:entries:components/item.html }}');
+  await write('src/components/item.html', '<p>{{ text:label }}</p><p>{{ html:descriptionHtml }}</p>');
   await write('src/data/entries.json', JSON.stringify([{ label: '<img>&"', descriptionHtml: 'English<br>中文' }]));
   const { html } = await renderSite(directory);
   assert.match(html, /Hello <br>world/);
@@ -123,7 +123,7 @@ test('--check detects stale generated HTML without overwriting it', async (t) =>
   const { directory, write } = await fixture(t);
   await write('src/photography.html', '<h1>Photography archive</h1>');
   await mkdir(join(directory, 'scripts'));
-  for (const filename of ['build.mjs', 'build-lib.mjs', 'gallery-lib.mjs']) {
+  for (const filename of ['build.mjs', 'build-lib.mjs', 'gallery-lib.mjs', 'home-data.mjs', 'project-data.mjs', 'site-metadata.mjs']) {
     await copyFile(join(root, 'scripts', filename), join(directory, 'scripts', filename));
   }
   const script = join(directory, 'scripts/build.mjs');

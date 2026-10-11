@@ -1,6 +1,9 @@
 import { readFile, readdir, stat } from 'node:fs/promises';
 import { isAbsolute, join, relative, resolve, sep } from 'node:path';
 import { readGalleryCollections } from './gallery-lib.mjs';
+import { readHomeData } from './home-data.mjs';
+import { readProjectCollections } from './project-data.mjs';
+import { readSiteMetadata, metadataTranslations, injectMetadata, scriptJson, siteAuxiliaryFiles } from './site-metadata.mjs';
 
 const normalize = (text) => text.replace(/\r\n/g, '\n');
 const has = (object, key) => Object.hasOwn(object, key);
@@ -189,27 +192,49 @@ export async function validateHtml(html, root, translations, generatedPages = {}
 export async function renderSite(root) {
   root = resolve(root);
   const translations = await loadTranslations(root);
+  const exists = async name => {
+    try { return (await stat(join(root, name))).isFile(); }
+    catch (error) { if (error.code === 'ENOENT') return false; throw error; }
+  };
+  const home = await exists('src/data/experience.json') ? await readHomeData(root) : { collections: {}, translations: { en: {}, cn: {} } };
+  const site = await readSiteMetadata(root);
+  const metaTranslations = metadataTranslations(site);
+  const extraTranslations = {en: {}, cn: {}};
+  for (const language of ['en', 'cn']) {
+    Object.assign(extraTranslations[language], home.translations[language], metaTranslations[language]);
+    Object.assign(translations[language], extraTranslations[language]);
+  }
+  const projects = await exists('src/data/project-details.json') ? await readProjectCollections(root, translations) : {};
   let gallery;
   const galleryCollection = (name) => async () => {
     gallery ??= readGalleryCollections(root);
     return (await gallery)[name];
   };
   const render = createRenderer(join(root, 'src'), translations, {
+    ...home.collections,
+    ...projects,
     'gallery-years': galleryCollection('gallery-years'),
     'gallery-featured': galleryCollection('gallery-featured'),
   });
-  const names = ['index.html'];
-  try {
-    if ((await stat(join(root, 'src/photography.html'))).isFile()) names.push('photography.html');
-  } catch (error) {
-    if (error.code !== 'ENOENT') throw error;
-  }
+  // Root-level source pages are published; includes stay in nested directories.
+  const names = ['index.html', ...(await readdir(join(root, 'src'))).filter(name => name !== 'index.html' && /^[a-z][a-z0-9-]*\.html$/.test(name)).sort()];
   const generated = {};
-  for (const name of names) generated[name] = `${(await render(name)).replace(/[ \t]+$/gm, '').trimEnd()}\n`;
+  for (const name of names) {
+    let html = injectMetadata(await render(name), name, site);
+    const usedKeys = new Set([...html.matchAll(/\bi18n="([^"]+)"/g)].map(match => match[1]));
+    const embedded = Object.fromEntries(['en', 'cn'].map(language => [language,
+      Object.fromEntries(Object.entries(extraTranslations[language]).filter(([key]) => usedKeys.has(key))),
+    ]));
+    if (Object.keys(embedded.en).length) {
+      const script = `<script type="application/json" id="content-translations">${scriptJson(embedded)}</script>`;
+      html = html.includes('</body>') ? html.replace('</body>', `${script}\n  </body>`) : `${html}\n${script}`;
+    }
+    generated[name] = `${html.replace(/[ \t]+$/gm, '').trimEnd()}\n`;
+  }
   const pages = {};
   for (const name of names) {
     pages[name] = { html: generated[name], stats: await validateHtml(generated[name], root, translations, generated) };
   }
   // Keep the original single-page API available to callers and existing checks.
-  return { ...pages['index.html'], pages };
+  return { ...pages['index.html'], pages, files: siteAuxiliaryFiles(site, names) };
 }

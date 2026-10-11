@@ -165,3 +165,33 @@ test('i18n-only values and placeholders do not replace unrelated markup', async 
   assert.equal(input.value, 'User entered text');
   assert.equal(input.innerHTML, 'Preserve');
 });
+
+test('structured content and metadata translate together without duplicate authored dictionaries', async () => {
+  const news = element({ i18n: 'news_one' }, 'English news');
+  const meta = element({ i18n: 'description', 'i18n-only': 'content', content: 'English description' });
+  const root = page([news, meta]);
+  const get = root.getElementById;
+  root.getElementById = id => id === 'content-translations' ? { textContent: JSON.stringify({
+    en: {news_one: 'English news', description: 'English description'},
+    cn: {news_one: '最新动态', description: '中文简介'},
+  }) } : get(id);
+  const controller = initLanguage(root, async () => response({news_one: 'Outdated duplicate'}));
+  await controller.ready;
+  assert.equal(news.innerHTML, 'English news');
+  assert.equal(await controller.setLanguage('cn'), true);
+  assert.equal(news.innerHTML, '最新动态');
+  assert.equal(meta.getAttribute('content'), '中文简介');
+  assert.equal(meta.innerHTML, '');
+  await controller.setLanguage('en');
+  assert.equal(meta.getAttribute('content'), 'English description');
+});
+
+test('invalid embedded content leaves static fallback and normal language controls available', async t => {
+  t.mock.method(console, 'warn', () => {});
+  const root = page();
+  const get = root.getElementById;
+  root.getElementById = id => id === 'content-translations' ? {textContent: '{not json'} : get(id);
+  const controller = initLanguage(root, async () => response({}));
+  assert.equal(await controller.ready, true);
+  assert.equal(root.elements[0].innerHTML, 'Static title');
+});

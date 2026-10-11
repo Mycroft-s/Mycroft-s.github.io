@@ -57,22 +57,30 @@
           </a>
         </li>
         <li class="nav__item">
-          <div class="nav__link" id="translate" value="en">
+          <button class="nav__link nav__control" id="translate" type="button" value="en">
             <svg class="icon nav__icon-svg" aria-hidden="true">
               <use xlink:href="#icon-fanyi"></use>
             </svg>
-            <a class="=nav__link" id="nav__translate">Translate</a>
-          </div>
+            <span id="nav__translate" aria-hidden="true">En/中</span>
+            <span class="control-sr-only" i18n="controls__language">{{ t:controls__language }}</span>
+          </button>
         </li>
       </ul>
-      <i class="uil uil-times nav__close" id="nav-close"></i>
+      <button class="nav__close nav__control" id="nav-close" type="button">
+        <i class="uil uil-times" aria-hidden="true"></i>
+        <span class="control-sr-only" i18n="controls__close_menu">{{ t:controls__close_menu }}</span>
+      </button>
     </div>
 
     <div class="nav__btns">
-      <i class="uil uil-moon change-theme" id="theme-button"></i>
-      <div class="nav__toggle" id="nav-toggle">
-        <i class="uil uil-apps"></i>
-      </div>
+      <button class="change-theme nav__control" id="theme-button" type="button" aria-pressed="false">
+        <i class="uil uil-moon" data-theme-icon aria-hidden="true"></i>
+        <span class="control-sr-only" i18n="controls__dark_mode">{{ t:controls__dark_mode }}</span>
+      </button>
+      <button class="nav__toggle nav__control" id="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false">
+        <i class="uil uil-apps" aria-hidden="true"></i>
+        <span class="control-sr-only" i18n="controls__menu">{{ t:controls__menu }}</span>
+      </button>
     </div>
   </nav>
 </header>

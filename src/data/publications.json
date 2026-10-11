@@ -5,8 +5,12 @@
     "titleKey": "publication1__title",
     "descriptionKey": "publication1__description",
     "descriptionClass": "publication1__description",
-    "url": "https://ieeexplore.ieee.org/document/10816109",
-    "buttonLabel": "Demo"
+    "links": [
+      {
+        "kind": "paper",
+        "url": "https://ieeexplore.ieee.org/document/10816109"
+      }
+    ]
   },
   {
     "image": "assets/img/BMC.png",
@@ -14,8 +18,12 @@
     "titleKey": "publication2__title",
     "descriptionKey": "publication2__description",
     "descriptionClass": "publication2__description",
-    "url": "https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-024-10409-9",
-    "buttonLabel": "Demo"
+    "links": [
+      {
+        "kind": "paper",
+        "url": "https://doi.org/10.1186/s12864-024-10409-9"
+      }
+    ]
   },
   {
     "image": "assets/img/multi.jpg",
@@ -23,8 +31,12 @@
     "titleKey": "publication3__title",
     "descriptionKey": "publication3__description",
     "descriptionClass": "publication3__description",
-    "url": "https://d.wanfangdata.com.cn/periodical/Ch9QZXJpb2RpY2FsQ0hJTmV3UzIwMjQxMTA1MTcxMzA0Eg5neHl6ejIwMjQwMjAwNhoIa2hidnJoMms%3D",
-    "buttonLabel": "Demo"
+    "links": [
+      {
+        "kind": "paper",
+        "url": "https://d.wanfangdata.com.cn/periodical/Ch9QZXJpb2RpY2FsQ0hJTmV3UzIwMjQxMTA1MTcxMzA0Eg5neHl6ejIwMjQwMjAwNhoIa2hidnJoMms%3D"
+      }
+    ]
   },
   {
     "image": "assets/img/patent.png",
@@ -32,7 +44,11 @@
     "titleKey": "publication4__title",
     "descriptionKey": "publication4__description",
     "descriptionClass": "publication4__description",
-    "url": "https://www.xjishu.com/zhuanli/55/202311195296.html",
-    "buttonLabel": "Demo"
+    "links": [
+      {
+        "kind": "patent",
+        "url": "https://www.xjishu.com/zhuanli/55/202311195296.html"
+      }
+    ]
   }
 ]

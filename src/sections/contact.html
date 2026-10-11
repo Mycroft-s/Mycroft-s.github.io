@@ -6,27 +6,40 @@
   <div class="contact__container container grid">
     <div>
       <div class="contact__information">
-        <i class="uil uil-phone-alt contact__icon"></i>
+        <i class="uil uil-phone-alt contact__icon" aria-hidden="true"></i>
 
         <div>
           <h3 class="contact__title" i18n="tel">{{ t:tel }}</h3>
-          <span class="contact__subtitle" i18n="tel__number"
-            >{{ t:tel__number }}</span>
+          <div class="contact__subtitle">
+            <a class="contact__link contact__phone" href="tel:+17183063737">+1 (718) 306-3737</a>
+            <span aria-hidden="true"> / </span>
+            <a class="contact__link contact__phone" href="tel:+8618500305220">+86 18500305220</a>
+          </div>
         </div>
       </div>
 
       <div class="contact__information">
-        <i class="uil uil-envelope contact__icon"></i>
+        <i class="uil uil-envelope contact__icon" aria-hidden="true"></i>
 
         <div>
           <h3 class="contact__title" i18n="email">{{ t:email }}</h3>
-          <span class="contatc__subtitle" i18n="email__address"
-            >{{ t:email__address }}</span>
+          <div class="contact__email-actions">
+            <a class="contact__link" id="contact-email" href="mailto:{{ t:email__address }}" i18n="email__address">{{ t:email__address }}</a>
+            <button class="contact__copy" id="contact-copy-email" type="button" aria-describedby="contact-copy-status" hidden>
+              <i class="uil uil-copy" aria-hidden="true"></i>
+              <span i18n="contact__copy">{{ t:contact__copy }}</span>
+            </button>
+          </div>
+          <p class="contact__copy-status" id="contact-copy-status" role="status" aria-live="polite"></p>
+          <div class="contact__copy-fallback" id="contact-copy-fallback" hidden>
+            <label for="contact-copy-field" i18n="contact__manual_copy">{{ t:contact__manual_copy }}</label>
+            <input class="contact__copy-field" id="contact-copy-field" type="email" value="{{ t:email__address }}" readonly />
+          </div>
         </div>
       </div>
 
       <div class="contact__information">
-        <i class="uil uil-map-marker contact__icon"></i>
+        <i class="uil uil-map-marker contact__icon" aria-hidden="true"></i>
 
         <div>
           <h3 class="contact__title" i18n="location">{{ t:location }}</h3>
@@ -35,5 +48,9 @@
         </div>
       </div>
     </div>
+  </div>
+  <div id="contact-copy-messages" hidden>
+    <span i18n="contact__copied">{{ t:contact__copied }}</span>
+    <span i18n="contact__copy_failed">{{ t:contact__copy_failed }}</span>
   </div>
 </section>

@@ -7,19 +7,50 @@ export function initNavigation(root = document, view = window) {
   const menu = root.getElementById('nav-menu');
   const toggle = root.getElementById('nav-toggle');
   const close = root.getElementById('nav-close');
-  const setMenuOpen = open => {
+  const mobile = view.matchMedia('(max-width: 767px)');
+  let menuOpen = false;
+  const setMenuOpen = (open, restoreFocus = false) => {
+    menuOpen = open && mobile.matches;
+    open = menuOpen;
     menu?.classList.toggle('show-menu', open);
     toggle?.setAttribute('aria-expanded', String(open));
+    if (menu) {
+      // Off-screen mobile links must not remain in the keyboard tab order.
+      menu.inert = mobile.matches && !open;
+      if (mobile.matches && !open) menu.setAttribute('aria-hidden', 'true');
+      else menu.removeAttribute('aria-hidden');
+    }
+    if (restoreFocus) toggle?.focus();
   };
 
   if (menu) {
     toggle?.setAttribute('aria-controls', menu.id);
     setMenuOpen(menu.classList.contains('show-menu'));
-    toggle?.addEventListener('click', () => setMenuOpen(true));
-    close?.addEventListener('click', () => setMenuOpen(false));
-    menu.addEventListener('click', event => {
-      if (event.target.closest('.nav__link')) setMenuOpen(false);
+    toggle?.addEventListener('click', () => {
+      setMenuOpen(!menuOpen);
+      if (menuOpen) menu.querySelector('a.nav__link')?.focus();
     });
+    close?.addEventListener('click', () => setMenuOpen(false, true));
+    menu.addEventListener('click', event => {
+      const link = event.target.closest('a.nav__link');
+      if (!link || !menuOpen) return;
+      const href = link.getAttribute('href');
+      setMenuOpen(false);
+      if (href?.startsWith('#')) {
+        const target = root.getElementById(href.slice(1));
+        if (target) {
+          target.tabIndex = -1;
+          target.focus({ preventScroll: true });
+        }
+      }
+    });
+    root.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menuOpen) {
+        event.preventDefault();
+        setMenuOpen(false, true);
+      }
+    });
+    mobile.addEventListener('change', () => setMenuOpen(false));
   }
 
   const header = root.getElementById('header');

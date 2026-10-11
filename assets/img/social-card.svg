@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8069ee"/><stop offset="1" stop-color="#5239bc"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".09"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#fbfaff"/>
+  <rect x="800" width="400" height="630" fill="url(#purple)"/>
+  <rect x="800" width="400" height="630" fill="url(#grid)"/>
+  <path d="M800 0C900 130 702 200 800 320s-70 205 0 310" fill="none" stroke="#d8ccff" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="80" y="95" fill="#6d56df" font-size="24" font-weight="700" letter-spacing="3">MYCROFT</text>
+    <rect x="80" y="158" width="58" height="6" rx="3" fill="#7259e6"/>
+    <text x="76" y="257" fill="#23212c" font-size="76" font-weight="700" letter-spacing="-3">Hongdao Meng</text>
+    <text x="80" y="322" fill="#7259e6" font-size="36">AI Engineer</text>
+    <text x="80" y="393" fill="#777080" font-size="23">Agents · Knowledge Systems · Photography</text>
+    <path d="M80 488h650" stroke="#e5dff1"/>
+    <text x="80" y="544" fill="#524b65" font-size="23">menghongdao.com</text>
+    <text x="717" y="544" fill="#7259e6" font-size="35">↗</text>
+  </g>
+  <g transform="translate(1000 304)" fill="none" stroke="#fff">
+    <circle r="114" stroke-opacity=".25"/>
+    <circle r="82" stroke-opacity=".7"/>
+    <path d="M0-82 71-41 71 41 0 82-71 41-71-41Z" stroke-width="2"/>
+    <path d="M0-82 36-20 71 41 0 41-71 41-36-20Z" stroke-opacity=".75" stroke-width="2"/>
+    <circle cy="-82" r="7" fill="#fff"/><circle cx="71" cy="41" r="7" fill="#fff"/><circle cx="-71" cy="41" r="7" fill="#fff"/>
+    <circle r="15" fill="#fff" stroke-width="8" stroke-opacity=".15"/>
+  </g>
+  <text x="917" y="486" font-family="Arial, sans-serif" font-size="15" letter-spacing="4" fill="#eee6ff">BUILD · EXPLORE</text>
+</svg>

@@ -1,46 +1,79 @@
 [
   {
-    "date": "2026.7.13",
-    "descriptionHtml": "I joined TikTok’s GMPT Transaction Platform team as an AI Engineer, working on Transaction Agent. My focus is building high-performance knowledge bases, automating skill generation, and developing offline pipelines for agent evaluation and self-improvement, with the goal of building a self-improving agent.<br>\n我加入了 TikTok GMPT 旗下的 Transaction Platform 团队，担任 AI 工程师，从事 Transaction Agent 研发。工作聚焦于高性能知识库建设、Skill 自动生成，以及 Agent 评测与自提升的离线链路，目标是构建能够持续自我改进的 Agent。"
+    "date": "2026-07-13",
+    "description": {
+      "en": "I joined TikTok’s GMPT Transaction Platform team as an AI Engineer, building Transaction Agent through high-performance knowledge bases, automated skill generation, and offline evaluation and self-improvement.",
+      "cn": "我加入 TikTok GMPT 旗下 Transaction Platform 团队，担任 AI 工程师，围绕高性能知识库、Skill 自动生成及离线评测与自提升，研发 Transaction Agent。"
+    }
   },
   {
-    "date": "2025.11.7",
-    "descriptionHtml": "I gave a presentation on recommendation systems at the student learning hub event held by C2smarter Center.<br>\n我在C2smarter Center 举办的student learning hub活动中，做了关于推荐系统的分享。"
+    "date": "2025-11-07",
+    "description": {
+      "en": "I gave a presentation on recommendation systems at the student learning hub event held by C2smarter Center.",
+      "cn": "我在C2smarter Center 举办的student learning hub活动中，做了关于推荐系统的分享。"
+    }
   },
   {
-    "date": "2025.9.10",
-    "descriptionHtml": "Excited to share that I’ve accepted a 2026 spring internship offer from TikTok! I’ll be joining the e-commerce recommendation infrastructure team, focusing on Feature Service and User data accessor.<br>\n我很高兴地告诉大家，我已经接受了Tiktok 2026年春季实习的邀请！我将加入电子商务推荐基础设施团队，专注于功能服务和用户数据访问。"
+    "date": "2025-09-10",
+    "description": {
+      "en": "Excited to share that I’ve accepted a 2026 spring internship offer from TikTok! I’ll be joining the e-commerce recommendation infrastructure team, focusing on Feature Service and User data accessor.",
+      "cn": "我很高兴地告诉大家，我已经接受了Tiktok 2026年春季实习的邀请！我将加入电子商务推荐基础设施团队，专注于功能服务和用户数据访问。"
+    }
   },
   {
-    "date": "2025.4.16",
-    "descriptionHtml": "Excited to share that I’ve accepted a 2025 summer internship offer from TikTok! I’ll be joining the e-commerce team, working on recommendation infrastructure.<br>\n我已拿到 TikTok 的暑期实习 offer，2025 年暑假将在 TikTok 电商部门从事推荐系统架构的相关工作。"
+    "date": "2025-04-16",
+    "description": {
+      "en": "Excited to share that I’ve accepted a 2025 summer internship offer from TikTok! I’ll be joining the e-commerce team, working on recommendation infrastructure.",
+      "cn": "我已拿到 TikTok 的暑期实习 offer，2025 年暑假将在 TikTok 电商部门从事推荐系统架构的相关工作。"
+    }
   },
   {
-    "date": "2025.4.6",
-    "descriptionHtml": "I updated my photography works in my website.<br>\n我在网站上更新了自己的摄影作品。"
+    "date": "2025-04-06",
+    "description": {
+      "en": "I updated my photography works in my website.",
+      "cn": "我在网站上更新了自己的摄影作品。"
+    }
   },
   {
-    "date": "2025.3.15",
-    "descriptionHtml": "I started my research on automated deployment with AI (CI/CD)!<br>\n我开始了关于AI结合的自动化部署（CI/CD）的研究！"
+    "date": "2025-03-15",
+    "description": {
+      "en": "I started my research on automated deployment with AI (CI/CD)!",
+      "cn": "我开始了关于AI结合的自动化部署（CI/CD）的研究！"
+    }
   },
   {
-    "date": "2025.1.15",
-    "descriptionHtml": "I'm happy to share that I have started my Developer Assistant job in C2SMARTER Center!<br>\n我很高兴地告诉大家，我已经在C2SMARTER Center开始了我的开发助理工作！"
+    "date": "2025-01-15",
+    "description": {
+      "en": "I'm happy to share that I have started my Developer Assistant job in C2SMARTER Center!",
+      "cn": "我很高兴地告诉大家，我已经在C2SMARTER Center开始了我的开发助理工作！"
+    }
   },
   {
-    "date": "2024.12.24",
-    "descriptionHtml": "I got 3.8 GPA for my frist semester!<br>\n我在NYU的第一学期的GPA是3.8 ！"
+    "date": "2024-12-24",
+    "description": {
+      "en": "I got 3.8 GPA for my first semester!",
+      "cn": "我在NYU的第一学期的GPA是3.8 ！"
+    }
   },
   {
-    "date": "2024.12.20",
-    "descriptionHtml": "My paper Federated Multi-view Multi-Label Classification was accepted by IEEE TBD.<br>\n我作为第一作者的论文《Federated Multi-view Multi-Label Classification》被IEEE TBD接受。"
+    "date": "2024-12-20",
+    "description": {
+      "en": "My paper Federated Multi-view Multi-Label Classification was accepted by IEEE TBD.",
+      "cn": "我作为第一作者的论文《Federated Multi-view Multi-Label Classification》被IEEE TBD接受。"
+    }
   },
   {
-    "date": "2024.9.3",
-    "descriptionHtml": "I started my work and research on deepfake detection!<br>\n我开始了关于深度伪造检测的工作和研究！"
+    "date": "2024-09-03",
+    "description": {
+      "en": "I started my work and research on deepfake detection!",
+      "cn": "我开始了关于深度伪造检测的工作和研究！"
+    }
   },
   {
-    "date": "2024.9.1",
-    "descriptionHtml": "I'm happy to share that I've started my master of computer science at New York University!<br>\n我很高兴地告诉大家，我已经开始在纽约大学攻读计算机科学硕士学位了！"
+    "date": "2024-09-01",
+    "description": {
+      "en": "I'm happy to share that I've started my master of computer science at New York University!",
+      "cn": "我很高兴地告诉大家，我已经开始在纽约大学攻读计算机科学硕士学位了！"
+    }
   }
 ]

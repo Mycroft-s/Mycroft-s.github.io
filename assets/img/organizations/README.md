@@ -14,7 +14,9 @@ These local assets identify the companies and schools in the Experience timeline
 
 ICO resources were converted to PNG without cropping or recoloring. Display marks at no more than 32 CSS pixels so the smallest source assets stay crisp.
 
-Edit entries in `src/sections/qualification.html`, then run `npm run build`. The unnamed startup uses a decorative inline SVG symbol. The research lab uses BJUT's mark, as confirmed by the site owner. Logo images use empty alt text; clickable marks have a bilingual text label that names the destination and announces the new tab.
+Edit organization names, logo paths, website URLs, and LinkedIn destinations in the `organizations` object in `src/data/experience.json`, then run `npm run build`. Work and education entries in the same file reference these shared organizations and store their bilingual roles and date periods. This is the single content source; do not duplicate dates or institutional links in the section template or language dictionaries.
+
+`scripts/home-data.mjs` validates and formats the data, and `src/components/experience-item.html` renders each timeline entry. `src/sections/qualification.html` contains the section and tab structure. The unnamed startup uses a decorative inline SVG symbol. The research lab uses BJUT's mark, as confirmed by the site owner. Logo images use empty alt text; clickable marks have a bilingual text label that names the destination and announces the new tab. Work and education buttons retain the same hover, press, and focus effects.
 
 ## Work timeline LinkedIn destinations
 

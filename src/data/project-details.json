@@ -1,0 +1,38 @@
+[
+  {
+    "id": "deepfake",
+    "number": "01",
+    "page": "project-deepfake.html",
+    "repo": "https://github.com/Mycroft-s/image_and_audio_deepfakededtection",
+    "stack": ["Django", "PyTorch", "TensorFlow", "Vision Transformer", "Librosa"],
+    "sources": [
+      {"labelKey": "project__source_inference", "url": "https://github.com/Mycroft-s/image_and_audio_deepfakededtection/blob/main/detection/views.py"},
+      {"labelKey": "skills__fine_tuning", "url": "https://github.com/Mycroft-s/image_and_audio_deepfakededtection/blob/main/Fine_tuned_ViT/train.py"},
+      {"labelKey": "project__source_evaluation", "url": "https://github.com/Mycroft-s/image_and_audio_deepfakededtection/blob/main/Fine_tuned_ViT/evaluate.py"}
+    ]
+  },
+  {
+    "id": "rag",
+    "number": "02",
+    "page": "project-rag.html",
+    "repo": "https://github.com/Mycroft-s/Web-Search-Engines-CS-GY-6913-A/tree/main/Hybrid_search_bgem3_LLMs",
+    "stack": ["BGE-M3", "Milvus", "Flask", "React", "Reranking"],
+    "sources": [
+      {"labelKey": "project__source_overview", "url": "https://github.com/Mycroft-s/Web-Search-Engines-CS-GY-6913-A/blob/main/Hybrid_search_bgem3_LLMs/Readme.md"},
+      {"labelKey": "project__source_retrieval", "url": "https://github.com/Mycroft-s/Web-Search-Engines-CS-GY-6913-A/blob/main/Hybrid_search_bgem3_LLMs/backend/hybrid_search.py"},
+      {"labelKey": "project__source_api", "url": "https://github.com/Mycroft-s/Web-Search-Engines-CS-GY-6913-A/blob/main/Hybrid_search_bgem3_LLMs/backend/hybrid_api.py"}
+    ]
+  },
+  {
+    "id": "voice-agent",
+    "number": "03",
+    "page": "project-voice-agent.html",
+    "repo": "https://github.com/Mycroft-s/voice-driven-AI-agents",
+    "stack": ["LangChain", "LangGraph", "FastAPI", "WebSocket", "SQLite"],
+    "sources": [
+      {"labelKey": "project__source_overview", "url": "https://github.com/Mycroft-s/voice-driven-AI-agents#readme"},
+      {"labelKey": "skills__agents", "url": "https://github.com/Mycroft-s/voice-driven-AI-agents/blob/main/langchain_agent.py"},
+      {"labelKey": "project__source_workflow", "url": "https://github.com/Mycroft-s/voice-driven-AI-agents/blob/main/langgraph_workflow.py"}
+    ]
+  }
+]
