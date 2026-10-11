@@ -68,10 +68,25 @@
             </div>
             <p id="gallery-year-hint" class="gallery-timeline__hint" i18n="gallery__year_hint">{{ t:gallery__year_hint }}</p>
           </div>
-          <label class="gallery-device-filter" for="gallery-device-filter">
-            <span i18n="gallery__device">{{ t:gallery__device }}</span>
-            <select id="gallery-device-filter"><option value="all" i18n="gallery__all_devices">{{ t:gallery__all_devices }}</option></select>
-          </label>
+          <div class="gallery-cameras">
+            <div class="gallery-cameras__heading">
+              <p id="gallery-device-label" i18n="gallery__device">{{ t:gallery__device }}</p>
+              <p i18n="gallery__camera_hint">{{ t:gallery__camera_hint }}</p>
+            </div>
+            <div id="gallery-device-shelf" class="gallery-camera-shelf" role="group" aria-labelledby="gallery-device-label"></div>
+          </div>
+          <div class="gallery-tools">
+            <div class="gallery-view-switch" role="group" aria-labelledby="gallery-view-label">
+              <span id="gallery-view-label" class="gallery-sr-only" i18n="gallery__view_label">{{ t:gallery__view_label }}</span>
+              <button id="gallery-view-gallery" type="button" aria-pressed="true"><svg viewBox="0 0 20 20" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2.5 2.5h6v9h-6zm9 0h6v5h-6zm0 8h6v7h-6zm-9 4h6v3h-6z"/></svg><span i18n="gallery__view_gallery">{{ t:gallery__view_gallery }}</span></button>
+              <button id="gallery-view-contact" type="button" aria-pressed="false"><svg viewBox="0 0 20 20" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2.5 2.5h6v6h-6zm9 0h6v6h-6zm-9 9h6v6h-6zm9 0h6v6h-6z"/></svg><span i18n="gallery__view_contact">{{ t:gallery__view_contact }}</span></button>
+            </div>
+            <div class="gallery-tools__actions">
+              <button id="gallery-random" class="gallery-tool" type="button" aria-describedby="gallery-random-hint"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5h2c4 0 6 10 10 10h4m-3-3 3 3-3 3M2 15h2c1.4 0 2.7-1.2 4-3m4-4c.7-1.8 1.3-3 3-3h3m-3-3 3 3-3 3"/></svg><span i18n="gallery__random">{{ t:gallery__random }}</span></button>
+              <span id="gallery-random-hint" class="gallery-sr-only" i18n="gallery__random_hint">{{ t:gallery__random_hint }}</span>
+              <button id="gallery-screening" class="gallery-tool gallery-tool--primary" type="button"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="m7 4 9 6-9 6z"/></svg><span i18n="gallery__screening">{{ t:gallery__screening }}</span></button>
+            </div>
+          </div>
           <p class="gallery-result-count" id="gallery-result-count" role="status" aria-live="polite"></p>
         </div>
 
@@ -90,14 +105,26 @@
     <dialog class="photo-viewer" id="photo-viewer" aria-labelledby="viewer-caption">
       <div class="photo-viewer__toolbar">
         <p id="viewer-position" class="photo-viewer__position" aria-live="polite"></p>
-        <button id="viewer-close" class="photo-viewer__close" type="button"><span i18n="gallery__close">{{ t:gallery__close }}</span><span aria-hidden="true">×</span></button>
+        <div class="photo-viewer__actions">
+          <button id="viewer-play" class="photo-viewer__action" type="button" aria-pressed="false"><svg class="photo-viewer__play-icon" viewBox="0 0 20 20" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="m6 3 10 7-10 7z"/></svg><svg class="photo-viewer__pause-icon" viewBox="0 0 20 20" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M5 3h3v14H5zm7 0h3v14h-3z"/></svg><span class="photo-viewer__action-label" i18n="gallery__play">{{ t:gallery__play }}</span></button>
+          <button id="viewer-screening" class="photo-viewer__action" type="button" aria-pressed="false"><svg viewBox="0 0 20 20" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 2.5H2.5V7m10.5-4.5h4.5V7M17.5 13v4.5H13M7 17.5H2.5V13"/></svg><span class="photo-viewer__action-label" i18n="gallery__screening">{{ t:gallery__screening }}</span></button>
+          <button id="viewer-share" class="photo-viewer__action" type="button"><svg viewBox="0 0 20 20" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="m7 12 6-4m-6 0 6 4"/><circle cx="5" cy="10" r="2.5"/><circle cx="15" cy="5.5" r="2.5"/><circle cx="15" cy="14.5" r="2.5"/></svg><span class="photo-viewer__action-label" i18n="gallery__share">{{ t:gallery__share }}</span></button>
+          <button id="viewer-close" class="photo-viewer__close" type="button"><span i18n="gallery__close">{{ t:gallery__close }}</span><span aria-hidden="true">×</span></button>
+        </div>
       </div>
       <div class="photo-viewer__stage">
         <img id="viewer-image" alt="" />
         <p class="photo-viewer__status" id="viewer-status" role="status" aria-live="polite" hidden></p>
       </div>
+      <div class="photo-viewer__share">
+        <p id="viewer-share-status" role="status" aria-live="polite"></p>
+        <div id="viewer-share-fallback" class="photo-viewer__share-fallback" hidden>
+          <label for="viewer-share-url" i18n="gallery__share_url">{{ t:gallery__share_url }}</label>
+          <input id="viewer-share-url" type="url" readonly />
+        </div>
+      </div>
       <div class="photo-viewer__footer">
-        <div class="photo-viewer__details"><h2 id="viewer-caption"></h2><p id="viewer-description" hidden></p><p id="viewer-meta"></p><a id="viewer-original" target="_blank" rel="noopener" i18n="gallery__original">{{ t:gallery__original }}</a></div>
+        <div class="photo-viewer__details"><h2 id="viewer-caption"></h2><p id="viewer-description" hidden></p><p id="viewer-meta"></p><a id="viewer-original" target="_blank" rel="noopener" i18n="gallery__original">{{ t:gallery__original }}</a><p id="viewer-screening-hint" i18n="gallery__screening_hint">{{ t:gallery__screening_hint }}</p></div>
         <div class="photo-viewer__controls">
           <button id="viewer-prev" type="button"><span aria-hidden="true">←</span><span i18n="gallery__previous">{{ t:gallery__previous }}</span></button>
           <button id="viewer-next" type="button"><span i18n="gallery__next">{{ t:gallery__next }}</span><span aria-hidden="true">→</span></button>
@@ -119,6 +146,23 @@
       <span i18n="gallery__taken">{{ t:gallery__taken }}</span>
       <span i18n="gallery__theme">{{ t:gallery__theme }}</span>
       <span i18n="gallery__language">{{ t:gallery__language }}</span>
+      <span i18n="gallery__all_cameras">{{ t:gallery__all_cameras }}</span>
+      <span i18n="gallery__film">{{ t:gallery__film }}</span>
+      <span i18n="gallery__digital">{{ t:gallery__digital }}</span>
+      <span i18n="gallery__view_gallery">{{ t:gallery__view_gallery }}</span>
+      <span i18n="gallery__view_contact">{{ t:gallery__view_contact }}</span>
+      <span i18n="gallery__view_label">{{ t:gallery__view_label }}</span>
+      <span i18n="gallery__random">{{ t:gallery__random }}</span>
+      <span i18n="gallery__screening">{{ t:gallery__screening }}</span>
+      <span i18n="gallery__exit_screening">{{ t:gallery__exit_screening }}</span>
+      <span i18n="gallery__play">{{ t:gallery__play }}</span>
+      <span i18n="gallery__pause">{{ t:gallery__pause }}</span>
+      <span i18n="gallery__share">{{ t:gallery__share }}</span>
+      <span i18n="gallery__copied">{{ t:gallery__copied }}</span>
+      <span i18n="gallery__copy_fallback">{{ t:gallery__copy_fallback }}</span>
+      <span i18n="gallery__share_url">{{ t:gallery__share_url }}</span>
+      <span i18n="gallery__screening_hint">{{ t:gallery__screening_hint }}</span>
+      <span i18n="gallery__random_hint">{{ t:gallery__random_hint }}</span>
     </div>
     <script type="module" src="assets/js/photography.js"></script>
   </body>
